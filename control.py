@@ -6,10 +6,10 @@ screen_size = (2880, 1864)
 pack_size = (1920, 1080)
 
 def swup(a:float, b: float):
-    return a/1080*1864, b/1080*1864
+    return a/1920*2880*1.33, b/1920*2880*1.33
 
 def swdown(a:float, b: float):
-    return a/2880*1920/1.32165, b/2880*1920/1.32165
+    return a/2880*1920/1.33, b/2880*1920/1.33
 
 def click(a: float, b: float, interval=0.5):
     """Click on the x-y position on mac screen."""
@@ -64,9 +64,23 @@ def start_game(mode: bool):
         click(1550, 520, 2.5)
         nclick(1510, 690, 2, 5)
 
+def team_trial():
+    """Conduct team trial from home screen, untill no stamina."""
+    nclick(1500, 400, 2)
+    click(1620, 680, 2)  # Click race
+    click(1450, 500, 5)
+    click(1500, 500, 5)
+    for i in range(5):
+        click(1550, 400, 7)
+        click(1550, 620, 2)
+        click(1610, 510, 5)
+        nclick(1580, 650, 12, 4.5)
+        if i == 4:
+            nclick(1550, 680, 3)
+            break
+        nclick(1500, 650, 3, 5)
+    
 
-start_game(0)
-
-
-
+# start_game(0)
+# team_trial()
 
