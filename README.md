@@ -6,8 +6,10 @@ For this early draft I just created a function control.start_game, which takes a
 
 This version unfortunately only works on my macbook with screen size 2880 * 1864.
 
-Popenv is a folder containing a virtual environment. To activate on mac, use terminal command:
+To run this code you need to install pyautogui, pillow, and OpenCV
 
-source Popenv/bin/activate
+On macbook I used iphone mirroring to connect to mobile device and then run this code. The window do have to be fixed to the top right corner of the macbook.
+
+I know this code is insanely bad but trust me it is only starting.
 
 
