@@ -1,0 +1,16 @@
+def friend_supportcard_identify(type="Speed", rarity="SR"):
+    """Identify the right friend support card to choose from.
+    
+    This will judge if a support card is duplicate, and whether it is 
+    of correct type and rarity.
+
+    When the first correct card is identified, its coodinate will be 
+    returned.
+
+    Note: This function does not interact with screen.
+    """
+    y = [227, 300, 373, 446, 519]
+    n = 0
+    while n <= 4:  # It will examine the five friend support cards on screen.
+        if pyautogui.pixel(1421, y[n]) == (72, 72, 72):
+            n += 1
