@@ -1,22 +1,12 @@
 import pyautogui
 from pyautogui import ImageNotFoundException
 import time
-from builtins import Exception
+
 
 # Get the screen size
 screen_width, screen_height = pyautogui.size()  # Size in mouse functions' format, different from locate.
 x0, y0 = 1426.5, 185.5  # Coordinate of topleft corner on my macbook.
 ww0, wh0 = 248.0, 500.5 # width and height of window on my macbook.
-all_special_events = {"Sweep Tosho spe": ["wonderful_mistake"], "Super Creek sta": [], "Special Week spe": [], "Mayano Top Gun sta": [], "Gold City spe": [], "Eishin Flash spe": []}
-default_supportcard = ("Sweep Tosho spe", "Super Creek sta", "Special Week spe", "Mayano Top Gun sta", "Gold City spe", "Eishin Flash spe")
-
-
-class UmaException(Exception):
-    pass
-
-
-class ContinueException(Exception):
-    pass
 
 
 class UmaGame:
@@ -118,129 +108,6 @@ class UmaGame:
                 break
             self.nclick(1500, 650, 3, 5)
 
-    def train_horse_loop(self, name: str, supportcard: tuple = None):
-        """Train the horse with following logic.
-
-        conduct this loop, starting from turn 1:
-
-        1. check if there is any multiple choose questions on screen (test if hi_g.png is present)
-        -> if true: check if the event is recorded as special:
-                -> if true: choose according to special event outcome
-                -> if false: always choose the green option (top one)
-        -> if false: pass
-
-        2. check if the event-race label is present:
-        -> if true: 
-            add skills (not implemented)
-            attend race (change style to front, and click on result if unlocked. if locked, go to game) -> turn += 1
-        -> if false: pass
-
-        3. check if infirmary is open:
-        -> if true: go heal the uma -> turn += 1
-        -> if false: pass
-
-        4. check status of mood:
-        -> if mood awful or bad or normal: entertainment directly -> turn += 1
-        -> if mood is good: record and pass, with score 4.5
-        -> if mood is great: pass
-
-        5. check turn number, if at important time, attend g1 race at that time. If not then just pass
-
-        6. check energy:
-        -> if below 40, always rest -> turn += 1
-        -> else pass
-
-        7. check if training label is present:
-        -> if true: check five training options and calculate scores for each (a head has base score 1, if relationship bar empty + 1, if friendship training + 2.5)
-        (director and reporter both + 0.5, speed has base bonus + 1, stamina and power + 0.5, gut - 2, wit 0)
-
-        calculate the highest score (together with mood if recorded) and choose the one. If multiple highest score use rng. -> turn += 1
-        """
-        self.turn = 1
-        if supportcard is None:  # Load default support cards.
-            supportcard = default_supportcard
-        s = []  # The part loads special event list.
-        for i in supportcard:
-                x = all_special_events[i] 
-                if len(x) > 0:
-                    for j in x:
-                        s.append(j)
-        self.special_events = s
-
-        for i in range(75):
-            try:
-                self.train_horse(name, supportcard)
-            except ContinueException:
-                self.turn += 1
-                continue
-
-    def train_horse(self, name: str, supportcard: tuple = None):
-        if supportcard is None:  # Load default support cards.
-            supportcard = default_supportcard
-        self._check_multiq()
-        self._check_mainrace()
-        self._infirmary()
-        mood_score = 4.5 if self._check_mood() else 0
-        self._check_race(name)
-        self._check_energy()
-        self._check_training(supportcard, mood_score)
-
-    def _check_multiq(self):
-        """Obtain support card special events (that do not choose green) and check for them then normal events."""
-        try: 
-            a, b = identify_image("generaltraining/hi_g")
-            self.__check_special__()
-            click_true(a, b, 4.5)
-        except ImageNotFoundException:
-            pass
-        except UmaException:
-            pass
-
-    def __check_special__(self):
-        """Handle clicking for special events.
-        
-        You really should not call this function alone."""
-        x = 0
-        for i in self.special_events:
-            try:
-                identify_image(f"tscard/{i}")
-                click_image("generaltraining/hi_y")
-                x = 1
-                time.sleep(2.5)
-                break
-            except ImageNotFoundException:
-                continue
-        if x:
-            raise UmaException("Special event detected.")
-
-    def _check_mainrace(self):
-        try: 
-            click_image("generaltraining/RaceMain")
-        except ImageNotFoundException:
-            return None
-        self.click(1610, 620, 1)
-        self.click(1610, 520, 7.5)
-        if test_image("generaltraining/Front"):
-            pass
-        else:
-            self.nclick(1635, 455, 2, 1)  # change to front style. 
-            self.click(1620, 520, 5)
-        if test_image("generaltraining/Result"):
-            self.click(1500, 660, 5)
-            self.nclick(1565, 660, 6, 3)
-        else:
-            raise NotImplementedError
-        raise ContinueException
-
-    def _infirmary(self):
-        if test_image("generaltraining/Infirmary"):  # I will add the image of functional infirmary later. ***
-            NotImplemented
-        else:
-            pass
-
-        
-
-
 
 def identify_image(name="Sweep Tosho"):
     """Identify the required png. 
@@ -251,15 +118,6 @@ def identify_image(name="Sweep Tosho"):
     l, t, w, h = pyautogui.locateOnScreen(f"figures/{name}.png", confidence=0.9)
     # print(l, t, w, h)
     return (l/2+w/4, t/2+h/4)
-
-def test_image(name: str):
-    """Return 1 if image is present, and 0 vice versa."""
-    try:
-        pyautogui.locateOnScreen(f"figures/{name}.png", confidence=0.9)
-        return 1
-    except ImageNotFoundException:
-        return 0
-
 
 
 def click_true(a: float, b: float, interval=0.5):
@@ -281,5 +139,3 @@ if __name__ == "__main__":
     URA = UmaGame(test=0)
     URA._start_game(0)
     # URA._team_trial()
-
-

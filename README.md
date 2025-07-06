@@ -21,5 +21,10 @@ The clicking method will adjust the coordinate of clicking based on the relative
 I made two internal methods: _start_game(mode: bool) and _team_trial().
 Hopefully I could integrate them together later by adding functions detecting energy.
 
+# V0.2.5
+I implemented training algorithms but it's only half finished and have not been tested. I need to add more images, change names, and complete not implemented areas, as well as internal methods of adjusting mood and training. I also need to add function about inheriting event and URA Finale event. It's a long day for me and I will take a short break. 
+
+Mon 7 July
+
 
 
