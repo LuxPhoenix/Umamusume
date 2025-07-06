@@ -12,4 +12,14 @@ On macbook I used iphone mirroring to connect to mobile device and then run this
 
 I know this code is insanely bad but trust me it is only starting.
 
+# V0.2
+I implemented functions to adjust the coordinate system based on the position and size of the game window. This allows the game window to be placed anywhere in the screen (the entire game window must not be covered, or else it will fail to detect icons.) Note: during gameplay the window cannot be moved. (In the future I will add a update function called whenever the window is moved.)
+
+All functions except for image identification and clicking are integrated into class Umagame.
+The clicking method will adjust the coordinate of clicking based on the relative position of the player's window. clicking_image is a method that accurately clicks the true position of image, which makes sense as its true position, rather than relative position, is identified via pyautogui.
+
+I made two internal methods: _start_game(mode: bool) and _team_trial().
+Hopefully I could integrate them together later by adding functions detecting energy.
+
+
 
