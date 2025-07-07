@@ -26,5 +26,7 @@ I implemented training algorithms but it's only half finished and have not been 
 
 Mon 7 July
 
+# V0.2.8
+I added training logic, rest logic, infirmary logic, multiple choice logic, recover mood logic. Training logic is not complete yet, as I only let her click on speed training only. However I was able to pass URA with this code.
 
 
