@@ -75,7 +75,7 @@ class UmaGame:
         self.nclick(1500, 400, 2)
         self.click(1650,630, 7)
         if mode:  # To continue a game.
-            self.click(1640,520)
+            self.click(1640,520, 5)
         else:  # To start a new game.
             self.click(1550, 610)  # To character page
             self.click(1500, 420)  # Select Air groove
@@ -116,7 +116,23 @@ class UmaGame:
                 self.nclick(1550, 680, 3)
                 self.click(1580, 650)
                 break
-            self.nclick(1500, 650, 3, 5)
+            self.nclick(1500, 650, 5, 5)
+    
+    def remove_expired_followers(self, n: int = 10):
+        """Remove followers that does not log in."""
+        self.nclick(1500, 400, 2)
+        self.click(1670, 130)
+        self.click(1470, 300, 10)
+        self.click(1550, 170)
+        for i in range(n):
+            self.click(1500, 200, 4)
+            self.click(1470, 338, 3)
+            self.click(1560, 480)
+            self.click(1550, 630)
+            self.nclick(1670, 583, 2)
+        self.click(1550, 683, 3)
+        
+
 
     def train_horse_loop(self, name: str, supportcard: tuple = None):
         """Train the horse with following logic.
@@ -188,9 +204,10 @@ class UmaGame:
     def _check_multiq(self):
         """Obtain support card special events (that do not choose green) and check for them then normal events."""
         try: 
-            a, b = identify_image("generaltraining/hi_g")
-            self.__check_special__()
-            click_true(a, b, 4.5)
+            for i in range(3):  # Adding the loop to met situations with consecutive multiple choose events.
+                a, b = identify_image("generaltraining/hi_g")
+                self.__check_special__()
+                click_true(a, b, 4.5)
         except ImageNotFoundException:
             pass
         except UmaException:
@@ -218,28 +235,64 @@ class UmaGame:
             click_image("generaltraining/RaceMain")
         except ImageNotFoundException:
             return None
+        print("Following main agenda to race this turn.")
         self.click(1610, 620, 1)
         self.click(1610, 520, 7.5)
-        if test_image("generaltraining/Front"):
+        if test_image("generaltraining/Front", confi=0.99):
             pass
         else:
             self.nclick(1635, 455, 2, 1)  # change to front style. 
             self.click(1620, 520, 5)
         if test_image("generaltraining/Result"):
             self.click(1500, 660, 5)
-            self.nclick(1565, 660, 6, 3)
+            self.nclick(1565, 660, 6, 4.5)
         else:
             raise NotImplementedError
         raise ContinueException
 
     def _infirmary(self):
-        if test_image("generaltraining/Infirmary"):  # I will add the image of functional infirmary later. ***
-            NotImplemented
+        if test_image("generaltraining/Infirmary", confi=1):  # Go to the infirmary to treat
+            print("Use this turn to heal.")
+            self.click(1470, 640)
+            self.nclick(1620, 480, 2)
+            time.sleep(4)
+            raise ContinueException
         else:
             pass
 
-        
+    def _check_mood(self):  # Finish later
+        bad_mood = ("Awful", "Bad", "Normal")
+        for i in bad_mood:
+            if test_image(f"generaltraining/{i}"):
+                self.click(1560, 640)
+                self.nclick(1630, 490, 2)
+                time.sleep(5)
+                raise ContinueException
+            else:
+                pass
+        return 0
+    
+    def _check_race(self, name):  # Finish later
+        pass
 
+    def _check_energy(self):
+        if test_image("generaltraining/EnergyBar", confi=0.99):
+            pass
+        else:
+            print("Use this turn to rest.")
+            self.click(1450, 586)
+            self.nclick(1620, 480, 2)
+            time.sleep(4)
+            raise ContinueException
+    
+    def _check_training(self, supportcard, mood_score: float):
+        try:
+            click_image("generaltraining/Training")
+            print("Use this turn to train")
+            self.nclick(1445, 610, 2, 3)  # Select speed training for now.
+            time.sleep(4)
+        except ImageNotFoundException:
+            pass
 
 
 def identify_image(name="Sweep Tosho"):
@@ -252,10 +305,10 @@ def identify_image(name="Sweep Tosho"):
     # print(l, t, w, h)
     return (l/2+w/4, t/2+h/4)
 
-def test_image(name: str):
+def test_image(name: str, confi = 0.9):
     """Return 1 if image is present, and 0 vice versa."""
     try:
-        pyautogui.locateOnScreen(f"figures/{name}.png", confidence=0.9)
+        pyautogui.locateOnScreen(f"figures/{name}.png", confidence=confi)
         return 1
     except ImageNotFoundException:
         return 0
@@ -279,7 +332,9 @@ def click_image(name: str):
 
 if __name__ == "__main__":
     URA = UmaGame(test=0)
-    URA._start_game(0)
+    URA._start_game(1)
+    URA.train_horse_loop("Air Groove", default_supportcard)
+    # URA.remove_expired_followers(30)
     # URA._team_trial()
 
 
