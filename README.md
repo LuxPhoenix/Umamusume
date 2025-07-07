@@ -29,4 +29,8 @@ Mon 7 July
 # V0.2.8
 I added training logic, rest logic, infirmary logic, multiple choice logic, recover mood logic. Training logic is not complete yet, as I only let her click on speed training only. However I was able to pass URA with this code.
 
+# V0.2.9
+Inheritanting event logic added. Training algorithm half completed (counting number of heads for each training option, as well as the mood score).
 
+TD: add friendship training detection and integrate it into score counting.
+Have not been tested.
