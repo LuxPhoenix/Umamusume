@@ -103,9 +103,9 @@ class UmaGame:
 
     def _team_trial(self):
         """Conduct team trial from home screen, untill no stamina."""
-        self.nclick(1500, 400, 2)
-        self.click(1620, 680, 2)  # Click race
-        self.click(1450, 500, 5)
+        self.nclick(1500, 400, 3)
+        self.click(1620, 680, 3)  # Click race
+        self.click(1450, 500, 6)
         self.click(1500, 500, 5)
         for i in range(5):
             self.click(1550, 400, 7)
@@ -115,6 +115,7 @@ class UmaGame:
             if i == 4:
                 self.nclick(1550, 680, 3)
                 self.click(1580, 650)
+                self.click(1550, 680, 3)
                 break
             self.nclick(1500, 650, 5, 5)
     
@@ -301,15 +302,16 @@ class UmaGame:
     def _check_training(self, supportcard, mood_score: float):
         try:
             click_image("generaltraining/Training")
-            score = [1, 0.5, 0.5, -1.5, 0, mood_score]
+            score = [1.2, 0.6, 0.5, -1, 0, mood_score]
             order = [(self.pre_trainoption + i)%5 for i in range(1, 6)]  # Avoid single cicking of previous option.
             for i in order:
-                self.click(1450 + 50*i, 620)
-                score[i] += sum(test_image(f"tscard/{j}", rg=(1650, 200, 50, 280)) for j in supportcard)
-                score[i] += 0.5 * test_image("URA/Director", rg=(1650, 200, 50, 280))
-                score[i] += 0.5 * test_image("URA/Reporter", rg=(1650, 200, 50, 280))
+                self.click(1450 + 50*i, 620, 0)
+                score[i] += sum(test_image(f"tscard/{j}") for j in supportcard)
+                score[i] += 0.5 * test_image("URA/Director")
+                score[i] += 0.5 * test_image("URA/Reporter")
                 print(f"The score under {i + 1}th training option is {score[i]}")
             max_index = score.index(max(score))
+            print(max_index)
             if max_index == 5:
                 self.click(1440, 684, 1)  # Click back
                 self.click(1560, 640)  # Recover mood for this turn.
@@ -318,7 +320,8 @@ class UmaGame:
                 time.sleep(5)
                 raise ContinueException
             else:
-                self.nclick(1450 + score[max_index] * 50, 620, 2, 3)
+                self.nclick(1450 + max_index * 50, 620, 2)
+                self.pre_trainoption = max_index
                 print("Use this turn to train")
                 time.sleep(4)
         except ImageNotFoundException:
@@ -368,9 +371,9 @@ def click_image(name: str):
 
 if __name__ == "__main__":
     URA = UmaGame(test=0)
+    # URA._team_trial()
+    # URA.remove_expired_followers(30)
     URA._start_game(1)
     URA.train_horse_loop("Gold Ship", default_supportcard)
-    # URA.remove_expired_followers(30)
-    # URA._team_trial()
 
 
