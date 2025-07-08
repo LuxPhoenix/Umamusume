@@ -9,7 +9,7 @@ x0, y0 = 1426.5, 185.5  # Coordinate of topleft corner on my macbook.
 ww0, wh0 = 248.0, 500.5 # width and height of window on my macbook.
 all_special_events = {"Sweep Tosho spe": ["wonderful_mistake"], "Super Creek sta": [], "Special Week spe": [], "Mayano Top Gun sta": [], "Gold City spe": [], "Eishin Flash spe": []}
 default_supportcard = ("Sweep Tosho spe", "Super Creek sta", "Special Week spe", "Mayano Top Gun sta", "Gold City spe", "Eishin Flash spe")
-
+ts_rg = (3300, 400, 100, 560)
 
 class UmaException(Exception):
     pass
@@ -302,13 +302,13 @@ class UmaGame:
     def _check_training(self, supportcard, mood_score: float):
         try:
             click_image("generaltraining/Training")
-            score = [1.2, 0.6, 0.5, -1, 0, mood_score]
+            score = [1.5, 0.6, 0.5, -1, 0, mood_score]
             order = [(self.pre_trainoption + i)%5 for i in range(1, 6)]  # Avoid single cicking of previous option.
             for i in order:
                 self.click(1450 + 50*i, 620, 0)
-                score[i] += sum(test_image(f"tscard/{j}") for j in supportcard)
-                score[i] += 0.5 * test_image("URA/Director")
-                score[i] += 0.5 * test_image("URA/Reporter")
+                score[i] += sum(test_image(f"tscard/{j}", rg=ts_rg) for j in supportcard)
+                score[i] += 0.5 * test_image("URA/Director", rg=ts_rg)
+                score[i] += 0.5 * test_image("URA/Reporter", rg=ts_rg)
                 print(f"The score under {i + 1}th training option is {score[i]}")
             max_index = score.index(max(score))
             print(max_index)
@@ -373,7 +373,7 @@ if __name__ == "__main__":
     URA = UmaGame(test=0)
     # URA._team_trial()
     # URA.remove_expired_followers(30)
-    URA._start_game(1)
-    URA.train_horse_loop("Gold Ship", default_supportcard)
-
+    # URA._start_game(1)
+    # URA.train_horse_loop("Gold Ship", default_supportcard)
+    print(test_image("Test Label2", rg=(2690, 880, 200, 200)))
 
