@@ -34,3 +34,17 @@ Inheritanting event logic added. Training algorithm half completed (counting num
 
 TD: add friendship training detection and integrate it into score counting.
 Have not been tested.
+
+# V0.3.0
+Finally, this is a version where the program could run the game completely, from selecting character, parents, friend support card, and then play the game.
+The training logic is based on counting calculating scores for each training options as well as recover mood. URA finale logic is added, the energy detection is improved, and restrictions on area of scanning for certain parts have reduced the cost. This version runs the game slowly though, as it is to ensure the training loop will not skip some of its logic while the page loads or dialog piles over the page. Using this version I was able to consistently pass URA finale, obtain around 220,000 fans, and get a B+ rating Umamusume.
+
+The focuse for versions of 0.3 will be the follow four ideas:
+
+1. Implementing logic based on turns. (for instance prioritizing rest before summer training, attend certain G1 races to meet fans number requirements or just for attending.)
+
+2. Add default support cards and event calender for different Umamusume, as well as special events of characters and support cards.
+
+3. Reduce time needed for training by completing image scanning restrictions, reduce time.sleep as much as possible.
+
+4. Implement detection of TP and RP and act accordingly to conduct team trials and training automatically.

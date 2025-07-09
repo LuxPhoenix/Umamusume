@@ -3,6 +3,7 @@ from pyautogui import ImageNotFoundException
 import time
 from builtins import Exception
 
+
 # Get the screen size
 screen_width, screen_height = pyautogui.size()  # Size in mouse functions' format, different from locate.
 x0, y0 = 1426.5, 185.5  # Coordinate of topleft corner on my macbook.
@@ -135,7 +136,7 @@ class UmaGame:
         
 
 
-    def train_horse_loop(self, name: str, supportcard: tuple = None):
+    def train_horse_loop(self, name: str, supportcard: tuple = None, style: str = "front"):
         """Train the horse with following logic.
 
         conduct this loop, starting from turn 1:
@@ -174,6 +175,7 @@ class UmaGame:
         calculate the highest score (together with mood if recorded) and choose the one. If multiple highest score use rng. -> turn += 1
         """
         self.turn = 1
+        self.style = style
         self.pre_trainoption = 0  # The default starting "previous" training is speed.
         if supportcard is None:  # Load default support cards.
             supportcard = default_supportcard
@@ -190,6 +192,7 @@ class UmaGame:
                 self.train_horse(name, supportcard)
             except ContinueException:
                 self.turn += 1
+                time.sleep(4)
                 continue
 
     def train_horse(self, name: str, supportcard: tuple = None):
@@ -217,7 +220,7 @@ class UmaGame:
             for i in range(3):  # Adding the loop to met situations with consecutive multiple choose events.
                 a, b = identify_image("generaltraining/hi_g")
                 self.__check_special__()
-                click_true(a, b, 4.5)
+                click_true(a, b, 7.5)
         except ImageNotFoundException:
             pass
         except UmaException:
@@ -229,31 +232,28 @@ class UmaGame:
         You really should not call this function alone."""
         x = 0
         for i in self.special_events:
-            try:
-                identify_image(f"tscard/{i}")
+            if test_image(f"tscard/{i}"):
                 click_image("generaltraining/hi_y")
                 x = 1
                 time.sleep(2.5)
                 break
-            except ImageNotFoundException:
-                continue
         if x:
             raise UmaException("Special event detected.")
 
     def _check_mainrace(self):
-        try: 
-            click_image("generaltraining/RaceMain")
-        except ImageNotFoundException:
-
+        if test_image("generaltraining/RaceMain"):  #  or test_image("URA/RaceURA")
+            self.click()
+        else:
             return None
         print("Following main agenda to race this turn.")
         self.click(1610, 620, 1)
         self.click(1610, 520, 7.5)
-        if test_image("generaltraining/Front", confi=0.99):
-            pass
-        else:
+        if self.style == "front":
             self.nclick(1635, 455, 2, 1)  # change to front style. 
             self.click(1620, 520, 5)
+            self.style = "changed"
+        else:
+            pass
         if test_image("generaltraining/Result"):
             self.click(1500, 660, 5)
             self.nclick(1565, 660, 6, 4.5)
@@ -271,7 +271,8 @@ class UmaGame:
         else:
             pass
 
-    def _check_mood(self):  # Finish later
+    def _check_mood(self):
+        """Always spend turn to raise mood when below good, and return mood score 3 for good, 0 for great."""
         bad_mood = ("Awful", "Bad", "Normal")
         for i in bad_mood:
             if test_image(f"generaltraining/{i}"):
@@ -372,8 +373,7 @@ def click_image(name: str):
 if __name__ == "__main__":
     URA = UmaGame(test=0)
     # URA._team_trial()
-    # URA.remove_expired_followers(30)
-    # URA._start_game(1)
-    # URA.train_horse_loop("Gold Ship", default_supportcard)
-    print(test_image("Test Label2", rg=(2690, 880, 200, 200)))
+    # URA.remove_expired_followers(10)
+    URA._start_game(1)
+    URA.train_horse_loop("Air Groove", default_supportcard)
 

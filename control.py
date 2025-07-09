@@ -3,6 +3,7 @@ from pyautogui import ImageNotFoundException
 import time
 from builtins import Exception
 
+
 # Get the screen size
 screen_width, screen_height = pyautogui.size()  # Size in mouse functions' format, different from locate.
 x0, y0 = 1426.5, 185.5  # Coordinate of topleft corner on my macbook.
@@ -10,7 +11,8 @@ ww0, wh0 = 248.0, 500.5 # width and height of window on my macbook.
 all_special_events = {"Sweep Tosho spe": ["wonderful_mistake"], "Super Creek sta": [], "Special Week spe": [], "Mayano Top Gun sta": [], "Gold City spe": [], "Eishin Flash spe": []}
 default_supportcard = ("Sweep Tosho spe", "Super Creek sta", "Special Week spe", "Mayano Top Gun sta", "Gold City spe", "Eishin Flash spe")
 ts_rg = (3300, 400, 100, 560)
-
+rest_bar = (3050, 365, 70, 24)  # Region of locate function for resting judgement.
+racemain_bar = (3150, 1230, 74, 60)  # 1580, 620 is actual left top for race bar.
 class UmaException(Exception):
     pass
 
@@ -135,7 +137,7 @@ class UmaGame:
         
 
 
-    def train_horse_loop(self, name: str, supportcard: tuple = None):
+    def train_horse_loop(self, name: str, supportcard: tuple = None, style: str = "front"):
         """Train the horse with following logic.
 
         conduct this loop, starting from turn 1:
@@ -158,7 +160,7 @@ class UmaGame:
 
         4. check status of mood:
         -> if mood awful or bad or normal: entertainment directly -> turn += 1
-        -> if mood is good: record and pass, with score 4.5
+        -> if mood is good: record and pass, with score 3
         -> if mood is great: pass
 
         5. check turn number, if at important time, attend g1 race at that time. If not then just pass
@@ -169,11 +171,12 @@ class UmaGame:
 
         7. check if training label is present:
         -> if true: check five training options and calculate scores for each (a head has base score 1, if relationship bar empty + 1, if friendship training + 2.5)
-        (director and reporter both + 0.5, speed has base bonus + 1, stamina and power + 0.5, gut - 2, wit 0)
+        (director and reporter both + 0.5, speed has base bonus + 1.5, stamina + 0.6, power + 0.5, gut - 0.8, wit 0)
 
         calculate the highest score (together with mood if recorded) and choose the one. If multiple highest score use rng. -> turn += 1
         """
         self.turn = 1
+        self.style = style
         self.pre_trainoption = 0  # The default starting "previous" training is speed.
         if supportcard is None:  # Load default support cards.
             supportcard = default_supportcard
@@ -190,6 +193,7 @@ class UmaGame:
                 self.train_horse(name, supportcard)
             except ContinueException:
                 self.turn += 1
+                time.sleep(4)
                 continue
 
     def train_horse(self, name: str, supportcard: tuple = None):
@@ -217,7 +221,7 @@ class UmaGame:
             for i in range(3):  # Adding the loop to met situations with consecutive multiple choose events.
                 a, b = identify_image("generaltraining/hi_g")
                 self.__check_special__()
-                click_true(a, b, 4.5)
+                click_true(a, b, 7.5)
         except ImageNotFoundException:
             pass
         except UmaException:
@@ -229,31 +233,28 @@ class UmaGame:
         You really should not call this function alone."""
         x = 0
         for i in self.special_events:
-            try:
-                identify_image(f"tscard/{i}")
+            if test_image(f"tscard/{i}"):
                 click_image("generaltraining/hi_y")
                 x = 1
                 time.sleep(2.5)
                 break
-            except ImageNotFoundException:
-                continue
         if x:
             raise UmaException("Special event detected.")
 
     def _check_mainrace(self):
-        try: 
-            click_image("generaltraining/RaceMain")
-        except ImageNotFoundException:
-
+        if test_images("RaceMain", "RaceURA", confi=0.98, rg=racemain_bar, dir="generaltraining/"):  #  or test_image("URA/RaceURA")
+            self.click(1615, 625, 1)
+        else:
             return None
         print("Following main agenda to race this turn.")
         self.click(1610, 620, 1)
         self.click(1610, 520, 7.5)
-        if test_image("generaltraining/Front", confi=0.99):
-            pass
-        else:
+        if self.style == "front":
             self.nclick(1635, 455, 2, 1)  # change to front style. 
             self.click(1620, 520, 5)
+            self.style = "changed"
+        else:
+            pass
         if test_image("generaltraining/Result"):
             self.click(1500, 660, 5)
             self.nclick(1565, 660, 6, 4.5)
@@ -271,13 +272,21 @@ class UmaGame:
         else:
             pass
 
-    def _check_mood(self):  # Finish later
+    def __raise_mood__(self):
+        if test_image(f"generaltraining/Rest", confi=0.99):
+            self.click(1560, 640)
+        else:  # for summer training.
+            self.click(1450, 580)
+        print("Use this turn to raise mood.")
+        self.nclick(1630, 490, 2)
+        time.sleep(5)
+
+    def _check_mood(self):
+        """Always spend turn to raise mood when below good, and return mood score 3 for good, 0 for great."""
         bad_mood = ("Awful", "Bad", "Normal")
         for i in bad_mood:
             if test_image(f"generaltraining/{i}"):
-                self.click(1560, 640)
-                self.nclick(1630, 490, 2)
-                time.sleep(5)
+                self.__raise_mood__()
                 raise ContinueException
             else:
                 pass
@@ -290,7 +299,9 @@ class UmaGame:
         pass
 
     def _check_energy(self):
-        if test_image("generaltraining/EnergyBar", confi=0.99):
+        if not test_image(f"generaltraining/Training", confi=0.99):
+            pass
+        elif test_image("generaltraining/EnergyBar", confi=0.98, rg=rest_bar):
             pass
         else:
             print("Use this turn to rest.")
@@ -302,7 +313,7 @@ class UmaGame:
     def _check_training(self, supportcard, mood_score: float):
         try:
             click_image("generaltraining/Training")
-            score = [1.5, 0.6, 0.5, -1, 0, mood_score]
+            score = [1.5, 0.6, 0.5, -0.8, 0, mood_score]
             order = [(self.pre_trainoption + i)%5 for i in range(1, 6)]  # Avoid single cicking of previous option.
             for i in order:
                 self.click(1450 + 50*i, 620, 0)
@@ -314,10 +325,7 @@ class UmaGame:
             print(max_index)
             if max_index == 5:
                 self.click(1440, 684, 1)  # Click back
-                self.click(1560, 640)  # Recover mood for this turn.
-                self.nclick(1630, 490, 2)
-                print("Use this turn to recover mood.")
-                time.sleep(5)
+                self.__raise_mood__()
                 raise ContinueException
             else:
                 self.nclick(1450 + max_index * 50, 620, 2)
@@ -352,6 +360,20 @@ def test_image(name: str, confi = 0.9, rg = None):
     except ImageNotFoundException:
         return 0
 
+def test_images(*args: str, confi = 0.9, rg = None, logic = "or", dir="generaltraining/"):
+    """Return 1 if images present following and & or logic."""
+    ts = sum(test_image(dir + i, confi=confi, rg=rg) for i in args)
+    if ts:
+        if logic == "or":
+            return 1
+        elif logic == "and" and ts == len(args):
+            return 1
+        else:
+            return 0
+    else:
+        return 0
+
+
 
 
 def click_true(a: float, b: float, interval=0.5):
@@ -372,8 +394,6 @@ def click_image(name: str):
 if __name__ == "__main__":
     URA = UmaGame(test=0)
     # URA._team_trial()
-    # URA.remove_expired_followers(30)
+    # URA.remove_expired_followers(10)
     # URA._start_game(1)
-    # URA.train_horse_loop("Gold Ship", default_supportcard)
-    print(test_image("Test Label2", rg=(2690, 880, 200, 200)))
-
+    URA.train_horse_loop("Air Groove", default_supportcard)
