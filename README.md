@@ -1,6 +1,13 @@
 # Umamusume
 This is a project aiming at automatically running the game of Umamusume Pretty Derby. 
 
+I will now include instructions about how you could run this code on your macbook:
+
+1. Make sure you have python installed. You can install from homebrew, from official website of python, from anaconda, or any other ways you want.
+
+2. It is recommended for you to download visual studio code, which is a really convenient platform for coding. 
+
+
 # V0.1
 For this early draft I just created a function control.start_game, which takes a bool parameter and will start the game from home screen of umamusume pretty derby international edition. If it takes zero, a new game is started. If the parameter is one, then it continues a previous save.
 
@@ -48,3 +55,11 @@ The focuse for versions of 0.3 will be the follow four ideas:
 3. Reduce time needed for training by completing image scanning restrictions, reduce time.sleep as much as possible.
 
 4. Implement detection of TP and RP and act accordingly to conduct team trials and training automatically.
+
+# V0.3.1
+
+Implementation of race functions (will select required race to attend at turns included in racelist for the character), multiple bug fixes (connection error, stuck on next page, and closing insufficient fan number pop-up), refining turn logic.
+
+To do: refine race and main race function. For race function, replace the trouble shoot logic to scroll down the race list to find out required race. For main race, add algorithm to retry when failing to meet goal condition.
+
+Result: This version of code is able to produce rank A Oguri Cup with 350k+ fans.

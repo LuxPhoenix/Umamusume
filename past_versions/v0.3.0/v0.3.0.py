@@ -13,14 +13,6 @@ default_supportcard = ("Sweep Tosho spe", "Super Creek sta", "Special Week spe",
 ts_rg = (3300, 400, 100, 560)
 rest_bar = (3050, 365, 70, 24)  # Region of locate function for resting judgement.
 racemain_bar = (3150, 1230, 74, 60)  # 1580, 620 is actual left top for race bar.
-insufficient_fans_bar = (3050, 710, 160, 140)  # Remainder of insufficient fans pop-up.
-RaceTable = {21: ("Keto Hai Junior", "Daily Hai Junior"), 
-            23: ("Hanshin Juvenile", "Asahi Hai Futurity"),
-            24: ("Hopeful S")
-}
-Oguri_RaceTable = {23: "Hanshin Juvenile", 24: "Hopeful S", 45: "Shuka Sho", 55: "Osaka hai", 58: "Tenno Sho Spring", 59: "Victoria Mile", 61: "Yasuda Kinen", 72: "Japan C"}
-
-
 class UmaException(Exception):
     pass
 
@@ -145,7 +137,7 @@ class UmaGame:
         
 
 
-    def train_horse_loop(self, name: str, supportcard: tuple = None, style: str = "front", turn = 1):
+    def train_horse_loop(self, name: str, supportcard: tuple = None, style: str = "front"):
         """Train the horse with following logic.
 
         conduct this loop, starting from turn 1:
@@ -183,7 +175,7 @@ class UmaGame:
 
         calculate the highest score (together with mood if recorded) and choose the one. If multiple highest score use rng. -> turn += 1
         """
-        self.turn = turn
+        self.turn = 1
         self.style = style
         self.pre_trainoption = 0  # The default starting "previous" training is speed.
         if supportcard is None:  # Load default support cards.
@@ -196,9 +188,7 @@ class UmaGame:
                         s.append(j)
         self.special_events = s
 
-        self.click(1550, 240)  # Make sure screen is accessible.
-
-        while self.turn <= 80:
+        for i in range(75):
             try:
                 self.train_horse(name, supportcard)
             except ContinueException:
@@ -209,29 +199,21 @@ class UmaGame:
     def train_horse(self, name: str, supportcard: tuple = None):
         if supportcard is None:  # Load default support cards.
             supportcard = default_supportcard
+        self._trouble_shoot()  # Check if inheriting event or connection error happens.
         self._check_multiq()
         self._check_mainrace()
         self._infirmary()
-        self._check_race()  # Put this priority below infirmary since health is always the first, haha.
-        mood_score = 3 if self._check_mood() else 0
+        mood_score = 4.5 if self._check_mood() else 0
+        self._check_race(name)
         self._check_energy()
         self._check_training(supportcard, mood_score)
-        self._trouble_shoot()  # Check if inheriting event or connection error happens.
 
     def _trouble_shoot(self):
         if test_image("generaltraining/Inheriting"):
             self.click(1550, 580, 7)
-            print(f"Inheriting event at turn {self.turn}.")
             raise ContinueException
-        elif test_image("generaltraining/InsufficientFans"):
-            self.click(1490, 520, 2)
-        elif test_image("generaltraining/ConnectionError"):
-            self.click(1625, 485, 2)
         else:
-            try: 
-                click_image("generaltraining/Next")
-            except ImageNotFoundException:
-                pass
+            pass
 
     def _check_multiq(self):
         """Obtain support card special events (that do not choose green) and check for them then normal events."""
@@ -240,7 +222,6 @@ class UmaGame:
                 a, b = identify_image("generaltraining/hi_g")
                 self.__check_special__()
                 click_true(a, b, 7.5)
-                print("Choose green choice.")
         except ImageNotFoundException:
             pass
         except UmaException:
@@ -254,7 +235,6 @@ class UmaGame:
         for i in self.special_events:
             if test_image(f"tscard/{i}"):
                 click_image("generaltraining/hi_y")
-                print("Special choice selected.")
                 x = 1
                 time.sleep(2.5)
                 break
@@ -266,7 +246,7 @@ class UmaGame:
             self.click(1615, 625, 1)
         else:
             return None
-        print(f"Following main agenda to race on turn {self.turn}.")
+        print("Following main agenda to race this turn.")
         self.click(1610, 620, 1)
         self.click(1610, 520, 7.5)
         if self.style == "front":
@@ -283,8 +263,8 @@ class UmaGame:
         raise ContinueException
 
     def _infirmary(self):
-        if test_image("generaltraining/Infirmary", confi=0.9998):  # Go to the infirmary to treat
-            print(f"Use turn {self.turn} to heal.")
+        if test_image("generaltraining/Infirmary", confi=1):  # Go to the infirmary to treat
+            print("Use this turn to heal.")
             self.click(1470, 640)
             self.nclick(1620, 480, 2)
             time.sleep(4)
@@ -297,15 +277,13 @@ class UmaGame:
             self.click(1560, 640)
         else:  # for summer training.
             self.click(1450, 580)
-        print(f"Use turn {self.turn} to raise mood.")
+        print("Use this turn to raise mood.")
         self.nclick(1630, 490, 2)
         time.sleep(5)
 
     def _check_mood(self):
         """Always spend turn to raise mood when below good, and return mood score 3 for good, 0 for great."""
         bad_mood = ("Awful", "Bad", "Normal")
-        if self.turn == 1:
-            return 0  # Let it train for the first turn to use some energy.
         for i in bad_mood:
             if test_image(f"generaltraining/{i}"):
                 self.__raise_mood__()
@@ -313,29 +291,12 @@ class UmaGame:
             else:
                 pass
         if test_image(f"generaltraining/Good"):
-            return 1
+            return 3  # I will change it to 4.5 once I add detection for rainbow.
         else:
             return 0
     
-    def _check_race(self, rl: dict = Oguri_RaceTable):
-        """Attend race according to turns recorded in RaceTable for the character."""
-        if self.turn in rl.keys():
-            self.click(1615, 625, 1)
-            try:
-                click_image(f"URA/races/{rl[self.turn]}")
-            except ImageNotFoundException:
-                self._trouble_shoot()
-                self._check_multiq()
-            self.click(1620, 625, 1)
-            self.click(1620, 520, 7)
-            print(f"USe turn {self.turn} to attend {rl[self.turn]}.")
-            if test_image("generaltraining/Result"):
-                self.click(1500, 660, 5)
-                self.nclick(1565, 660, 4, 4.5)
-            else:
-                raise NotImplementedError
-            raise ContinueException
-
+    def _check_race(self, name):  # Finish later
+        pass
 
     def _check_energy(self):
         if not test_image(f"generaltraining/Training", confi=0.99):
@@ -343,7 +304,7 @@ class UmaGame:
         elif test_image("generaltraining/EnergyBar", confi=0.98, rg=rest_bar):
             pass
         else:
-            print(f"Use turn {self.turn} to rest.")
+            print("Use this turn to rest.")
             self.click(1450, 586)
             self.nclick(1620, 480, 2)
             time.sleep(4)
@@ -369,8 +330,8 @@ class UmaGame:
             else:
                 self.nclick(1450 + max_index * 50, 620, 2)
                 self.pre_trainoption = max_index
-                print(f"Use turn {self.turn} to train")
-                raise ContinueException
+                print("Use this turn to train")
+                time.sleep(4)
         except ImageNotFoundException:
             pass
 
@@ -431,9 +392,8 @@ def click_image(name: str):
 
 
 if __name__ == "__main__":
-    URA = UmaGame(test=0)
-   # URA._team_trial()
-   # URA.remove_expired_followers(10)
-   # URA._start_game(1)
-    URA.train_horse_loop("Oguri Cup", default_supportcard, turn=69)
-
+    URA = UmaGame(test=1)
+    # URA._team_trial()
+    # URA.remove_expired_followers(10)
+    URA._start_game(0)
+    URA.train_horse_loop("Air Groove", default_supportcard)
