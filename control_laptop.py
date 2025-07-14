@@ -5,6 +5,7 @@ from builtins import Exception
 import pygetwindow as gw
 import json
 from utils.logger import Logger
+import math
 
 logger = Logger.get_logger()
 
@@ -281,7 +282,7 @@ class UmaGame:
             for i in range(3):  # Adding the loop to met situations with consecutive multiple choose events.
                 a, b = identify_image("generaltraining/hi_g")
                 self.__check_special__()
-                click_true(a, b, 7.5)
+                click_true(a, b, self.c["wait_time"]["_check_multiq"])  
             logger.info(f"Turn {self.turn}: Special event detected.")
         except ImageNotFoundException:  # No special event.
             logger.debug(f"Turn {self.turn}: No choice event.")
@@ -294,13 +295,14 @@ class UmaGame:
         """Handle clicking for special events.
         
         You really should not call this function alone."""
+        #FIXME: make this function that can choose special events's choice.
         x = 0
         for i in self.special_events:
             if test_image(f"tscard/{i}"):
                 click_image("generaltraining/hi_y")
                 print("Special choice selected.")
                 x = 1
-                time.sleep(2.5)
+                time.sleep(self.c["wait_time"]["_check_special_"])
                 break
         if x:
             raise UmaException("Special event detected.")
@@ -313,9 +315,9 @@ class UmaGame:
             return
         
         logger.info(f"Turn {self.turn}: Following main agenda to race")
-        self.click(self.c["root"]["daily_training"]["race_day"], 1)
-        self.click(self.c["lobby_ui"]["race_enter"], 1.5)
-        self.click(self.c["lobby_ui"]["race_confirm_button"], 10)
+        self.click(self.c["root"]["daily_training"]["race_day"], self.c["wait_time"]["_check_mainrace"]["register"])
+        self.click(self.c["lobby_ui"]["race_enter"], self.c["wait_time"]["_check_mainrace"]["register"])
+        self.click(self.c["lobby_ui"]["race_confirm_button"], self.c["wait_time"]["_check_mainrace"]["event_wait"])
 
         #FIXME: make function control the style of the horse here.
         # if self.style == "front":
@@ -326,9 +328,9 @@ class UmaGame:
         #     pass
 
         if test_image("generaltraining/Result"):
-            self.nclick(self.c["lobby_ui"]["view_result_button"], 3, 4.5)
-            self.nclick(self.c["lobby_ui"]["race_button"], 6, 4.5)
-            self.nclick(self.c["lobby_ui"]["next_button"], 2, 4.5)
+            self.nclick(self.c["lobby_ui"]["view_result_button"], 3, self.c["wait_time"]["result_button"])
+            self.nclick(self.c["lobby_ui"]["race_button"], 6, self.c["wait_time"]["race_button"])
+            self.nclick(self.c["lobby_ui"]["next_button"], 2, self.c["wait_time"]["next_button"])
         else:
             raise NotImplementedError
         raise ContinueException
@@ -336,8 +338,7 @@ class UmaGame:
     def _infirmary(self):
         if test_image("generaltraining/Infirmary", confi=0.95):  # Go to the infirmary to treat
             print(f"Use turn {self.turn} to heal.")
-            self.click(self.c["root"]["daily_training"]["infirmary"])
-            self.nclick(1620, 480, 2)
+            self.click(self.c["wait_time"]["infirmary"], self.c["wait_time"]["_check_mainrace"]["register"])
             time.sleep(4)
             logger.info(f"Turn {self.turn}: Call an ambulance.")
             raise ContinueException
@@ -347,11 +348,11 @@ class UmaGame:
 
     def __raise_mood__(self):
         if test_image(f"generaltraining/Recreation", confi=0.90):
-            self.click(self.c["root"]["daily_training"]["recreation"])
+            self.click(self.c["root"]["daily_training"]["recreation"], 0.5)
             logger.info(f"Turn {self.turn}: Raise mood by recreation.")
         else:  # for summer training.
             self.click(1450, 580)
-        time.sleep(5)
+        time.sleep(self.c["wait_time"]["_raise_mood_"])
 
     def _check_mood(self):
         """Always spend turn to raise mood when below good, and return mood score 3 for good, 0 for great."""
@@ -360,7 +361,7 @@ class UmaGame:
             logger.info(f"Turn {self.turn}: First turn, no mood check.")
             return 0  # Let it train for the first turn to use some energy.
         for i in bad_mood:
-            if test_image(f"generaltraining/{i}"):
+            if test_image(f"generaltraining/{i}", confi=0.85):
                 self.__raise_mood__()
                 raise ContinueException
             else:
@@ -406,15 +407,20 @@ class UmaGame:
             logger.info(f"Turn {self.turn}: Energy bar low, rest.")
             self.click(self.c['root']['daily_training']['rest'])
             # self.nclick(1620, 480, 2)
-            time.sleep(4)
+            time.sleep(self.c["wait_time"]["_check_energy_"])
             raise ContinueException
+        
+    def __friendship_bonus_score__(self, supportcard: tuple):
+        amplifier = 1 - 1/(1+ math.exp(-0.18 * (self.turn - 35)))
+        return amplifier * sum(test_image(f"tscard/{i}") for i in supportcard)
     
     def _check_training(self, supportcard, mood_score: float):
         logger.debug(f"Turn {self.turn}: Check training options.")
         # print(1/0)
         try:
             self.click(self.c["root"]["daily_training"]["training"], 2)
-            score = [1.5, 0.6, 0.5, -0.8, 0, mood_score]
+            score = [1.5, 0.6, 0.2, -0.45, 0, mood_score]
+
             order = [(self.pre_trainoption + i)%5 for i in range(1, 6)]  # Avoid single cicking of previous option.
             for i in order:
                 self.click([self.c["training_option"]["speed"][0] + 80*i, self.c["training_option"]["speed"][1]], 0)
@@ -429,7 +435,7 @@ class UmaGame:
                 self.__raise_mood__()
                 raise ContinueException
             else:
-                self.nclick([self.c["training_option"]["speed"][0] + max_index*80, self.c["training_option"]["speed"][1]], 4, 1)
+                self.nclick([self.c["training_option"]["speed"][0] + max_index*80, self.c["training_option"]["speed"][1]], 4, self.c["wait_time"]["_check_training_"])
                 self.pre_trainoption = max_index
                 # print(f"Use turn {self.turn} to train {training_ls[max_index]}")  
                 logger.info(f"Turn {self.turn}: Training {training_ls[max_index]} with score {score[max_index]}.")

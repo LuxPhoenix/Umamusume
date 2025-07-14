@@ -60,5 +60,19 @@
     },
     "trouble_shoot": {
         "inheriting": [420, 682]
+    },
+    "wait_time": {
+        "_check_special_": 2.5,
+        "_check_multiq": 8,
+        "_check_mainrace": {
+            "register": 1.5,
+            "event_wait": 10,
+            "result_button": 5,
+            "race_button": 5,
+            "next_button": 5
+        },
+        "_raise_mood_": 5,
+        "_check_energy_": 5,
+        "_check_training_": 1
     }
 }
