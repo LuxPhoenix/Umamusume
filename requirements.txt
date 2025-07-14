@@ -1,0 +1,4 @@
+pyautogui
+pywinauto
+pynput
+pygetwindow

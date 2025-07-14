@@ -1,0 +1,64 @@
+{
+    "menu":{
+        "home": [418, 799],
+        "career": [539, 712]
+    },
+    "career_menu": {
+        "next": [518, 706],
+        "legacy1": [264, 527],
+        "legacy2": [474, 527],
+        "slot0":[],
+        "slot1": [331, 516],
+        "slot2": [413, 516],
+        "slot3": [495, 516],
+        "slot4": [577, 516],
+        "card_slot": [537,455],
+        "confirm_button": [515, 769]
+    },
+    "root":{
+        "skip_button": [681, 790],
+        "skip_button2": [419, 812],
+        "confirm_button": [412, 605],
+        "daily_training": {
+            "rest": [266, 655],
+            "training": [421, 650],
+            "skills": [566, 652],
+            "infirmary": [298, 741],
+            "recreation": [416, 740],
+            "races":[538, 739],
+            "race_day": [517, 706]
+        },
+        "back_button": [173, 800],
+        "enter_race_button": [523, 611]
+    },
+    "training_option":{
+        "speed": [258, 711],
+        "stamina": [338, 711],
+        "power": [418, 711],
+        "guts": [498, 711],
+        "wisdom": [578, 711]
+    },
+    "run_style":{
+        "front": [1635, 455],
+        "middle": [1635, 505],
+        "back": [1635, 555]
+    },
+    "lobby_ui":{
+        "race_enter": [516, 713],
+        "race_confirm_button": [517, 610],
+        "strategy_button": [627, 499],
+        "strategy_type":{
+            "front": [561, 517],
+            "pace": [468, 517],
+            "late": [371, 517],
+            "end": [281, 517]
+        },
+        "confirm_button": [521, 604],
+        "view_result_button": [351, 759],
+        "race_button": [487, 762],
+        "next_button": [421, 723]
+    },
+    "trouble_shoot": {
+        "inheriting": [420, 682]
+    }
+}
