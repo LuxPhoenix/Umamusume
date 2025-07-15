@@ -14,7 +14,7 @@ rest_bar = (3050, 365, 70, 24)  # Region of locate function for resting judgemen
 racemain_bar = (3150, 1230, 74, 60)  # 1580, 620 is actual left top for race bar.
 insufficient_fans_bar = (3050, 710, 360, 400)  # Remainder of insufficient fans pop-up.
 teamrace_bar = (3000, 960, 300, 180)  # Indicator of teamrace label.
-race_bar = {3220, 1290, 80, 80}
+race_bar = (3220, 1290, 300, 300)
 
 class UmaException(Exception):
     pass
@@ -92,7 +92,7 @@ class UmaGame:
                 pyautogui.locateOnScreen(f"figures/{name}.png", confidence=confi, region=rg1)
             return 1
         except ImageNotFoundException:
-            return 0    
+            return 0 
 
     def test_images(self, *args: str, confi = 0.9, rg = None, logic = "or", dir="generaltraining/"):
         """Return 1 if images present following and & or logic."""
@@ -349,13 +349,15 @@ class UmaGame:
         if rl is None:
             rl = self.c.race_table
         if self.turn in rl.keys():
+            self._check_multiq()
+            time.sleep(2)
             while self.test_image("generaltraining/Races", rg=race_bar):
                 self.click(1615, 625, 4)
             try:
                 click_image(f"URA/races/{rl[self.turn]}")
+                print("Clicking successful")
             except ImageNotFoundException:
                 self._trouble_shoot(1)
-                self._check_multiq()
             self.click(1620, 625, 4)
             self.click(1620, 520, 8)
             print(f"Use turn {self.turn} to attend {rl[self.turn]}.")
@@ -382,6 +384,7 @@ class UmaGame:
     def _check_training(self, mood_score: float):
         try:
             click_image("generaltraining/Training")
+            self.ts_list = self.c.supportcard
             score = self.c.training_priority + [mood_score]
             order = [(self.pre_trainoption + i)%5 for i in range(1, 6)]  # Avoid single cicking of previous option.
             for i in order:
@@ -403,6 +406,20 @@ class UmaGame:
                 raise ContinueException
         except ImageNotFoundException:
             pass
+
+    def __test_training__(self, train_type: int, confi = 0.9, rg = ts_rg):
+        """Check number of heads under a training type.
+        
+        It also finds out the cards with organge & max relationship, and rainbow circles.
+        Train_type is the type of training asserted on the screen. 0 is speed and 4 is wit."""
+        for sup in self.ts_list:
+            try:
+                c1 = pyautogui.locateCenterOnScreen(f"figures/tscard/{sup}.png", confidence=confi, region=rg)
+                print(c1)
+                c2 = (int(c1[0]-60), int(c1[1]+10), 120, 60)
+                print(c2)
+            except ImageNotFoundException:
+                pass
 
     def __friendship_bonus_score__(self, simple: bool = 0):
         if simple:
@@ -443,4 +460,4 @@ if __name__ == "__main__":
     # URA._team_trial()
     # URA.remove_expired_followers(15)
     # URA._start_game(Daiwa_Scarlet, 0)
-    URA.train_horse_loop(Maruzensky, turn=35)
+    URA.train_horse_loop(Daiwa_Scarlet, turn=72)

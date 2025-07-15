@@ -19,5 +19,12 @@
         "default_racetable": {"24": "Hopeful S", "34": "NHK Mile", "45": "Shuka Sho", "47": "Mile C", "55": "Osaka hai", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Mile C"},
         "training_priority": [1.7, 0.6, 0.5, -1, 1],
         "special_events": []
+    },
+    "Tokai Teio": {
+        "default_supportcard": ["Sweep Tosho spe", "Super Creek sta", "Special Week spe", "Mayano Top Gun sta", "Gold City spe", "Eishin Flash spe"],
+        "friend_supportcard": "Sweep Tosho spe",
+        "default_racetable": {"24": "Hopeful S", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
+        "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
+        "special_events": ["wonderful mistake"]
     }
 }
