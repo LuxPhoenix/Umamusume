@@ -6,8 +6,8 @@ from builtins import Exception
 
 # Get the screen size
 screen_width, screen_height = pyautogui.size()  # Size in mouse functions' format, different from locate.
-x0, y0 = 1426.5, 185.5  # Coordinate of topleft corner on my macbook.
-ww0, wh0 = 248.0, 500.5 # width and height of window on my macbook.
+x0, y0 = 1431.0, 133.5  # Coordinate of topleft corner on my macbook.
+ww0, wh0 = 242.0, 553.5 # width and height of window on my macbook.
 all_special_events = {"Sweep Tosho spe": ["wonderful_mistake"], "Super Creek sta": [], "Special Week spe": [], "Mayano Top Gun sta": [], "Gold City spe": [], "Eishin Flash spe": []}
 default_supportcard = ("Sweep Tosho spe", "Super Creek sta", "Special Week spe", "Mayano Top Gun sta", "Gold City spe", "Eishin Flash spe")
 ts_rg = (3300, 400, 100, 560)
@@ -18,7 +18,7 @@ RaceTable = {21: ("Keto Hai Junior", "Daily Hai Junior"),
             23: ("Hanshin Juvenile", "Asahi Hai Futurity"),
             24: ("Hopeful S")
 }
-Oguri_RaceTable = {23: "Hanshin Juvenile", 24: "Hopeful S", 45: "Shuka Sho", 55: "Osaka hai", 58: "Tenno Sho Spring", 59: "Victoria Mile", 61: "Yasuda Kinen", 72: "Japan C"}
+Oguri_RaceTable = {23: "Hanshin Juvenile", 24: "Hopeful S", 32: "Oka Sho", 35: "Japan Derby", 45: "Shuka Sho", 55: "Osaka hai", 58: "Tenno Sho Spring", 59: "Victoria Mile", 61: "Yasuda Kinen", 72: "Japan C"}
 
 
 class UmaException(Exception):
@@ -39,12 +39,12 @@ class UmaGame:
         in the new device (self.xy[0], self.xy[1]),
         while self.xy[2], self.xy[3] are the amplification in width & height."""
         if config is None or len(config) != 4:
-            config = {"x0": 1426.5, "y0": 185.5, "ww0": 248.0, "wh0": 500.5}
+            config = {"x0": x0, "y0": y0, "ww0": ww0, "wh0": wh0}
         self.c = config
         self.screen_width, self.screen_height = pyautogui.size()  # Currently unused.
         if test:  # If test is true, conduct screen adjustment.
-            a, b = identify_image("tlcorner")
-            c, d = identify_image("brcorner")
+            c, b = identify_image("trcorner")
+            a, d = identify_image("blcorner")
             self.xy = (a, b, (c - a)/config["ww0"], (d - b)/config["wh0"])
             self.test = 1 
         else:
@@ -65,7 +65,9 @@ class UmaGame:
         The position is set to be the coordinate on my macbook,
         with the game window on top right corner from iphone 15 mirroring.
         For other devices and window, it will adjust the clicking position accordingly.
-        The a, b therefore is only relative, and are not the actual pixel."""
+        The a, b therefore is only relative, and are not the actual pixel.
+        
+        t is duration of pressing the mouse."""
         a1, b1 = self._coordinate_for_click(a, b)
         pyautogui.click(a1, b1)
         time.sleep(interval)
@@ -218,15 +220,24 @@ class UmaGame:
         self._check_training(supportcard, mood_score)
         self._trouble_shoot()  # Check if inheriting event or connection error happens.
 
-    def _trouble_shoot(self):
-        if test_image("generaltraining/Inheriting"):
-            self.click(1550, 580, 7)
-            print(f"Inheriting event at turn {self.turn}.")
-            raise ContinueException
-        elif test_image("generaltraining/InsufficientFans"):
+    def _trouble_shoot(self, racemode=0):
+        if test_image("generaltraining/InsufficientFans"):
             self.click(1490, 520, 2)
         elif test_image("generaltraining/ConnectionError"):
             self.click(1625, 485, 2)
+        elif test_image("generaltraining/RaceRecommendation"):
+            self.click(1560, 635, 2)
+        # Skip following check during race trouble shooting.
+        if racemode:
+            pass
+        elif test_image("generaltraining/DollGame"):
+            for i in range(3):
+                self.click(1550, 640, 3.5)
+            self.click(1550, 620, 2)
+        elif test_image("generaltraining/Inheriting"):
+            self.click(1550, 580, 7)
+            print(f"Inheriting event at turn {self.turn}.")
+            raise ContinueException
         else:
             try: 
                 click_image("generaltraining/Next")
@@ -317,17 +328,17 @@ class UmaGame:
         else:
             return 0
     
-    def _check_race(self, rl: dict = Oguri_RaceTable):
+    def _check_race(self, rl: dict = {}):
         """Attend race according to turns recorded in RaceTable for the character."""
         if self.turn in rl.keys():
-            self.click(1615, 625, 1)
+            self.click(1615, 625, 2)
             try:
                 click_image(f"URA/races/{rl[self.turn]}")
             except ImageNotFoundException:
-                self._trouble_shoot()
+                self._trouble_shoot(1)
                 self._check_multiq()
-            self.click(1620, 625, 1)
-            self.click(1620, 520, 7)
+            self.click(1620, 625, 2)
+            self.click(1620, 520, 8)
             print(f"USe turn {self.turn} to attend {rl[self.turn]}.")
             if test_image("generaltraining/Result"):
                 self.click(1500, 660, 5)
@@ -357,11 +368,11 @@ class UmaGame:
             for i in order:
                 self.click(1450 + 50*i, 620, 0)
                 score[i] += sum(test_image(f"tscard/{j}", rg=ts_rg) for j in supportcard)
-                score[i] += 0.5 * test_image("URA/Director", rg=ts_rg)
-                score[i] += 0.5 * test_image("URA/Reporter", rg=ts_rg)
+                score[i] += 0.3 * test_image("URA/Director", rg=ts_rg)
+                score[i] += 0.3 * test_image("URA/Reporter", rg=ts_rg)
                 print(f"The score under {i + 1}th training option is {score[i]}")
             max_index = score.index(max(score))
-            print(max_index)
+            training_ls = ["Speed", "Stamina", "Power", "Guts", "Wits"]
             if max_index == 5:
                 self.click(1440, 684, 1)  # Click back
                 self.__raise_mood__()
@@ -369,7 +380,7 @@ class UmaGame:
             else:
                 self.nclick(1450 + max_index * 50, 620, 2)
                 self.pre_trainoption = max_index
-                print(f"Use turn {self.turn} to train")
+                print(f"Use turn {self.turn} to train {training_ls[max_index]}")
                 raise ContinueException
         except ImageNotFoundException:
             pass
@@ -431,9 +442,8 @@ def click_image(name: str):
 
 
 if __name__ == "__main__":
-    URA = UmaGame(test=0)
-   # URA._team_trial()
-   # URA.remove_expired_followers(10)
-   # URA._start_game(1)
-    URA.train_horse_loop("Oguri Cup", default_supportcard, turn=69)
-
+    URA = UmaGame(test=1)
+    # URA._team_trial()
+    # URA.remove_expired_followers(15)
+    URA._start_game(1)
+    URA.train_horse_loop("Oguri Cup", default_supportcard, turn=1)
