@@ -237,7 +237,7 @@ class UmaGame:
                 self.train_horse(name, supportcard)
             except ContinueException:
                 self.turn += 1
-                time.sleep(4)
+                time.sleep(6)
                 continue
 
     def train_horse(self, name: str, supportcard: tuple = None):
@@ -328,9 +328,9 @@ class UmaGame:
         #     pass
 
         if test_image("generaltraining/Result"):
-            self.nclick(self.c["lobby_ui"]["view_result_button"], 3, self.c["wait_time"]["result_button"])
-            self.nclick(self.c["lobby_ui"]["race_button"], 6, self.c["wait_time"]["race_button"])
-            self.nclick(self.c["lobby_ui"]["next_button"], 2, self.c["wait_time"]["next_button"])
+            self.nclick(self.c["lobby_ui"]["view_result_button"], 3, self.c["wait_time"]["_check_mainrace"]["result_button"])
+            self.nclick(self.c["lobby_ui"]["race_button"], 3, self.c["wait_time"]["_check_mainrace"]["race_button"])
+            self.nclick(self.c["lobby_ui"]["next_button"], 2, self.c["wait_time"]["_check_mainrace"]["next_button"])
         else:
             raise NotImplementedError
         raise ContinueException
@@ -399,7 +399,7 @@ class UmaGame:
         #     print("No training label, no energy check.")
         #     pass
         # elif test_image("generaltraining/EnergyBar", confi=0.98, rg=rest_bar):
-        if test_image("generaltraining/EnergyBar", confi=0.95):
+        if test_image("generaltraining/EnergyBar", confi=0.96):
             logger.info(f"Turn {self.turn}: Energy bar safe.")
             # self.click(self.c['root']['daily_training']['rest'])
             pass
