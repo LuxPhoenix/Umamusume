@@ -1,0 +1,48 @@
+2025-07-14 21:20:56,330 - main -  DEBUG - Turn 4: No choice event.
+2025-07-14 21:20:57,453 - main -   INFO - Turn 4: Race day detected.
+2025-07-14 21:20:57,455 - main -   INFO - Turn 4: Following main agenda to race
+2025-07-14 21:22:05,747 - main -  DEBUG - Turn 5: No choice event.
+2025-07-14 21:22:06,562 - main -  DEBUG - Turn 5: No main race today.
+2025-07-14 21:22:07,001 - main -  DEBUG - Turn 5: Status good today.
+2025-07-14 21:22:09,175 - main -   INFO - Turn 5: Mood is GREAT, no need to raise mood.
+2025-07-14 21:22:09,671 - main -   INFO - Turn 5: Energy bar low, rest.
+2025-07-14 21:22:18,612 - main -  DEBUG - Turn 6: No choice event.
+2025-07-14 21:22:19,413 - main -  DEBUG - Turn 6: No main race today.
+2025-07-14 21:22:19,856 - main -  DEBUG - Turn 6: Status good today.
+2025-07-14 21:22:22,198 - main -   INFO - Turn 6: Mood is GREAT, no need to raise mood.
+2025-07-14 21:22:22,608 - main -   INFO - Turn 6: Energy bar safe.
+2025-07-14 21:22:22,609 - main -  DEBUG - Turn 6: Check training options.
+2025-07-14 21:22:55,969 - main -   INFO - Turn 6: Training Wits with score 3.0.
+2025-07-14 21:23:00,352 - main -  DEBUG - Turn 7: No choice event.
+2025-07-14 21:23:01,195 - main -  DEBUG - Turn 7: No main race today.
+2025-07-14 21:23:01,643 - main -  DEBUG - Turn 7: Status good today.
+2025-07-14 21:23:03,340 - main -   INFO - Turn 7: Mood is GREAT, no need to raise mood.
+2025-07-14 21:23:03,816 - main -   INFO - Turn 7: Energy bar safe.
+2025-07-14 21:23:03,817 - main -  DEBUG - Turn 7: Check training options.
+2025-07-14 21:23:36,463 - main -   INFO - Turn 7: Training Speed with score 3.5.
+2025-07-14 21:23:40,775 - main -  DEBUG - Turn 8: No choice event.
+2025-07-14 21:23:41,538 - main -  DEBUG - Turn 8: No main race today.
+2025-07-14 21:23:41,961 - main -  DEBUG - Turn 8: Status good today.
+2025-07-14 21:23:43,526 - main -   INFO - Turn 8: Mood is GREAT, no need to raise mood.
+2025-07-14 21:23:43,926 - main -   INFO - Turn 8: Energy bar safe.
+2025-07-14 21:23:43,928 - main -  DEBUG - Turn 8: Check training options.
+2025-07-14 21:24:16,476 - main -   INFO - Turn 8: Training Guts with score 2.2.
+2025-07-14 21:24:20,776 - main -  DEBUG - Turn 9: No choice event.
+2025-07-14 21:24:21,565 - main -  DEBUG - Turn 9: No main race today.
+2025-07-14 21:24:22,006 - main -  DEBUG - Turn 9: Status good today.
+2025-07-14 21:24:23,714 - main -   INFO - Turn 9: Mood is GREAT, no need to raise mood.
+2025-07-14 21:24:24,178 - main -   INFO - Turn 9: Energy bar low, rest.
+2025-07-14 21:24:33,149 - main -  DEBUG - Turn 10: No choice event.
+2025-07-14 21:24:33,979 - main -  DEBUG - Turn 10: No main race today.
+2025-07-14 21:24:34,464 - main -  DEBUG - Turn 10: Status good today.
+2025-07-14 21:24:36,535 - main -   INFO - Turn 10: Mood is GREAT, no need to raise mood.
+2025-07-14 21:24:37,008 - main -   INFO - Turn 10: Energy bar safe.
+2025-07-14 21:24:37,011 - main -  DEBUG - Turn 10: Check training options.
+2025-07-14 21:25:11,363 - main -   INFO - Turn 10: Training Speed with score 3.5.
+2025-07-14 21:25:15,769 - main -  DEBUG - Turn 11: No choice event.
+2025-07-14 21:25:16,856 - main -  DEBUG - Turn 11: No main race today.
+2025-07-14 21:25:17,646 - main -  DEBUG - Turn 11: Status good today.
+2025-07-14 21:25:19,421 - main -   INFO - Turn 11: Mood is GREAT, no need to raise mood.
+2025-07-14 21:25:19,923 - main -   INFO - Turn 11: Energy bar safe.
+2025-07-14 21:25:19,925 - main -  DEBUG - Turn 11: Check training options.
+2025-07-14 21:25:52,408 - main -   INFO - Turn 11: Training Speed with score 1.5.
