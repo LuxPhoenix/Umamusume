@@ -6,24 +6,13 @@ import pygetwindow as gw
 import json
 from utils.logger import Logger
 import math
+import win32gui
+import win32con
 
 logger = Logger.get_logger()
 
 # Get the screen size
 screen_width, screen_height = pyautogui.size()  # Size in mouse functions' format, different from locate.
-# x0, y0 = 1431.0, 133.5  # Coordinate of topleft corner on my macbook.
-# ww0, wh0 = 242.0, 553.5 # width and height of window on my macbook.
-all_special_events = {"Sweep Tosho spe": ["wonderful_mistake"], "Super Creek sta": [], "Special Week spe": [], "Mayano Top Gun sta": [], "Gold City spe": [], "Eishin Flash spe": [], "King Halo spe": [], "Bakushin spe": [], "Fine Motion wit": []}
-default_supportcard = ("Sweep Tosho spe", "Super Creek sta", "Special Week spe", "Mayano Top Gun sta", "Gold City spe", "Eishin Flash spe", "Bakushin spe", "Fine Motion wit", "King Halo spe")
-ts_rg = (3300, 400, 100, 560)
-rest_bar = (3050, 365, 70, 24)  # Region of locate function for resting judgement.
-racemain_bar = (3150, 1230, 74, 60)  # 1580, 620 is actual left top for race bar.
-insufficient_fans_bar = (3050, 710, 160, 140)  # Remainder of insufficient fans pop-up.
-RaceTable = {21: ("Keto Hai Junior", "Daily Hai Junior"), 
-            23: ("Hanshin Juvenile", "Asahi Hai Futurity"),
-            24: ("Hopeful S")
-}
-Oguri_RaceTable = {23: "Hanshin Juvenile", 24: "Hopeful S", 32: "Oka Sho", 35: "Japan Derby", 45: "Shuka Sho", 55: "Osaka hai", 58: "Tenno Sho Spring", 59: "Victoria Mile", 61: "Yasuda Kinen", 72: "Japan C"}
 
 class UmaException(Exception):
     pass
@@ -33,7 +22,7 @@ class ContinueException(Exception):
     print("Continue to next turn.")
     pass
 
-class UmaGame:
+class UmaReroll:
     """Everything integrated."""
 
     def __init__(self, config:dict = None, test: bool = 1):
@@ -42,19 +31,8 @@ class UmaGame:
         self.xy records the coordinate of the topleft corner of the game window
         in the new device (self.xy[0], self.xy[1]),
         while self.xy[2], self.xy[3] are the amplification in width & height."""
-        # if config is None or len(config) != 4:
-        #     config = {"x0": 1426.5, "y0": 185.5, "ww0": 248.0, "wh0": 500.5}
-        # self.c = config
-        self.screen_width, self.screen_height = pyautogui.size()  # Currently unused.
         self.style = None
         self.pre_trainoption = None
-        # if test:  # If test is true, conduct screen adjustment.
-        #     a, b = identify_image("tlcorner")
-        #     c, d = identify_image("brcorner")
-        #     self.xy = (a, b, (c - a)/config["ww0"], (d - b)/config["wh0"])
-        #     self.test = 1 
-        # else:
-        #     self.test = 0
 
         self.x, self.y, self.w, self.h, self.c = self._settings_config()  # Get the window position and size.
         self.pos_dict = self.get_pos_dict()  # Get the position dictionary.
@@ -67,20 +45,20 @@ class UmaGame:
         original_width, original_height = window.width, window.height
         aspect_ratio = original_width / original_height
 
-        new_width = 1440
+        new_width = 1280
         new_height = int(new_width / aspect_ratio)
 
         # Áp dụng kích thước mới
         window.resizeTo(new_width, new_height)
 
-        
-        with open('dictionary.json', 'r', encoding='utf-8') as file:
+
+        with open('reroll_config.json', 'r', encoding='utf-8') as file:
             cfg = json.load(file)
         return (window.left, window.top, new_width, new_height, cfg)
-    
+
     def get_pos_dict(self):
         """Get the position dictionary from the config file."""
-        with open("dictionary.json", "r", encoding="utf-8") as f:
+        with open("reroll_config.json", "r", encoding="utf-8") as f:
             pos_dict = json.load(f)
         return pos_dict
 
@@ -97,7 +75,7 @@ class UmaGame:
         """Click at the specified position in the game window."""
         return self.x + x, self.y + y
     
-    def click(self, coord: tuple, interval=0.5):
+    def click(self, coord: tuple, interval=2):
         a1, b1 = self._click_game_ui(coord[0], coord[1])
         pyautogui.click(a1, b1)
         time.sleep(interval)
@@ -112,71 +90,7 @@ class UmaGame:
                 pyautogui.click(a1, b1)
                 time.sleep(interval)
 
-    def _start_game(self, mode: bool):
-        """Starting game from home screen."""
-        self.nclick(self.pos_dict["menu"]["home"], 2)   # Double next
-        self.click(1650,630, 7)
-        if mode:  # To continue a game.
-            self.click(self.pos_dict["career_menu"]["next"], 5)
-        else:  # To start a new game.
-            self.click(1550, 610)  # To character page
-            self.click(1500, 420)  # Select Air groove
-            self.click(1550, 610)  # Confirm
-            self.click(1450, 450) 
-            self.click(1500, 440)  # Select first parent
-            self.click(1550, 610)  # Confirm
-            self.click(1600, 450)
-            self.click(1600, 440)  # Select second parent
-            self.nclick(1550, 610, 2)  # Confirm
-            self.click(1650, 420)  # Click on friend support card
-            for i in range(25):
-                try:
-                    click_image("Sweep Tosho")
-                    break
-                except ImageNotFoundException:
-                    self.click(1675, 550, 2)    
-            self.click(1550, 610)  # Enter the game
-            self.click(1640, 630, 5)
-            self.click(1680, 670)  # Skip intro
-            self.click(1640, 480, 2.5)
-            self.click(1550, 520, 2.5)
-            self.nclick(1510, 690, 2, 1.5)
-            time.sleep(3.5)
-
-    def _team_trial(self):
-        """Conduct team trial from home screen, untill no stamina."""
-        self.nclick(1500, 400, 3)
-        self.click(1620, 680, 3)  # Click race
-        self.click(1450, 500, 6)
-        self.click(1500, 500, 5)
-        for i in range(5):
-            self.click(1550, 400, 7)
-            self.click(1550, 620, 2)
-            self.click(1610, 510, 5)
-            self.nclick(1580, 650, 12, 4.5)
-            if i == 4:
-                self.nclick(1550, 680, 3)
-                self.click(1580, 650)
-                self.click(1550, 680, 3)
-                break
-            self.nclick(1500, 650, 5, 5)
-    
-    def remove_expired_followers(self, n: int = 10):
-        """Remove followers that does not log in."""
-        self.nclick(1500, 400, 2)
-        self.click(1670, 130)
-        self.click(1470, 300, 10)
-        self.click(1550, 170)
-        for i in range(n):
-            self.click(1500, 200, 4)
-            self.click(1470, 338, 3)
-            self.click(1560, 480)
-            self.click(1550, 630)
-            self.nclick(1670, 583, 2)
-        self.click(1550, 683, 3)
-        
-
-    def train_horse_loop(self, name: str, supportcard: tuple = None, style: str = "front", turn = 1):
+    def reroll_loop(self):
         """Train the horse with following logic.
 
         conduct this loop, starting from turn 1:
@@ -214,28 +128,46 @@ class UmaGame:
 
         calculate the highest score (together with mood if recorded) and choose the one. If multiple highest score use rng. -> turn += 1
         """
-        self.turn = turn
-        self.style = style
-        self.pre_trainoption = 0  # The default starting "previous" training is speed.
-        if supportcard is None:  # Load default support cards.
-            supportcard = default_supportcard
-        s = []  # The part loads special event list.
-        for i in supportcard:
-                x = all_special_events[i] 
-                if len(x) > 0:
-                    for j in x:
-                        s.append(j)
-        self.special_events = s
+        self.click(self.c["menu"]["step1"])
+        self.click(self.c["menu"]["terms1"])
+        self.click(self.c["menu"]["terms2"])
+        self.click(self.c["menu"]["confirm"])
+        
+        self.click(self.c["region"]["change"])
+        self.click(self.c["region"]["ok1"])
+        self.click(self.c["region"]["ok2"])
 
-        # self.click(1550, 240)  # Make sure screen is accessible.
+        self.click(self.c["age_confirm"]["click_point"])
+        pyautogui.write(self.c["age_confirm"]["value"])
+        self.click(self.c["age_confirm"]["ok3"], 5)
 
-        while self.turn <= 80:
-            try:
-                self.train_horse(name, supportcard)
-            except ContinueException:
-                self.turn += 1
-                time.sleep(6)
-                continue
+        self.click(self.c["skip_turtorial"], 3)
+
+        self.click(self.c["trainer_registration"]["click_point"])
+        pyautogui.write(self.c["trainer_registration"]["name"])
+        self.nclick(self.c["trainer_registration"]["register"], 2, 1.5)
+        self.click(self.c["trainer_registration"]["confirm"], 10)
+
+        self.nclick(self.c["game"]["skip"], 8, 1.5)
+        self.nclick(self.c["game"]["skip"], 2, 2.5)
+        self.click(self.c["game"]["close1"])
+        self.click(self.c["game"]["close2"])
+        self.click(self.c["game"]["present"], 5)
+        self.click(self.c["game"]["collect_all"], 2)
+        self.click(self.c["game"]["close3"])
+
+        self.click(self.c["banner"]["open"])
+        self.click(self.c["banner"]["next"], 3, 1.5)
+        self.click(self.c["banner"]["x10"])
+        for i in range (7):
+            self.click(self.c["banner"]["scout"])
+            self.click(self.c["banner"]["skip"], 4, 1)
+            self.click(self.c["banner"]["scout_again"])
+
+        self.click(self.c["banner"]["close4"], 2)
+        self.c
+
+        return
 
     def train_horse(self, name: str, supportcard: tuple = None):
         if supportcard is None:  # Load default support cards.
@@ -370,76 +302,6 @@ class UmaGame:
         else:
             logger.info(f"Turn {self.turn}: Mood is GREAT, no need to raise mood.")
             return 0
-    
-    def _check_race(self, rl: dict = {}):
-        """Attend race according to turns recorded in RaceTable for the character."""
-        # if self.turn in rl.keys():
-        #     self.click(1615, 625, 2)
-        #     try:
-        #         click_image(f"URA/races/{rl[self.turn]}")
-        #     except ImageNotFoundException:
-        #         self._trouble_shoot(1)
-        #         self._check_multiq()
-        #     self.click(1620, 625, 2)
-        #     self.click(1620, 520, 8)
-        #     print(f"USe turn {self.turn} to attend {rl[self.turn]}.")
-        #     if test_image("generaltraining/Result"):
-        #         self.click(1500, 660, 5)
-        #         self.nclick(1565, 660, 4, 4.5)
-        #     else:
-        #         raise NotImplementedError
-        #     raise ContinueException
-        pass
-
-    def _check_energy(self):
-        # if not test_image(f"generaltraining/Training", confi=0.99):
-        #     print("No training label, no energy check.")
-        #     pass
-        # elif test_image("generaltraining/EnergyBar", confi=0.98, rg=rest_bar):
-        if test_image("generaltraining/EnergyBar", confi=0.96):
-            logger.info(f"Turn {self.turn}: Energy bar safe.")
-            # self.click(self.c['root']['daily_training']['rest'])
-            pass
-        else:
-            logger.info(f"Turn {self.turn}: Energy bar low, rest.")
-            self.click(self.c['root']['daily_training']['rest'])
-            # self.nclick(1620, 480, 2)
-            time.sleep(self.c["wait_time"]["_check_energy_"])
-            raise ContinueException
-        
-    def __friendship_bonus_score__(self, supportcard: tuple):
-        amplifier = 2 * (1 - 1/(1+ math.exp(-0.18 * (self.turn - 35))))
-        return amplifier * sum(test_image(f"tscard/{i}") for i in supportcard)
-    
-    def _check_training(self, supportcard, mood_score: float):
-        logger.debug(f"Turn {self.turn}: Check training options.")
-        # print(1/0)
-        try:
-            self.click(self.c["root"]["daily_training"]["training"], 2)
-            score = [1.5, 0.6, 0.2, -0.45, 0, mood_score]
-
-            order = [(self.pre_trainoption + i)%5 for i in range(1, 6)]  # Avoid single cicking of previous option.
-            for i in order:
-                self.click([self.c["training_option"]["speed"][0] + 80*i, self.c["training_option"]["speed"][1]], 0)
-                score[i] += self.__friendship_bonus_score__(supportcard) 
-                score[i] += 0.3 * test_image("URA/Director") 
-                score[i] += 0.3 * test_image("URA/Reporter") 
-                print(f"The score under {i + 1}th training option is {score[i]}")
-            max_index = score.index(max(score))
-            training_ls = ["Speed", "Stamina", "Power", "Guts", "Wits"]
-            if max_index == 5:
-                self.click(self.c["root"]["back_button"], 1)  # Click back
-                self.__raise_mood__()
-                raise ContinueException
-            else:
-                self.nclick([self.c["training_option"]["speed"][0] + max_index*80, self.c["training_option"]["speed"][1]], 4, self.c["wait_time"]["_check_training_"])
-                self.pre_trainoption = max_index
-                # print(f"Use turn {self.turn} to train {training_ls[max_index]}")  
-                logger.info(f"Turn {self.turn}: Training {training_ls[max_index]} with score {score[max_index]}.")
-                raise ContinueException
-        except ImageNotFoundException as e:
-            print(e)
-            pass
 
 def identify_image(name="Sweep Tosho"):
     """Identify the required png. 
@@ -506,10 +368,18 @@ def resize_game(name: str):
     # Áp dụng kích thước mới
     window.resizeTo(new_width, new_height)
 
+def activate_window(window_title):
+    hwnd = win32gui.FindWindow(None, window_title)
+    if hwnd:
+        win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)  # Khôi phục cửa sổ nếu minimized
+        win32gui.SetForegroundWindow(hwnd)  # Focus cửa sổ
+        return True
+    return False
+
 if __name__ == "__main__":
     resize_game("Umamusume")
 
-    URA = UmaGame(test=1)
+    URA = UmaReroll(test=1)
     # URA._team_trial()
     # URA.remove_expired_followers(15)
     URA._start_game(1)

@@ -1,0 +1,33 @@
+{
+    "menu": {
+        "step1": [620, 481],
+        "terms1": [776, 344],
+        "terms2": [778, 421],
+        "confirm": [723, 535]
+    },
+    "region": {
+        "change": [770, 395],
+        "ok1": [724, 532],
+        "ok2": [730, 492]
+    },
+    "age_confirm":{
+        "click_point": [650, 396],
+        "value": "200311",
+        "ok3": [726, 486],
+        "ok4": [729, 497]
+    },
+    "skip_turtorial": [731, 495],
+    "trainer_registration":{
+        "click_point": [681, 353],
+        "name": "Momoi",
+        "register": [640, 494],
+        "confirm": [724, 505]
+    },
+    "game": {
+        "skip": [600, 714],
+        "close1": [371, 497],
+        "close2": [370, 692],
+        "present": [533, 536],
+        "collect_all": [466, 685]
+    }
+}
