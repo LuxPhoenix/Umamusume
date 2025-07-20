@@ -63,3 +63,24 @@ Implementation of race functions (will select required race to attend at turns i
 To do: refine race and main race function. For race function, replace the trouble shoot logic to scroll down the race list to find out required race. For main race, add algorithm to retry when failing to meet goal condition.
 
 Result: This version of code is able to produce rank A Oguri Cup with 350k+ fans.
+
+# V0.3.5
+Major update! I just implemented functions to test for the relationship bar for supportcards during training, which will allow rainbow training to be detected. Upon this mechanism the score function is made better. For each support card, it's score contributed to a training type will be:
+
+If the card is not present under the training type, then score is 0.
+        
+The score is 1 if this card is present and the relationship bar is not organge yet, since it is valuable to
+increase the relationship.
+        
+The score is 2.4 if relationship bar is organge & maxed, and the support card is present under its specialized
+training type. This triggers friendship traininng, which is immensely valuable.
+        
+The score is 0.6 if relationship is organge & maxed but rainbow training is not triggered. This mearly addes up the 
+training effectiveness & mood bonus, so the benefit is smaller.
+
+I also made changes to the _check_training function to make it more efficient, now it takes about 1/3 less time to operate than before.
+
+Data related to horsegirls and supportcards are recorded in json files, and I made two corresponding class for them.
+I also improved the _check_race function, which is now functioning normally.
+
+Lastly, the team-trial function is made faster by simply fast-clicking on next (which is simple but efficient).

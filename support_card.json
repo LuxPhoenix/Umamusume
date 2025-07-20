@@ -1,0 +1,35 @@
+{
+    "Kitasan Black spe": {
+        "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Special Week spe": {
+        "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Sweep Tosho spe": {
+        "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Silence Suzuka spe": {
+        "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Super Creek sta": {
+         "train_type": "stamina", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Mayano Top Gun sta": {
+         "train_type": "stamina", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Fine Motion wit": {
+         "train_type": "wits", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Eishin Flash spe": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Haru Urara gut": {
+         "train_type": "guts", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Gold City spe": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Matikanefukukitaru wit": {
+         "train_type": "wits", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    }
+}

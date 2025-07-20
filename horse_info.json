@@ -14,10 +14,10 @@
         "special_events": ["wonderful mistake"]
     },
     "Maruzensky": {
-        "default_supportcard": ["Matikanefukukitaru wit", "Fine Motion wit", "Special Week spe", "Silence Suzuka spe", "Gold City spe", "Eishin Flash spe"],
+        "default_supportcard": ["Super Creek sta", "Fine Motion wit", "Special Week spe", "Silence Suzuka spe", "Kitasan Black spe", "Eishin Flash spe"],
         "friend_supportcard": "Fine Motion wit",
-        "default_racetable": {"24": "Hopeful S", "34": "NHK Mile", "45": "Shuka Sho", "47": "Mile C", "55": "Osaka hai", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Mile C"},
-        "training_priority": [1.7, 0.6, 0.5, -1, 1],
+        "default_racetable": {"24": "Hopeful S", "34": "NHK Mile", "45": "Shuka Sho", "47": "Mile C", "59": "Victoria Mile", "72": "Mile C"},
+        "training_priority": [1.3, 0.6, 0.5, 0, 0.6],
         "special_events": []
     },
     "Tokai Teio": {
