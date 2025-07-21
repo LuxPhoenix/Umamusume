@@ -74,5 +74,19 @@
         "_raise_mood_": 5,
         "_check_energy_": 5,
         "_check_training_": 1
+    },
+    "event_capture": {
+        "event_img":{
+            "top_left": [127, 155],
+            "bottom_right": [187, 215]
+        },
+        "event_type_color": {
+            "top_left": [300, 158],
+            "bottom_right": [320, 172]
+        },
+        "event_text": {
+            "top_left": [190, 170],
+            "bottom_right": [448, 215]
+        }
     }
 }
