@@ -5,63 +5,46 @@ from builtins import Exception
 import pygetwindow as gw
 import json
 from utils.logger import Logger
+from utils.detect_text import ScreenTextReader
 import math
 
 logger = Logger.get_logger()
 
-# Get the screen size
-screen_width, screen_height = pyautogui.size()  # Size in mouse functions' format, different from locate.
+  # Size in mouse functions' format, different from locate.
 # x0, y0 = 1431.0, 133.5  # Coordinate of topleft corner on my macbook.
 # ww0, wh0 = 242.0, 553.5 # width and height of window on my macbook.
 all_special_events = {"Sweep Tosho spe": ["wonderful_mistake"], "Super Creek sta": [], "Special Week spe": [], "Mayano Top Gun sta": [], "Gold City spe": [], "Eishin Flash spe": [], "King Halo spe": [], "Bakushin spe": [], "Fine Motion wit": []}
 default_supportcard = ("Sweep Tosho spe", "Super Creek sta", "Special Week spe", "Mayano Top Gun sta", "Gold City spe", "Eishin Flash spe", "Bakushin spe", "Fine Motion wit", "King Halo spe")
-ts_rg = (3300, 400, 100, 560)
-rest_bar = (3050, 365, 70, 24)  # Region of locate function for resting judgement.
-racemain_bar = (3150, 1230, 74, 60)  # 1580, 620 is actual left top for race bar.
-insufficient_fans_bar = (3050, 710, 160, 140)  # Remainder of insufficient fans pop-up.
-RaceTable = {21: ("Keto Hai Junior", "Daily Hai Junior"), 
-            23: ("Hanshin Juvenile", "Asahi Hai Futurity"),
-            24: ("Hopeful S")
-}
-Oguri_RaceTable = {23: "Hanshin Juvenile", 24: "Hopeful S", 32: "Oka Sho", 35: "Japan Derby", 45: "Shuka Sho", 55: "Osaka hai", 58: "Tenno Sho Spring", 59: "Victoria Mile", 61: "Yasuda Kinen", 72: "Japan C"}
 
 class UmaException(Exception):
     pass
-
 
 class ContinueException(Exception):
     time.sleep(2)
     print("Continue to next turn.")
     pass
 
-
 class UmaGame:
     """Everything integrated."""
 
-    def __init__(self, config:dict = None, test: bool = 1):
-        """Adjust the coordinate system according to the device.
-        
-        self.xy records the coordinate of the topleft corner of the game window
-        in the new device (self.xy[0], self.xy[1]),
-        while self.xy[2], self.xy[3] are the amplification in width & height."""
-        # if config is None or len(config) != 4:
-        #     config = {"x0": 1426.5, "y0": 185.5, "ww0": 248.0, "wh0": 500.5}
-        # self.c = config
+    def __init__(self, config:dict = None, support_card: tuple = None, test: bool = 1):
+        """Adjust the coordinate system according to the device."""
+
         self.screen_width, self.screen_height = pyautogui.size()  # Currently unused.
         self.style = None
         self.pre_trainoption = None
-        # if test:  # If test is true, conduct screen adjustment.
-        #     a, b = identify_image("tlcorner")
-        #     c, d = identify_image("brcorner")
-        #     self.xy = (a, b, (c - a)/config["ww0"], (d - b)/config["wh0"])
-        #     self.test = 1 
-        # else:
-        #     self.test = 0
+        self.turn = 0
 
-        self.x, self.y, self.w, self.h, self.c = self._settings_config()  # Get the window position and size.
+        self.all_support_card, self.c = self._settings_config() 
+
+        self.special_events = self._prepare_special_events(support_card)
+
+        self.x, self.y, self.w, self.h = self._settings_UI()  # Get the window position and size.
         self.pos_dict = self.get_pos_dict()  # Get the position dictionary.
 
-    def _settings_config(self):
+        self.screen_reader = ScreenTextReader()
+
+    def _settings_UI(self):
         window_title = "Umamusume"
         window = gw.getWindowsWithTitle(window_title)[0]
 
@@ -74,11 +57,33 @@ class UmaGame:
 
         # Áp dụng kích thước mới
         window.resizeTo(new_width, new_height)
-
         
+        return (window.left, window.top, new_width, new_height)
+
+    def _settings_config(self):
         with open('dictionary.json', 'r', encoding='utf-8') as file:
             cfg = json.load(file)
-        return (window.left, window.top, new_width, new_height, cfg)
+            
+        with open("event_infor.json", 'r', encoding='utf-8') as file:
+            support_card = json.load(file)
+        
+        return support_card, cfg
+    
+    def _prepare_special_events(self, support_card: tuple):
+        """Prepare the special events for the support cards."""
+        special_events = {}
+        if support_card is None:
+            return special_events
+        
+        for character in support_card:
+            try:
+                character_events = self.all_support_card[character] 
+                for event_name, event_data in character_events.items():
+                    special_events[event_name] = event_data
+            except KeyError as e:
+                print(e)
+        
+        return special_events
     
     def get_pos_dict(self):
         """Get the position dictionary from the config file."""
@@ -178,7 +183,6 @@ class UmaGame:
         self.click(1550, 683, 3)
         
 
-
     def train_horse_loop(self, name: str, supportcard: tuple = None, style: str = "front", turn = 1):
         """Train the horse with following logic.
 
@@ -220,17 +224,8 @@ class UmaGame:
         self.turn = turn
         self.style = style
         self.pre_trainoption = 0  # The default starting "previous" training is speed.
-        if supportcard is None:  # Load default support cards.
-            supportcard = default_supportcard
-        s = []  # The part loads special event list.
-        for i in supportcard:
-                x = all_special_events[i] 
-                if len(x) > 0:
-                    for j in x:
-                        s.append(j)
-        self.special_events = s
-
-        # self.click(1550, 240)  # Make sure screen is accessible.
+        # if self.supportcard is None:  # Load default support cards.
+        #     supportcard = default_supportcard
 
         while self.turn <= 80:
             try:
@@ -243,8 +238,8 @@ class UmaGame:
     def train_horse(self, name: str, supportcard: tuple = None):
         if supportcard is None:  # Load default support cards.
             supportcard = default_supportcard
-        self._check_multiq()    # 90%
-        self._check_mainrace()  # 90%
+        self._check_multiq()    
+        self._check_mainrace()  
         self._infirmary()       
         # self._check_race()  # Put this priority below infirmary since health is always the first, haha.
         mood_score = 3 if self._check_mood() else 0
@@ -281,8 +276,9 @@ class UmaGame:
         try: 
             for i in range(3):  # Adding the loop to met situations with consecutive multiple choose events.
                 a, b = identify_image("generaltraining/hi_g")
-                self.__check_special__()
-                click_true(a, b, self.c["wait_time"]["_check_multiq"])  
+                logger.info(f"Turn {self.turn}: Find choice event.")
+                self.__check_special__(a, b)
+                # click_true(a, b, self.c["wait_time"]["_check_multiq"])  
             logger.info(f"Turn {self.turn}: Special event detected.")
         except ImageNotFoundException:  # No special event.
             logger.debug(f"Turn {self.turn}: No choice event.")
@@ -291,21 +287,41 @@ class UmaGame:
             logger.debug(f"Turn {self.turn}: Choice event detected but no special event.")
             pass
 
-    def __check_special__(self):
+    def __check_special__(self, a: float, b: float):
         """Handle clicking for special events.
         
         You really should not call this function alone."""
-        #FIXME: make this function that can choose special events's choice.
-        x = 0
-        for i in self.special_events:
-            if test_image(f"tscard/{i}"):
-                click_image("generaltraining/hi_y")
-                print("Special choice selected.")
-                x = 1
-                time.sleep(self.c["wait_time"]["_check_special_"])
-                break
-        if x:
-            raise UmaException("Special event detected.")
+
+        self.screen_reader.capture_screen(region=(self.x, self.y, self.w, self.h))
+
+        # Text region
+        event_region = self.c["event_capture"]["event_text"]
+        top, left = event_region["top_left"]
+        bottom, right = event_region["bottom_right"]
+
+        event_name = self.screen_reader.detect_text_in_image("test/screenshot.png", (top, left, bottom, right))      
+        logger.info(f"Turn {self.turn}: Event name detected: {event_name}")
+
+        if event_name in self.special_events:
+            choice = self.special_events[event_name]["selectable"]
+            if choice:
+                click_true(a, b + 82 * (choice - 1), self.c["wait_time"]["_check_special_"])
+            logger.info(f"Turn {self.turn}: Special event {event_name} detected, choice {choice} selected.")
+        else:
+            click_true(a, b, self.c["wait_time"]["_check_multiq"])  
+            logger.info(f"Turn {self.turn}: Special event {event_name} not found in special events, choose green option.")
+
+
+        # x = 0
+        # for i in self.special_events:
+        #     if test_image(f"tscard/{i}"):
+        #         click_image("generaltraining/hi_y")
+        #         print("Special choice selected.")
+        #         x = 1
+        #         time.sleep(self.c["wait_time"]["_check_special_"])
+        #         break
+        # if x:
+        #     raise UmaException("Special event detected.")
 
     def _check_mainrace(self):
         if test_images("RaceMain", "RaceURA", confi=0.80, rg=None, dir="generaltraining/"):
@@ -336,7 +352,7 @@ class UmaGame:
         raise ContinueException
 
     def _infirmary(self):
-        if test_image("generaltraining/Infirmary", confi=0.95):  # Go to the infirmary to treat
+        if test_image("generaltraining/Infirmary", confi=0.80):  # Go to the infirmary to treat
             print(f"Use turn {self.turn} to heal.")
             self.click(self.c["wait_time"]["infirmary"], self.c["wait_time"]["_check_mainrace"]["register"])
             time.sleep(4)
@@ -411,7 +427,7 @@ class UmaGame:
             raise ContinueException
         
     def __friendship_bonus_score__(self, supportcard: tuple):
-        amplifier = 1 - 1/(1+ math.exp(-0.18 * (self.turn - 35)))
+        amplifier = 2 * (1 - 1/(1+ math.exp(-0.18 * (self.turn - 35))))
         return amplifier * sum(test_image(f"tscard/{i}") for i in supportcard)
     
     def _check_training(self, supportcard, mood_score: float):
@@ -424,9 +440,9 @@ class UmaGame:
             order = [(self.pre_trainoption + i)%5 for i in range(1, 6)]  # Avoid single cicking of previous option.
             for i in order:
                 self.click([self.c["training_option"]["speed"][0] + 80*i, self.c["training_option"]["speed"][1]], 0)
-                score[i] += sum(test_image(f"tscard/{j}") for j in supportcard) #NOTE: remove rg=ts_rg
+                score[i] += self.__friendship_bonus_score__(supportcard) 
                 score[i] += 0.3 * test_image("URA/Director") 
-                score[i] += 0.3 * test_image("URA/Reporter") #NOTE: remove rg=ts_rg
+                score[i] += 0.3 * test_image("URA/Reporter") 
                 print(f"The score under {i + 1}th training option is {score[i]}")
             max_index = score.index(max(score))
             training_ls = ["Speed", "Stamina", "Power", "Guts", "Wits"]
@@ -444,14 +460,13 @@ class UmaGame:
             print(e)
             pass
 
-
-def identify_image(name="Sweep Tosho"):
+def identify_image(name="Sweep Tosho", confidence=0.9):
     """Identify the required png. 
     
     Return the true central coordinate of the image.
     If no image is identified, it will raise
     pyautogui.ImageNotFoundException."""
-    l, t, w, h = pyautogui.locateOnScreen(f"figures_lap/{name}.png", confidence=0.9)
+    l, t, w, h = pyautogui.locateOnScreen(f"figures_lap/{name}.png", confidence=confidence)
     # print(l, t, w, h)
     return (l+w/2, t+h/2)
 
@@ -482,14 +497,10 @@ def test_images(*args: str, confi = 0.9, rg = None, logic = "or", dir="generaltr
     else:
         return 0
 
-
-
-
 def click_true(a: float, b: float, interval=0.5):
         """Click on the true x-y position on computer screen."""
         pyautogui.click(a, b)
         time.sleep(interval)
-
 
 def click_image(name: str):
     """Click on the exact position of image.
@@ -513,6 +524,7 @@ def resize_game(name: str):
 
     # Áp dụng kích thước mới
     window.resizeTo(new_width, new_height)
+
 
 
 if __name__ == "__main__":
