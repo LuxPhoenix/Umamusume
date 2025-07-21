@@ -21,7 +21,8 @@ class HorseGirl:
 
     def __init__(self, name: str, supportcard: tuple = None, 
                  friend_support: str = None, race_table: dict = None, 
-                 training_priority: list = None, special_events: list = None):
+                 training_priority: list = None, special_events: list = None,
+                 skill_set: tuple = None):
         self.name = name
         try:
             with open('horse_info.json', 'r') as file:
@@ -37,6 +38,7 @@ class HorseGirl:
         self.race_table = {int(k): v for k, v in d.items()}  # Make sure keys are integers rather than string.
         self.training_priority = training_priority if training_priority else self.DI['training_priority']
         self.special_events = special_events if special_events else self.DI['special_events']
+        self.skill_set = skill_set if skill_set else tuple(self.DI['skill_set'])
 
 
 Oguri_Cup = HorseGirl("Oguri Cup")
