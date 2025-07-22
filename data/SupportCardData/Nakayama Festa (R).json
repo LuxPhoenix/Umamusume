@@ -1,0 +1,44 @@
+{
+    "夕暮れにひと勝負": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +15",
+                    "Nakayama Festa bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +15",
+                    "Nakayama Festa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "夕暮れの独り飯": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Nakayama Racecourse ○ hint +1",
+                    "Nakayama Festa bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Hanshin Racecourse ○ hint +1",
+                    "Nakayama Festa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

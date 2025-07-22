@@ -1,0 +1,55 @@
+{
+    "Miracle ☆ Escape!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Speed +5",
+                    "Sweep Tosho bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Speed +20",
+                    "Sweep Tosho bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Wonderful ☆ Mistake!": {
+        "options": [
+            {
+                "type": "Top Option (Random Option 1)",
+                "effects": [
+                    "Energy -15",
+                    "Skill points +40"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Top Option (Random Option 2)",
+                "effects": [
+                    "Energy -20",
+                    "Skill points +40",
+                    "Sweep Tosho bond +5"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Get Charming ○ status",
+                    "Sweep Tosho bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": true
+    }
+}

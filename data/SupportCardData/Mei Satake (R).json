@@ -1,0 +1,224 @@
+{
+    "礼賛は雨のように": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +39",
+                    "Mood +1",
+                    "Guts +5",
+                    "Mei Satake bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "克服は近い未来に？": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +32",
+                    "Mood +1",
+                    "Power +5",
+                    "Guts +5",
+                    "Mei Satake bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "縁がいずれ行きつくは": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +45",
+                    "Guts +15",
+                    "Mood +1",
+                    "Get ポジティブ思考 status",
+                    "Mei Satake bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "All stats +5",
+                    "Mood +1",
+                    "Get 幸運体質 status",
+                    "Mei Satake bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "憧憬は始まりの地に": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +32",
+                    "Guts +21",
+                    "Mei Satake bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "結ぶは、星空の誓い": {
+        "options": null,
+        "has_random_options": true
+    },
+    "サッカーしよう！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Guts +15",
+                    "Mei Satake bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +6",
+                    "Power +10",
+                    "Mei Satake bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "時には仕事を忘れて\nDating starts": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +19",
+                    "Mood +1",
+                    "Guts +5",
+                    "Get 幸運体質 status",
+                    "Mei Satake bond +5",
+                    "Can start dating"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Middle Option (Random Option 1)",
+                "effects": [
+                    "Energy +45",
+                    "Mood +1",
+                    "Get 幸運体質 status",
+                    "Mei Satake bond +10"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Middle Option (Random Option 2)",
+                "effects": [
+                    "Energy -10",
+                    "Mei Satake bond +10",
+                    "Mood +1"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +31",
+                    "Wisdom +21",
+                    "Lone Wolf hint +5",
+                    "Mei Satake bond -5",
+                    "Event chain ended"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": true
+    },
+    "夢のトラブルシューター\nAfter first training": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Mood +1",
+                    "Guts +15",
+                    "Skill points +5",
+                    "Mei Satake bond +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "お疲れ様！！\nRandomly after training (repeatable)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Guts +3",
+                    "(random) Mood +1",
+                    "Mei Satake bond +5",
+                    "※ If Mei Satake is scenario-linked:",
+                    "Skill points +3",
+                    "Star Gauge of 5 random characters +1",
+                    "Mei Satake bond +2"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "星の凱旋門\nAfter Finals (bond maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Power +15",
+                    "Guts +26",
+                    "Skill points +31"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "祝杯の前払い\nAfter Finals (bond not maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Power +12",
+                    "Guts +18",
+                    "Skill points +21"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "メイとの絆・『夢』は難しい\nDating before the first New Year's": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Mood +1",
+                    "Guts +15",
+                    "Straightaway Adept hint +3",
+                    "Mei Satake bond +7",
+                    "※ If Mei Satake is scenario-linked:",
+                    "Mei Satake bond +3"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

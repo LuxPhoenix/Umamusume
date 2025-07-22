@@ -1,0 +1,45 @@
+{
+    "Encounter With the Sun ☆": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +10",
+                    "Daitaku Helios bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Get Hot Topic status",
+                    "Daitaku Helios bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Smiles Forever": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +5",
+                    "Power +10",
+                    "Daitaku Helios bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Long Shot ○ hint +1",
+                    "Daitaku Helios bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

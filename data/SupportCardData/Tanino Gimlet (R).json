@@ -1,0 +1,45 @@
+{
+    "破壊の喜びを……！！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +15",
+                    "Tanino Gimlet bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Skill points +30",
+                    "Tanino Gimlet bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "鮮烈なる今を……！！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +10",
+                    "Skill points +5",
+                    "Tanino Gimlet bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "End Closer Savvy ○ hint +1",
+                    "Tanino Gimlet bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "親切丁寧で思慮深く": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +15",
+                    "Dream Journey bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +5",
+                    "Wisdom +10",
+                    "Dream Journey bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "用意周到で妹想い": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Sufficient Thrust hint +1",
+                    "Dream Journey bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +15",
+                    "Dream Journey bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

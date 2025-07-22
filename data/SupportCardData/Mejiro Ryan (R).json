@@ -1,0 +1,46 @@
+{
+    "My Muscles and Me, Onward to Tomorrow!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -10",
+                    "Power +15",
+                    "Mejiro Ryan bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Power +5",
+                    "Mejiro Ryan bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "It's Not Like I Like Romance!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Pace Strategy hint +1",
+                    "Mejiro Ryan bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +30",
+                    "Mejiro Ryan bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "僕だって、いつか……": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Toward Victory hint +1",
+                    "Cheval Grand bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +15",
+                    "Cheval Grand bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "釣りは静かに……": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skill points +20",
+                    "Cheval Grand bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +15",
+                    "Cheval Grand bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

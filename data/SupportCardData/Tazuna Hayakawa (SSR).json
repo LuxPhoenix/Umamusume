@@ -1,0 +1,207 @@
+{
+    "Milk with a Chance of Apples": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +35",
+                    "Speed +6",
+                    "Mood +1",
+                    "Tazuna Hayakawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Inexplicable Speed": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +35",
+                    "Tazuna Hayakawa bond +5",
+                    "Heal a negative status effect"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Memories of Cinema": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +35",
+                    "Stamina +6",
+                    "Mood +1",
+                    "Tazuna Hayakawa bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +12",
+                    "Guts +12",
+                    "Mood +1",
+                    "Tazuna Hayakawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Sigh and a Bandage": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +49",
+                    "Wisdom +6",
+                    "Mood +1",
+                    "Tazuna Hayakawa bond +5",
+                    "Heal a negative status effect"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Surprise Breather": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +49",
+                    "Skill points +37",
+                    "Mood +2",
+                    "Tazuna Hayakawa bond +5",
+                    "Focus hint +1 or Concentration hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "My Chosen Way of Life": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +14",
+                    "Mood +1",
+                    "Tazuna Hayakawa bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Wisdom +6",
+                    "Tazuna Hayakawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Enthusiastic Pair\nDating starts": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +14",
+                    "Wisdom +6",
+                    "Mood +1",
+                    "Tazuna Hayakawa bond +5",
+                    "Can start dating"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood -1",
+                    "Tazuna Hayakawa bond -5",
+                    "Watchful Eye hint +1",
+                    "Event chain ended"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Tazuna, the Director's Secretary\nAfter first training": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Skill points +18",
+                    "Mood +1",
+                    "Tazuna Hayakawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Good Job! ♪\nRandomly after training (repeatable)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "(random) Mood +1",
+                    "Speed +3",
+                    "Tazuna Hayakawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "From Just a Little Closer\nAfter Finals (bond maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "All stats +7",
+                    "Skill points +37"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "The Usual, Please!\nAfter Finals (bond not maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "All stats +6",
+                    "Skill points +25"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Bond with Tazuna: Aspirations Entrusted\nDating before the first New Year's": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +14",
+                    "Speed +18",
+                    "Mood +1",
+                    "Tazuna Hayakawa bond +5",
+                    "Tail Held High hint +3"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

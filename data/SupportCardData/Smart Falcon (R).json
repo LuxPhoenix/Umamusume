@@ -1,0 +1,48 @@
+{
+    "Chants Are the Life of a Concert ☆": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +5",
+                    "Guts +10",
+                    "Smart Falcon bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wisdom +15",
+                    "Smart Falcon bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "If I'm Cute, Come to My Show! ☆": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -10",
+                    "Power +10",
+                    "Final Push hint +1",
+                    "Smart Falcon bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +10",
+                    "Wisdom +5",
+                    "Smart Falcon bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "Marvelous World Plan ☆": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Guts +5",
+                    "Wisdom +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Marvelously Marvelous ☆": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Guts +15",
+                    "Wisdom +15"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Marvelous, No Question ☆": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Speed +5",
+                    "Marvelous Sunday bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Speed +5",
+                    "Marvelous Sunday bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "How To Be More Marvelous ☆": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Mood +1",
+                    "Marvelous Sunday bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Hanshin Racecourse ○ hint +1",
+                    "Marvelous Sunday bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

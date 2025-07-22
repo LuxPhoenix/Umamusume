@@ -1,0 +1,42 @@
+{
+    "剛毅朴訥、仁に近し": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +10"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Power +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "嗚呼、守りたい……！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +10",
+                    "Power +10"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Medium Corners ○ hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

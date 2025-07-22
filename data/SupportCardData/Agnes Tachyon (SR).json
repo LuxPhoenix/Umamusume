@@ -1,0 +1,72 @@
+{
+    "Report: Potential of Specialized Training": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Wisdom +5",
+                    "Skill points +15"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Report: N/A (On Break)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Wisdom +10",
+                    "Skill points +15",
+                    "Subdued Front Runners hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "The Correlation between Sleep and Efficiency": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +5",
+                    "Wisdom +5",
+                    "Agnes Tachyon bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wisdom +10",
+                    "Agnes Tachyon bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Happenstance Introduced Through Intervention": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Late Surger Savvy ○ hint +1",
+                    "Agnes Tachyon bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wisdom +10",
+                    "Agnes Tachyon bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "りんご、お食べなさいな": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Guts +15",
+                    "Wonder Acute bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +15",
+                    "Wonder Acute bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "編みぐるみ、あげようね": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skillful Step hint +1",
+                    "Wonder Acute bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +10",
+                    "Skill points +10",
+                    "Wonder Acute bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

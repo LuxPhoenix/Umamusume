@@ -1,0 +1,46 @@
+{
+    "未知への潜入": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +15",
+                    "Transcend bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Front Row Aim hint +1",
+                    "Transcend bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "高速のフットワーク": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +10",
+                    "Guts +10",
+                    "Transcend bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +10",
+                    "Wisdom +10",
+                    "Transcend bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "Trying Hard with Rice!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Trying Hard with King!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Mood +1",
+                    "Haru Urara bond +5",
+                    "Energy +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Trying Hard with Everyone's Support!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +15",
+                    "Haru Urara bond +5",
+                    "Unruffled hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Urara's ☆ Study Review": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Wisdom +5",
+                    "Haru Urara bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Wisdom +5",
+                    "Haru Urara bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Urara's ☆ Long Shot Dash!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Long Shot ○ hint +1",
+                    "Haru Urara bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Energy +10",
+                    "Haru Urara bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

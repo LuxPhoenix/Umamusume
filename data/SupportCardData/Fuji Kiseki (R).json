@@ -1,0 +1,46 @@
+{
+    "Sleight of Hand": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +5",
+                    "Skill points +15",
+                    "Fuji Kiseki bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Power +5",
+                    "Skill points +15",
+                    "Fuji Kiseki bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Misdirection": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Prepared to Pass hint +1",
+                    "Fuji Kiseki bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Skill points +30",
+                    "Fuji Kiseki bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

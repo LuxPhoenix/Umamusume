@@ -1,0 +1,44 @@
+{
+    "Just Start Running!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mood -1",
+                    "Speed +20"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Power +20"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "I'm All Fired Up!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +15",
+                    "Twin Turbo bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Early Lead hint +1",
+                    "Twin Turbo bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

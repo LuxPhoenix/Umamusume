@@ -1,0 +1,47 @@
+{
+    "Watch Where You're Going!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Extra Tank hint +1",
+                    "Special Week bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +15",
+                    "Special Week bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "So Many Options!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Mood +1",
+                    "Special Week bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Stamina +15",
+                    "Skill points +15",
+                    "Special Week bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "読書家あるある": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +5",
+                    "Wisdom +5",
+                    "Zenno Rob Roy bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +10",
+                    "Power +5",
+                    "Zenno Rob Roy bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "託された物語": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +10",
+                    "Wisdom +10",
+                    "Zenno Rob Roy bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Medium Straightaways ○ hint +1",
+                    "Zenno Rob Roy bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

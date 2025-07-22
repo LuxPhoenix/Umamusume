@@ -1,0 +1,48 @@
+{
+    "//Verification Required": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Guts +5",
+                    "Air Shakur bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Stamina +5",
+                    "Guts +10",
+                    "Air Shakur bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "//Absolute Desire": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Pace Strategy hint +1",
+                    "Air Shakur bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Guts +5",
+                    "Air Shakur bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

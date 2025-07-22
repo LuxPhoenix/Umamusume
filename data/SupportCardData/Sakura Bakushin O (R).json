@@ -1,0 +1,47 @@
+{
+    "Genius Efficiency!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +15",
+                    "Sakura Bakushin O bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +5",
+                    "Power +10",
+                    "Sakura Bakushin O bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Enough to Break into a Dash!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Gap Closer hint +1",
+                    "Sakura Bakushin O bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Speed +10",
+                    "Power +5",
+                    "Sakura Bakushin O bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "あなたに響け、とまこまい": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +15",
+                    "Hokko Tarumae bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Power +5",
+                    "Guts +10",
+                    "Hokko Tarumae bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "みんなに届け、とまこまい": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skill points +30",
+                    "Hokko Tarumae bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Top Pick hint +1",
+                    "Hokko Tarumae bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

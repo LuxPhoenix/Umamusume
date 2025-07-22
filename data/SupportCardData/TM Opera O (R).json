@@ -1,0 +1,44 @@
+{
+    "Etude to Victory": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mood -1",
+                    "Speed +5",
+                    "Skill points +30"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Power +5",
+                    "Skill points +15"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Beyond Our Limited Time": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Skill points +15"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Non-Standard Distance ○ hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

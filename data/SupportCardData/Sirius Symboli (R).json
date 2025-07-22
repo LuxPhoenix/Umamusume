@@ -1,0 +1,46 @@
+{
+    "教えてやろうか？": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -5",
+                    "Stamina +20",
+                    "Sirius Symboli bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wisdom +10",
+                    "Sirius Symboli bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "助けてやろうか？": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +5",
+                    "Disorient hint +1",
+                    "Sirius Symboli bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Skill points +15",
+                    "Sirius Symboli bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

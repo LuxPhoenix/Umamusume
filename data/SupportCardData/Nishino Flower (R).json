@@ -1,0 +1,45 @@
+{
+    "Warmth, Love, and Lunch": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Get Charming ○ status",
+                    "Nishino Flower bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +20",
+                    "Nishino Flower bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Let's Bloom Beautifully ♪": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +15",
+                    "Nishino Flower bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +10",
+                    "Power +5",
+                    "Nishino Flower bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

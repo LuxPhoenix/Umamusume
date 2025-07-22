@@ -1,0 +1,41 @@
+{
+    "The Emperor's Encouragement": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +10"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Skill points +30"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "The Student Council President's Thoughtfulness": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Rainy Days ○ hint +1"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +15"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

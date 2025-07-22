@@ -1,0 +1,87 @@
+{
+    "Beef, Pork, Chicken, Curry!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +5",
+                    "Power +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Got My Priorities Straight": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +5",
+                    "Power +5",
+                    "Guts +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "My Flaws Make Me Who I Am!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +5",
+                    "Power +10",
+                    "Fast & Furious hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Tamamo's School Tour": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +10",
+                    "Tamamo Cross bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +5",
+                    "Guts +5",
+                    "Tamamo Cross bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Battle I Can't Lose!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Calm in a Crowd hint +1",
+                    "Tamamo Cross bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +5",
+                    "Wisdom +5",
+                    "Tamamo Cross bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "私が育った場所": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mood +1",
+                    "Energy +25",
+                    "Daring Tact bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Skill points +30",
+                    "Daring Tact bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "私を育てた場所": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +20",
+                    "Daring Tact bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Forward Step by Step hint +1",
+                    "Daring Heart bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

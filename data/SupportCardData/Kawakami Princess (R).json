@@ -1,0 +1,44 @@
+{
+    "プリンセス、殴る！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Guts +10",
+                    "Kawakami Princess bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Kawakami Princess bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "プリンセス、逃走！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Kawakami Princess bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Steadfast hint +1",
+                    "Kawakami Princess bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

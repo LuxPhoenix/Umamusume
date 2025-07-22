@@ -1,0 +1,213 @@
+{
+    "ドリームはジャンボにッ！": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Energy +24",
+                    "Mood +1",
+                    "Stamina +38",
+                    "Next turn Specialty Rate of all support cards +20",
+                    "Tucker Bryne bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "理想のままに": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +24",
+                    "Mood +1",
+                    "Speed +33",
+                    "Find a Way! hint +2",
+                    "Next turn Specialty Rate of all support cards +20",
+                    "Tucker Bryne bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "言わなくていいこと": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +60",
+                    "Mood +1",
+                    "Next turn Specialty Rate of all support cards +30",
+                    "Tucker Bryne bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "All stats +8",
+                    "Skill points +11",
+                    "Next turn Specialty Rate of all support cards +30",
+                    "Tucker Bryne bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "酔えど秘めごと": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +30",
+                    "Mood +1",
+                    "Stamina +16",
+                    "Guts +16",
+                    "Next turn Specialty Rate of all support cards +20",
+                    "Tucker Bryne bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "叫べ！響け！": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +36",
+                    "Mood +1",
+                    "Power +33",
+                    "Pathfinder hint +3",
+                    "Next turn Specialty Rate of all support cards +120",
+                    "Tucker Bryne bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "道を指し、導く者": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +11",
+                    "Guts +11",
+                    "Tucker Bryne bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +12",
+                    "Power +5",
+                    "Tucker Bryne bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "燃やせ！エクササイズ！\nDating starts": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +24",
+                    "Mood +1",
+                    "Skill points +11",
+                    "Get 幸運体質 status",
+                    "Tucker Bryne bond +5",
+                    "Can start dating"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Speed +5",
+                    "Stamina +5",
+                    "Guts +5",
+                    "Straightaway Recovery hint +5",
+                    "Get 幸運体質 status",
+                    "Tucker Bryne bond +5",
+                    "Can start dating"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "無人島発、未来行き\nAfter first training": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Mood +1",
+                    "Speed +5",
+                    "Stamina +5",
+                    "Power +5",
+                    "Tucker Bryne bond +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "本能的トレーニング\nRandomly after training (repeatable)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +5",
+                    "(random) Mood +1",
+                    "Next turn Specialty Rate of all support cards +20",
+                    "Tucker Bryne bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "君がいたから\nAfter Finals (bond maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Speed +16",
+                    "Stamina +16",
+                    "Guts +16",
+                    "Skill points +55"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "タッカーブラインとの絆・大秘境を往け\nDating before the first New Year's": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +18",
+                    "Mood +1",
+                    "Speed +11",
+                    "Fuse hint +3",
+                    "Tucker Bryne bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

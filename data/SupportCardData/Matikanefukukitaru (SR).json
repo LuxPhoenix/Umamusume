@@ -1,0 +1,95 @@
+{
+    "Spirits' Lost and Found": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +5",
+                    "Mood +1",
+                    "Skill points +15",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Guidance and Friends": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skill points +45",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option (Random Option 1)",
+                "effects": [
+                    "Energy +10",
+                    "Mood +1",
+                    "Right-Handed ○ hint +3",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Bottom Option (Random Option 2)",
+                "effects": [
+                    "Energy -20",
+                    "Right-Handed ○ hint +1",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": true
+            }
+        ],
+        "has_random_options": true
+    },
+    "Maximum Spirituality": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +5",
+                    "Skill points +15",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Speed +5",
+                    "Stamina +5",
+                    "Power +5",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "When Piety and Kindness Intersect": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skill points +30",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +20",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

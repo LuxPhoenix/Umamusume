@@ -1,0 +1,45 @@
+{
+    "ときめく彼女": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skill points +25",
+                    "Buena Vista bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Overflowing Passion hint +1",
+                    "Buena Vista bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "きよらかな彼女": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Guts +20",
+                    "Buena Vista bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +10",
+                    "Power +10",
+                    "Buena Vista bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

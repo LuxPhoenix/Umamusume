@@ -1,0 +1,74 @@
+{
+    "First-Rate Coaching": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Speed +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "First-Rate Advice": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Speed +15",
+                    "Skill points +15"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "You May Socialize With Me!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -20",
+                    "Speed +10",
+                    "Power +10",
+                    "Wisdom +5",
+                    "King Halo bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood -1",
+                    "Guts +25",
+                    "King Halo bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "You May Advise Me!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Guts +10",
+                    "Wisdom +5",
+                    "King Halo bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Homestretch Haste hint +1",
+                    "King Halo bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

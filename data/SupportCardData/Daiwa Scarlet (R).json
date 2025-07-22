@@ -1,0 +1,46 @@
+{
+    "I'm Going to Win Tomorrow!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +10",
+                    "Daiwa Scarlet bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Skill points +15",
+                    "Daiwa Scarlet bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "This Is Nothing!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina to Spare hint +1",
+                    "Daiwa Scarlet bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +20",
+                    "Mood +1",
+                    "Daiwa Scarlet bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

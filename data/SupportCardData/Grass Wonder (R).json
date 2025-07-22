@@ -1,0 +1,45 @@
+{
+    "Library Vexation": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +10",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +5",
+                    "Wisdom +5",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Friendly Daytime Discussion": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Frenzied Pace Chasers hint +1",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Target in Sight ○ hint +1",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

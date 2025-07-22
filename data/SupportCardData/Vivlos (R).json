@@ -1,0 +1,45 @@
+{
+    "いつの間にかあまーい時間♪": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -5",
+                    "Power +25",
+                    "Vivlos bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +15",
+                    "Vivlos bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "いつの日にかキラキラセレブ♪": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Late Surger Straightaways ○ hint +1",
+                    "Vivlos bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Power +10",
+                    "Vivlos bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

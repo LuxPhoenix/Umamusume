@@ -1,0 +1,44 @@
+{
+    "わたしをデコレート": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +15",
+                    "North Flight bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +15",
+                    "North Flight bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "あなたのためのスタイリング": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "High Hopes hint +1",
+                    "North Flight bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +15",
+                    "North Flight bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

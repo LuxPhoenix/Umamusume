@@ -1,0 +1,98 @@
+{
+    "Quiet Passion": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +10",
+                    "Wisdom +5",
+                    "Skill points +15",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Moment's Respite": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +15",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option (Random Option 1)",
+                "effects": [
+                    "Energy -10",
+                    "Power +5",
+                    "Guts +5",
+                    "Wisdom +5",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Bottom Option (Random Option 2)",
+                "effects": [
+                    "Power +5",
+                    "Guts +5",
+                    "Wisdom +10",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": true
+            }
+        ],
+        "has_random_options": true
+    },
+    "Hidden Petals": {
+        "options": null,
+        "has_random_options": true
+    },
+    "Library Vexation": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +10",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +5",
+                    "Wisdom +5",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Friendly Daytime Discussion": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Frenzied Pace Chasers hint +1",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Target in Sight ○ hint +1",
+                    "Grass Wonder bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

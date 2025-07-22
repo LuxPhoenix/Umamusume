@@ -1,0 +1,45 @@
+{
+    "オンステージ": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +20",
+                    "Cesario bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +20",
+                    "Cesario bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "オフステージ": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mood +1",
+                    "Speed +10",
+                    "Cesario bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Satisfying Pace hint +1",
+                    "Cesario bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

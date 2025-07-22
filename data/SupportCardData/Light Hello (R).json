@@ -1,0 +1,198 @@
+{
+    "嵐の大洋で、まどろみ": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Energy +32",
+                    "Mood +1",
+                    "Light Hello bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "ティコの輝き": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +32",
+                    "Mood +1",
+                    "Guts +12",
+                    "Light Hello bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "レゴリスで隠して": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +65",
+                    "Mood +1",
+                    "Light Hello bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Speed +18",
+                    "Guts +18",
+                    "Light Hello bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "ホイヘンス山、越えし君": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +39",
+                    "Mood +1",
+                    "Guts +12",
+                    "Light Hello bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "虹の入り江にて": {
+        "options": null,
+        "has_random_options": true
+    },
+    "ちゃっかりリサーチ♪": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +8",
+                    "Guts +8",
+                    "Light Hello bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +6",
+                    "Mood +1",
+                    "Light Hello bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "想いの力、受け止めて……！\nDating starts": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +19",
+                    "Mood +1",
+                    "Speed +8",
+                    "Guts +8",
+                    "Light Hello bond +5",
+                    "Can start dating"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wisdom +36",
+                    "Skill points +36",
+                    "Maverick ○ hint +5",
+                    "Light Hello bond -5",
+                    "Event chain ended"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "イベント企画のライトハロー\nAfter first training": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Mood +1",
+                    "Speed +12",
+                    "Guts +12",
+                    "Light Hello bond +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "お疲れ様です……！\nRandomly after training (repeatable)": {
+        "options": null,
+        "has_random_options": true
+    },
+    "有明を共に歩む\nAfter Finals (bond maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Speed +24",
+                    "Guts +24",
+                    "Skill points +36"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "満ちる時まで\nAfter Finals (bond not maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Speed +18",
+                    "Guts +18",
+                    "Skill points +24"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "ハローとの絆・きょうはぶれいこー\nDating before the first New Year's": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mood +2",
+                    "Speed +12",
+                    "Front Runner Savvy ○ hint +1",
+                    "Pace Chaser Savvy ○ hint +1",
+                    "Light Hello bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +19",
+                    "Guts +12",
+                    "Light Hello bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

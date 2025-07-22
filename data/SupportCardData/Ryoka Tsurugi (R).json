@@ -1,0 +1,165 @@
+{
+    "意外な素顔？": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +42",
+                    "Mood +1",
+                    "Speed +16",
+                    "All discipline levels +1",
+                    "Ryoka Tsurugi bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "『貴方のおっしゃる通りでした』": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +36",
+                    "Mood +1",
+                    "Speed +11",
+                    "Wisdom +11",
+                    "All discipline levels +1",
+                    "Ryoka Tsurugi bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "貴方の胸にも灯を": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +60",
+                    "Mood +1",
+                    "All discipline levels +1",
+                    "Ryoka Tsurugi bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Speed +49",
+                    "All discipline levels +1",
+                    "Ryoka Tsurugi bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "きっと何色の未来でも": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +36",
+                    "Mood +1",
+                    "Speed +27",
+                    "All discipline levels +1",
+                    "Ryoka Tsurugi bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "その働きに敬意を": {
+        "options": null,
+        "has_random_options": true
+    },
+    "忙しいは楽しい！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +16",
+                    "Ryoka Tsurugi bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +18",
+                    "Ryoka Tsurugi bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "撃ち抜いたのは……\nDating starts": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Energy +24",
+                    "Mood +1",
+                    "Ryoka Tsurugi bond +5",
+                    "Can start dating"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +33",
+                    "Power +33",
+                    "Competitive Spirit ○ hint +5",
+                    "Ryoka Tsurugi bond -5",
+                    "Event chain ended"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "広がる笑顔\nAfter first training": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Mood +1",
+                    "Speed +5",
+                    "Wisdom +5",
+                    "Ryoka Tsurugi bond +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "お疲れ様です！！\nRandomly after training (repeatable)": {
+        "options": null,
+        "has_random_options": true
+    },
+    "涼花との絆・彼女の『強み』\nDating before the first New Year's": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Energy +12",
+                    "Mood +1",
+                    "Speed +11",
+                    "Homestretch Haste hint +3",
+                    "Ryoka Tsurugi bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

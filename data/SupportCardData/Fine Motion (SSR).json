@@ -1,0 +1,106 @@
+{
+    "Lovely Training Weather ♪": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +5",
+                    "Skill points +20",
+                    "Fine Motion bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Middle Option",
+                "effects": [
+                    "Speed +10",
+                    "Stamina +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Get Practice Perfect ○ status",
+                    "Fine Motion bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Lovely Concert Weather ♪": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +10",
+                    "Skill points +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Lovely Racing Weather ♪": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy -10",
+                    "Guts +5",
+                    "Wisdom +5/+10",
+                    "Skill points +15",
+                    "Speed Star hint +1/+3 or Prepared to Pass hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Wonderful New Shoes": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +5",
+                    "Skill points +10",
+                    "Fine Motion bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Stamina +5",
+                    "Skill points +20",
+                    "Fine Motion bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Reminiscent Clover": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Corner Adept ○ hint +1",
+                    "Fine Motion bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +15",
+                    "Fine Motion bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

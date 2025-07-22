@@ -1,0 +1,94 @@
+{
+    "How I Can Help": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Skill points +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Aspiring to Adulthood": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -10",
+                    "Wisdom +20",
+                    "Nishino Flower bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wisdom +5",
+                    "Skill points +15"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "What's Important!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Speed +5",
+                    "Wisdom +10",
+                    "Beeline Burst hint +1/+3 or Straightaway Adept hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Warmth, Love, and Lunch": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Get Charming ○ status",
+                    "Nishino Flower bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +20",
+                    "Nishino Flower bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Let's Bloom Beautifully ♪": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +15",
+                    "Nishino Flower bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +10",
+                    "Power +5",
+                    "Nishino Flower bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

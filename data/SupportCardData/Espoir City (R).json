@@ -1,0 +1,45 @@
+{
+    "ガチってんだよ！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +15",
+                    "Espoir City bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +10",
+                    "Speed +5",
+                    "Espoir City bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "ぶちのめすぞ！！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skill points +25",
+                    "Espoir City bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Dust Off hint +1",
+                    "Espoir City bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

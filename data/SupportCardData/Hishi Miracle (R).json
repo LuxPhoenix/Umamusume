@@ -1,0 +1,45 @@
+{
+    "まあ普通にめんどいけど": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Guts +10",
+                    "Hishi Miracle bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +15",
+                    "Hishi Miracle bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "まあ普通にがんばります": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +15",
+                    "Hishi Miracle bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "My Own Pace hint +1",
+                    "Hishi Miracle bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

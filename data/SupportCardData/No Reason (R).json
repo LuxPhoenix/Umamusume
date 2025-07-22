@@ -1,0 +1,45 @@
+{
+    "甘味争奪合戦之巻": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +15",
+                    "No Reason bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "All That There Is hint +1",
+                    "No Reason bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "昼休、避球試合之巻": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -5",
+                    "Speed +25",
+                    "No Reason bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Power +15",
+                    "No Reason bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

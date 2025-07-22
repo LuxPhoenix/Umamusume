@@ -1,0 +1,46 @@
+{
+    "Solo Nighttime Run": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +10",
+                    "Manhattan Cafe bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +10",
+                    "Stamina +5",
+                    "Manhattan Cafe bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Taste of Silence": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +5",
+                    "Skill points +15",
+                    "Manhattan Cafe bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Non-Standard Distance ○ hint +1",
+                    "Manhattan Cafe bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

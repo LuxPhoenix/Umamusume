@@ -1,0 +1,45 @@
+{
+    "流すべきこの汗": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +10",
+                    "Guts +10",
+                    "Duramente bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +25",
+                    "Duramente bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "追うべき背中": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +15",
+                    "Duramente bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Ignition hint +1",
+                    "Duramente bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

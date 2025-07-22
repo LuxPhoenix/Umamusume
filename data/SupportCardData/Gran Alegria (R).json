@@ -1,0 +1,46 @@
+{
+    "マイ・オウン・ウェイ、です！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -5",
+                    "Power +25",
+                    "Gran Alegria bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Speed +10",
+                    "Gran Alegria bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "ゴー・マイル・ウェイ、です！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +15",
+                    "Gran Alegria bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mile Straightaways ○ hint +1",
+                    "Gran Alegria bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

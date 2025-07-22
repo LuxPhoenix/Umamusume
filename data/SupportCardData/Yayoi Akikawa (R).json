@@ -1,0 +1,212 @@
+{
+    "提案ッ！まずはご褒美を！": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Mood +1",
+                    "Energy +36",
+                    "Guts +22",
+                    "All vegetables +40",
+                    "Yayoi Akikawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "堪能ッ！もふもふモーモー！": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Mood +1",
+                    "Energy +36",
+                    "Speed +11",
+                    "Guts +11",
+                    "All vegetables +40",
+                    "Get リフレッシュの心得 status",
+                    "Yayoi Akikawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "記憶ッ！蘇るはあの日のこと": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +51",
+                    "Mood +1",
+                    "All vegetables +40",
+                    "Yayoi Akikawa bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Guts +31",
+                    "All vegetables +40",
+                    "Yayoi Akikawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "邂逅ッ！同じ空の下で": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Mood +1",
+                    "Energy +36",
+                    "Guts +27",
+                    "All vegetables +40",
+                    "Yayoi Akikawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "展望ッ！これからのわたしと君と": {
+        "options": null,
+        "has_random_options": true
+    },
+    "出題ッ！理事長チェック！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Guts +22",
+                    "Yayoi Akikawa bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +8",
+                    "Stamina +8",
+                    "Yayoi Akikawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "計画ッ！トレセンランド（仮）\nDating starts": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mood +1",
+                    "Energy +30",
+                    "Get リフレッシュの心得 status",
+                    "Yayoi Akikawa bond +5",
+                    "Can start dating"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Speed +8",
+                    "Guts +8",
+                    "Straightaway Adept hint +5",
+                    "Get リフレッシュの心得 status",
+                    "Yayoi Akikawa bond +5",
+                    "Can start dating"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "猛歩猛歩ッ！理事長の秘技ッ！\nAfter first training": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Mood +1",
+                    "Speed +15",
+                    "Yayoi Akikawa bond +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "激励ッ！そのまま進め！\nRandomly after training (repeatable)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "※ Junior Class",
+                    "Bond of the support with the lowest bond (apart from this card) +3",
+                    "(random) Mood +1",
+                    "Yayoi Akikawa bond +5",
+                    "※ Classic Class",
+                    "Speed +13",
+                    "(random) Mood +1",
+                    "Yayoi Akikawa bond +5",
+                    "※ Senior Class",
+                    "Guts +13",
+                    "(random) Mood +1",
+                    "Yayoi Akikawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "安息ッ！そして、また明日\nAfter Finals (bond maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Speed +22",
+                    "Guts +22",
+                    "Skill points +61"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "燦然ッ！限界を超えた力ッ！\nAfter Finals (bond not maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Speed +17",
+                    "Guts +17",
+                    "Skill points +47"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "やよいとの絆・これからはっ！\nDating before the first New Year's": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Mood +1",
+                    "Speed +26",
+                    "Middle Leg Adept hint +3",
+                    "Yayoi Akikawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

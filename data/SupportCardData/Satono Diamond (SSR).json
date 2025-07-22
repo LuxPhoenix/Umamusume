@@ -1,0 +1,116 @@
+{
+    "Hope Bearer": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +10",
+                    "Stamina +2",
+                    "Guts +2",
+                    "Wisdom +2"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Diamond Fixation": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +10",
+                    "Satono Diamond bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option (Random Option 1)",
+                "effects": [
+                    "Energy +15",
+                    "Stamina +10",
+                    "Satono Diamond bond +5"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Bottom Option (Random Option 2)",
+                "effects": [
+                    "Mood -1",
+                    "Guts +20"
+                ],
+                "is_random": true
+            }
+        ],
+        "has_random_options": true
+    },
+    "Only for You": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -20",
+                    "Stamina +30",
+                    "Iron Will hint +1",
+                    "Satono Diamond bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +5",
+                    "Guts +5",
+                    "Iron Will hint +1",
+                    "Satono Diamond bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "I Love New Things!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Guts +10",
+                    "Satono Diamond bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Stamina +20",
+                    "Satono Diamond bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "I Love Complicated Things!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +5",
+                    "Guts +10",
+                    "Satono Diamond bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Hesitant Front Runners hint +1",
+                    "Satono Diamond bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

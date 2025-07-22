@@ -1,0 +1,47 @@
+{
+    "のんびり、ゆったり。": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +15",
+                    "Guts +5",
+                    "Mejiro Bright bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +15",
+                    "Power +5",
+                    "Mejiro Bright bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "しっかり、じっくり。": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Deep Breaths hint +1",
+                    "Mejiro Bright bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wisdom +20",
+                    "Mejiro Bright bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

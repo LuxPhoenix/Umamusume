@@ -1,0 +1,85 @@
+{
+    "Freshly Made in Ample Amounts": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +10",
+                    "Stamina +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "The Taste of Warmth": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +5",
+                    "Power +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Have a Second Helping!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +10",
+                    "Power +5",
+                    "Swinging Maestro hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Leave it to Me to Help Out! ♪": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +15",
+                    "Super Creek bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +10",
+                    "Super Creek bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Leave it to Me to Be Considerate! ♪": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Deep Breaths hint +1",
+                    "Super Creek bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +10",
+                    "Stamina +5",
+                    "Super Creek bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

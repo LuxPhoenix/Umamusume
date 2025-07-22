@@ -1,0 +1,90 @@
+{
+    "A Plushie...": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Power +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "How Should I Respond?": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +5",
+                    "Power +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Guts +15"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "What I Want to Say": {
+        "options": [
+            {
+                "type": "Top Option (Random Option 1)",
+                "effects": [
+                    "Power +10",
+                    "Guts +5",
+                    "Skill points +10",
+                    "Oguri Cap bond +5",
+                    "Furious Feat hint +1"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Top Option (Random Option 2)",
+                "effects": [
+                    "Power +15",
+                    "Guts +10",
+                    "Skill points +15",
+                    "Oguri Cap bond +5",
+                    "Furious Feat hint +3"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +30"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": true
+    },
+    "Conquering the Crowds": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +5",
+                    "Skill points +15"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Nakayama Racecourse ○ hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

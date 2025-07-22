@@ -1,0 +1,46 @@
+{
+    "#あなただけのカワイイ": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +5",
+                    "Wisdom +10",
+                    "Curren Chan bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +10",
+                    "Power +5",
+                    "Curren Chan bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "#カワイイフォーユー☆": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skill points +15",
+                    "Curren Chan bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Intimidate hint +1",
+                    "Curren Chan bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

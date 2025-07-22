@@ -1,0 +1,46 @@
+{
+    "“闘叫”（トーキョー）の鬼": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +15",
+                    "Jungle Pocket bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Speed +15",
+                    "Stamina +10",
+                    "Jungle Pocket bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "“魔術”（マジック）みてぇに": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +15",
+                    "Jungle Pocket bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Devil-May-Care hint +1",
+                    "Jungle Pocket bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

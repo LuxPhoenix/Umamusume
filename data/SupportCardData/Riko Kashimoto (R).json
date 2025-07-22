@@ -1,0 +1,216 @@
+{
+    "歌には想いを乗せて": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +30",
+                    "Mood +1",
+                    "Stamina +12",
+                    "Riko Kashimoto bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "ひとときの休息を": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +24",
+                    "Mood +1",
+                    "Stamina +12",
+                    "Guts +12",
+                    "Riko Kashimoto bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "喜ぶ顔を思い浮かべて": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +24",
+                    "Mood +1",
+                    "Stamina +12",
+                    "Guts +6",
+                    "Riko Kashimoto bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Skill points +36",
+                    "Mood +1",
+                    "Riko Kashimoto bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "向けられる想いと戸惑い": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +24",
+                    "Mood +1",
+                    "Speed +12",
+                    "Stamina +6",
+                    "Power +6",
+                    "Riko Kashimoto bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "胸の内を少しだけ": {
+        "options": null,
+        "has_random_options": true
+    },
+    "樫本流、片付け術": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +18",
+                    "Riko Kashimoto bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +18",
+                    "Riko Kashimoto bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "意外な一面\nDating starts": {
+        "options": [
+            {
+                "type": "Top Option (Random Option 1)",
+                "effects": [
+                    "Energy +18",
+                    "Mood +1",
+                    "Stamina +12",
+                    "Ramp Up hint +3",
+                    "Riko Kashimoto bond +12"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Top Option (Random Option 2)",
+                "effects": [
+                    "Maverick ○ hint +5",
+                    "Riko Kashimoto bond -10"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Middle Option",
+                "effects": [
+                    "Mood +1",
+                    "Guts +18",
+                    "Riko Kashimoto bond +5",
+                    "Can start dating"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Lone Wolf hint +3",
+                    "Riko Kashimoto bond -10",
+                    "Event chain ended"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": true
+    },
+    "仕事人の樫本理子\nAfter first training": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Mood +1",
+                    "Stamina +7",
+                    "Guts +7",
+                    "Riko Kashimoto bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "お疲れ様です\nRandomly after training (repeatable)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "(random) Mood +1",
+                    "Stamina +3",
+                    "Riko Kashimoto bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "かけがえのない出会いに\nAfter Finals (bond maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +18",
+                    "Guts +18",
+                    "Skill points +24"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "たまにはこんな時間も\nAfter Finals (bond not maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +4",
+                    "Guts +4",
+                    "Skill points +7"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "理子との絆・過ちは繰り返さない\nDating before the first New Year's": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Mood +1",
+                    "Stamina +14",
+                    "Guts +7",
+                    "Sympathy hint +3",
+                    "Riko Kashimoto bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

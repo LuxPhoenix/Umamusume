@@ -1,0 +1,74 @@
+{
+    "As Dignified as a Moth Orchid": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Power +5",
+                    "Guts +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Bloom by the Oak": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy -20",
+                    "Power +5",
+                    "Guts +5",
+                    "Straightaway Acceleration hint +1",
+                    "Air Groove bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Strict but Gracious": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Go with the Flow hint +1",
+                    "Air Groove bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +10",
+                    "Wisdom +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Agile but Strong": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +15",
+                    "Air Groove bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +10",
+                    "Stamina +5",
+                    "Air Groove bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

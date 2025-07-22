@@ -1,0 +1,46 @@
+{
+    "開運☆あなたもハッピー": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +15",
+                    "Copano Rickey bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Power +15",
+                    "Copano Rickey bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "吉祥☆みんなでスマイル": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Skill points +10",
+                    "Copano Rickey bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Promising Omen hint +1",
+                    "Copano Rickey bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

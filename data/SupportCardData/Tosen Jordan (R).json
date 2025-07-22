@@ -1,0 +1,46 @@
+{
+    "スマホって時間泥棒じゃん？": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mood +1",
+                    "Speed +5",
+                    "Tosen Jordan bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +10",
+                    "Tosen Jordan bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "レビューって半分賭けじゃん？": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Mood +1",
+                    "Tosen Jordan bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Lucky Seven hint +1",
+                    "Tosen Jordan bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

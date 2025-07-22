@@ -1,0 +1,47 @@
+{
+    "Wonderful New Shoes": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +5",
+                    "Skill points +10",
+                    "Fine Motion bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Stamina +5",
+                    "Skill points +20",
+                    "Fine Motion bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Reminiscent Clover": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Corner Adept ○ hint +1",
+                    "Fine Motion bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +15",
+                    "Fine Motion bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

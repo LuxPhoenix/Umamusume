@@ -1,0 +1,72 @@
+{
+    "A Good Manager": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Energy +10",
+                    "Mood +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Good Friend": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +20",
+                    "Homestretch Haste hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Unforeseen Lunch": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +15",
+                    "Eishin Flash bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +5",
+                    "Guts +5",
+                    "Eishin Flash bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Responding to the Unforeseen": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Guts +10",
+                    "Eishin Flash bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Target in Sight ○ hint +1",
+                    "Eishin Flash bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

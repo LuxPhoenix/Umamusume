@@ -1,0 +1,47 @@
+{
+    "On and On": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +10",
+                    "Stamina +5",
+                    "Silence Suzuka bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +15",
+                    "Silence Suzuka bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "What Should I Do?": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +5",
+                    "Stamina +5",
+                    "Wisdom +5",
+                    "Silence Suzuka bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Left-Handed ○ hint +1",
+                    "Silence Suzuka bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

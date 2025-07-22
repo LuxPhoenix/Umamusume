@@ -1,0 +1,64 @@
+{
+    "A Big Sister's Job": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy -10",
+                    "Power +15"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Training in Theory": {
+        "options": null,
+        "has_random_options": true
+    },
+    "Last-Minute Modal Theory": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +15",
+                    "Biwa Hayahide bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +10",
+                    "Skill points +15",
+                    "Biwa Hayahide bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Step-Out-of-Your-Comfort-Zone Theory": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -10",
+                    "Inside Scoop hint +1",
+                    "Biwa Hayahide bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +10",
+                    "Stamina +10",
+                    "Biwa Hayahide bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

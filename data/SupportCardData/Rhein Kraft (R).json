@@ -1,0 +1,45 @@
+{
+    "ワクワクでキラキラな夢": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mile Corners ○ hint +1",
+                    "Rhein Kraft bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +15",
+                    "Rhein Kraft bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "ぽかぽかでねむねむな時間": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +15",
+                    "Rhein Kraft bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +10",
+                    "Guts +5",
+                    "Rhein Kraft bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

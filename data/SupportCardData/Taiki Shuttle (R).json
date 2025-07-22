@@ -1,0 +1,43 @@
+{
+    "Yes! Let's Hug ☆": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +10"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +5",
+                    "Power +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Yeehaw! Party Tonight ☆": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -10",
+                    "Speed +5",
+                    "Power +10"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Prepared to Pass hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

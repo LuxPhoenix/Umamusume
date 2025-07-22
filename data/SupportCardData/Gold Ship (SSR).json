@@ -1,0 +1,84 @@
+{
+    "Fervor! Air Basketball!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy -10",
+                    "Stamina +25"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Respect the Salmon!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy -10",
+                    "Guts +25"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Can't Spell \"Rival\" without \"Friend\"!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +10",
+                    "Corner Connoisseur hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Adventurer Gold Ship": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +15",
+                    "Gold Ship bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +10",
+                    "Skill points +15",
+                    "Gold Ship bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Revive the Brand! Golshi's Yakisoba": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mood +1",
+                    "Stamina +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Hanshin Racecourse ○ hint +1",
+                    "Gold Ship bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

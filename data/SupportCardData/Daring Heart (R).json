@@ -1,0 +1,46 @@
+{
+    "Queen's Heart": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mood +1",
+                    "Skill points +10",
+                    "Daring Heart bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +10",
+                    "Power +10",
+                    "Daring Heart bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Away in the Mountains": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Aggressive hint +1",
+                    "Daring Heart bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Guts +15",
+                    "Daring Heart bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

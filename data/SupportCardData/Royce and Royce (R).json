@@ -1,0 +1,44 @@
+{
+    "最強のセルフプロデュース": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Go with the Flow hint +1",
+                    "Royce and Royce bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wisdom +10",
+                    "Royce and Royce bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "最強の分析力": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +20",
+                    "Royce and Royce bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +15",
+                    "Royce and Royce bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

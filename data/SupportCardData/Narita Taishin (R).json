@@ -1,0 +1,46 @@
+{
+    "Just Leave Me Alone": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +5",
+                    "Skill points +15",
+                    "Narita Taishin bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Power +5",
+                    "Skill points +15",
+                    "Narita Taishin bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Just Don't Bother Me": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Pressure hint +1",
+                    "Narita Taishin bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Skill points +30",
+                    "Narita Taishin bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

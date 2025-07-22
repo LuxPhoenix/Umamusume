@@ -1,0 +1,48 @@
+{
+    "Maximum Spirituality": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +5",
+                    "Skill points +15",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Speed +5",
+                    "Stamina +5",
+                    "Power +5",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "When Piety and Kindness Intersect": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skill points +30",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +20",
+                    "Matikanefukukitaru bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

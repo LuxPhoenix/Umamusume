@@ -1,0 +1,47 @@
+{
+    "全力でパッション！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Mood +1",
+                    "Seeking the Pearl bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Power +5",
+                    "Guts +5",
+                    "Seeking the Pearl bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "全力でシンキング！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +20",
+                    "Seeking the Pearl bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Uma Stan hint +3",
+                    "Seeking the Pearl bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

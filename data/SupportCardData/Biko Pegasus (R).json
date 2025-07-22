@@ -1,0 +1,45 @@
+{
+    "A Hero's Woes": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +15",
+                    "Biko Pegasus bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +5",
+                    "Power +5",
+                    "Biko Pegasus bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Preparing My Special Move!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Sprint Straightaways ○ hint +1",
+                    "Biko Pegasus bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +30",
+                    "Biko Pegasus bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

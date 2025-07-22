@@ -1,0 +1,45 @@
+{
+    "Snack Advice for Mayano!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +5",
+                    "Guts +5",
+                    "Mayano Top Gun bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +10",
+                    "Mayano Top Gun bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Fashion Advice for Mayano!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Straightaway Adept hint +1",
+                    "Mayano Top Gun bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +10",
+                    "Mayano Top Gun bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

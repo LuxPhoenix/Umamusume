@@ -1,0 +1,44 @@
+{
+    "仕事人の心情": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Guts +25",
+                    "Symboli Kris S bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +15",
+                    "Symboli Kris S bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "仕事人の心得": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +15",
+                    "Symboli Kris S bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Cloudy Days ○ hint +1",
+                    "Symboli Kris S bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

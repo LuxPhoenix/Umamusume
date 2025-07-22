@@ -1,0 +1,45 @@
+{
+    "“観察者”との放課後": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Wisdom +20",
+                    "Neo Universe bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -5",
+                    "Skill points +40",
+                    "Neo Universe bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "“観測者”との遭遇": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "On the Move hint +1",
+                    "Neo Universe bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Power +15",
+                    "Neo Universe bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

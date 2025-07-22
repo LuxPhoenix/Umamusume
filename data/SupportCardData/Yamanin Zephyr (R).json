@@ -1,0 +1,47 @@
+{
+    "風は、自由": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +10",
+                    "Guts +5",
+                    "Yamanin Zephyr bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Yamanin Zephyr bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "風は、果てなく": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +3",
+                    "Power +3",
+                    "Guts +3",
+                    "Yamanin Zephyr bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Ambitions hint +1",
+                    "Yamanin Zephyr bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

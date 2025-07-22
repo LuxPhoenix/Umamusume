@@ -1,0 +1,84 @@
+{
+    "Username: W&T": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Guts +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Everyone Was Sore for Days!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +5",
+                    "Guts +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "We Are BNW!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Guts +10",
+                    "On Your Left! hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Full-Power Muscles!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +5",
+                    "Skill points +15",
+                    "Winning Ticket bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Skill points +15",
+                    "Winning Ticket bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Full-Power Racing!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Late Surger Corners ○ hint +1",
+                    "Winning Ticket bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Skill points +30",
+                    "Winning Ticket bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "An Inescapable Choice?": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy -15",
+                    "Guts +20",
+                    "Mejiro Palmer bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Power +5",
+                    "Skill points +15",
+                    "Mejiro Palmer bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Optimistic Escapism": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Guts +15",
+                    "Mejiro Palmer bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wet Conditions ○ hint +1",
+                    "Mejiro Palmer bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

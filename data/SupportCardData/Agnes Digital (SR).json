@@ -1,0 +1,72 @@
+{
+    "Happy Otaku Life": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Power +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "My Love for Umamusume is Eternal!": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Speed +5",
+                    "Power +10",
+                    "Frenzied End Closers hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Umamusume Deficiency!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +5",
+                    "Speed +5",
+                    "Agnes Digital bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +5",
+                    "Power +5",
+                    "Agnes Digital bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Heavy Romance": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Rainy Days ○ hint +1",
+                    "Agnes Digital bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wet Conditions ○ hint +1",
+                    "Agnes Digital bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

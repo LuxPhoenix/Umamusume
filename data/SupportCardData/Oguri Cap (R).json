@@ -1,0 +1,43 @@
+{
+    "How Should I Respond?": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +5",
+                    "Power +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Guts +15"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Conquering the Crowds": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +5",
+                    "Skill points +15"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Nakayama Racecourse ○ hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

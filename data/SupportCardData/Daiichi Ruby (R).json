@@ -1,0 +1,44 @@
+{
+    "華麗なる憂い？": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +15",
+                    "Daiichi Ruby bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Power +15",
+                    "Daiichi Ruby bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "華麗なる旋律": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skill points +25",
+                    "Daiichi Ruby bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Gap Closer hint +1",
+                    "Daiichi Ruby bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

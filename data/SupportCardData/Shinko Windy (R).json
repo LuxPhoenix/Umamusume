@@ -1,0 +1,47 @@
+{
+    "ガブッと、撲滅！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +3",
+                    "Mood +1",
+                    "Shinko Windy bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +10",
+                    "Skill points +5",
+                    "Shinko Windy bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "ガブッと、突撃！": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skill points +15",
+                    "Shinko Windy bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Speed +3",
+                    "Unyielding Spirit hint +1",
+                    "Shinko Windy bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "A Page from a Windy Day": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Guts +10",
+                    "Rice Shower bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Page from a Day Spent with Friends": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +10",
+                    "Rice Shower bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Page from a Day of Hard Work": {
+        "options": null,
+        "has_random_options": true
+    },
+    "A Page of Flower Shop Assistance": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mood +2",
+                    "Rice Shower bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Stamina +10",
+                    "Rice Shower bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "A Page About Cloudy Weather": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +5",
+                    "Guts +5",
+                    "Rice Shower bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Firm Conditions ○ hint +1",
+                    "Rice Shower bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

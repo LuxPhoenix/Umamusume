@@ -1,0 +1,45 @@
+{
+    "Give It a Try": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +15",
+                    "Mejiro Dober bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Skill points +15",
+                    "Mejiro Dober bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Hope She'll Like It...": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Skill points +45",
+                    "Mejiro Dober bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Unyielding Spirit hint +1",
+                    "Mejiro Dober bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

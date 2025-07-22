@@ -1,0 +1,46 @@
+{
+    "一瞥にて": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Mood +1",
+                    "Skill points +10",
+                    "Mejiro Ramonu bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wisdom +15",
+                    "Mejiro Ramonu bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "傅いて": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Speed +10",
+                    "Stamina +5",
+                    "Mejiro Ramonu bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Medium Corners ○ hint +1",
+                    "Mejiro Ramonu bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

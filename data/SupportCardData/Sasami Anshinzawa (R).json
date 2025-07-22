@@ -1,0 +1,157 @@
+{
+    "あんし～んな二人三脚！？": {
+        "options": null,
+        "has_random_options": true
+    },
+    "あんし～ん☆サングラス": {
+        "options": null,
+        "has_random_options": true
+    },
+    "決戦☆あんし～んよ永遠に！": {
+        "options": [
+            {
+                "type": "Top Option (Random Option 1)",
+                "effects": [
+                    "Energy +10",
+                    "All stats +3",
+                    "Skill points +10",
+                    "Questionable Strategy hint +3",
+                    "Sasami Anshinzawa bond +5"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Top Option (Random Option 2)",
+                "effects": [
+                    "Energy -10",
+                    "Mood -2",
+                    "Sasami Anshinzawa bond +5"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +20",
+                    "Mood +1",
+                    "Questionable Strategy hint +1",
+                    "Sasami Anshinzawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": true
+    },
+    "全ての道は笹針に通じる": {
+        "options": null,
+        "has_random_options": true
+    },
+    "あんし～んの練習台？\nDating starts": {
+        "options": [
+            {
+                "type": "Top Option (Random Option 1)",
+                "effects": [
+                    "Maximum Energy +4",
+                    "Energy +10",
+                    "Mood +1",
+                    "Sasami Anshinzawa bond +10"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Top Option (Random Option 2)",
+                "effects": [
+                    "Skill points +52",
+                    "Obtain Corner Recovery × skill",
+                    "Sasami Anshinzawa bond +5"
+                ],
+                "is_random": true
+            },
+            {
+                "type": "Middle Option",
+                "effects": [
+                    "Mood +1",
+                    "Stamina +10",
+                    "Sasami Anshinzawa bond +5",
+                    "Can start dating"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Skill points +105",
+                    "Questionable Strategy hint +1",
+                    "Obtain Running Idle skill",
+                    "Sasami Anshinzawa bond -10",
+                    "Event chain ended"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": true
+    },
+    "ブスッとおまかせ☆\nTraining together failed": {
+        "options": null,
+        "has_random_options": true
+    },
+    "不審者だけど、あんし～ん！？\nAfter first training": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "1 random stat +21",
+                    "Sasami Anshinzawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "必中☆笹針師\nRandomly after training (repeatable)": {
+        "options": null,
+        "has_random_options": true
+    },
+    "湯けむり☆あんし～ん旅情\nAfter Finals (bond maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "2 random stats +15",
+                    "Skill points +47"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "あんし～んな継承！？\nAfter Finals (bond not maxed)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "2 random stats +10",
+                    "Skill points +31"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "刺々美との絆・酔えばあんし～ん？\nDating before the first New Year's": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy +10",
+                    "2 random stats +10",
+                    "Uma Stan hint +3",
+                    "Sasami Anshinzawa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

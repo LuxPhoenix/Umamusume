@@ -1,0 +1,45 @@
+{
+    "Blazing Fire!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Stamina +10",
+                    "El Condor Pasa bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy -10",
+                    "Power +20",
+                    "El Condor Pasa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Secret Notebook!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Power +10",
+                    "El Condor Pasa bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Sunny Days ○ hint +1",
+                    "El Condor Pasa bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

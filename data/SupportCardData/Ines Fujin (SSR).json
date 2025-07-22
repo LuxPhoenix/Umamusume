@@ -1,0 +1,79 @@
+{
+    "The Power of a Big Sister": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy -10",
+                    "Speed +5",
+                    "Stamina +5",
+                    "Guts +10"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Take a Step": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Energy -10",
+                    "Guts +10",
+                    "Skill points +30",
+                    "Ines Fujin bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Aim for That Sparkling Moment!": {
+        "options": null,
+        "has_random_options": true
+    },
+    "It's a Game of Tag!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +10",
+                    "Speed +5",
+                    "Ines Fujin bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Fast-Paced hint +1",
+                    "Ines Fujin bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Ten Minutes Left!": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Guts +15",
+                    "Ines Fujin bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Wisdom +15",
+                    "Ines Fujin bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}

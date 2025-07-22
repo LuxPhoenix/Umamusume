@@ -1,0 +1,73 @@
+{
+    "A Light Workout (for a Hardworker)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +5",
+                    "Guts +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Visible Improvement (But So What?!)": {
+        "options": [
+            {
+                "type": "default",
+                "effects": [
+                    "Stamina +5",
+                    "Guts +10",
+                    "Extra Tank hint +1"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "Not like Meow": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Energy +20",
+                    "Nice Nature bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Energy +10",
+                    "Wisdom +5",
+                    "Nice Nature bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    },
+    "(Delicious) Burden": {
+        "options": [
+            {
+                "type": "Top Option",
+                "effects": [
+                    "Ramp Up hint +1",
+                    "Nice Nature bond +5"
+                ],
+                "is_random": false
+            },
+            {
+                "type": "Bottom Option",
+                "effects": [
+                    "Mood +1",
+                    "Maximum Energy +4",
+                    "Nice Nature bond +5"
+                ],
+                "is_random": false
+            }
+        ],
+        "has_random_options": false
+    }
+}
