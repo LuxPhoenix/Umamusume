@@ -84,3 +84,6 @@ Data related to horsegirls and supportcards are recorded in json files, and I ma
 I also improved the _check_race function, which is now functioning normally.
 
 Lastly, the team-trial function is made faster by simply fast-clicking on next (which is simple but efficient).
+
+# V0.3.6
+Improvement on support card relationship detection: original method of locating organe bar has low accuracy due to limits of pyautogui, so it is replaced by testing the color of a single pixel in the relationship bar. Now rainbow detection is highly accurate. Only limit is the support card pictures need to be taken exactly at the same position (otherwise the corresponding pixel tested for relationship may not lie in the relationship bar.)
