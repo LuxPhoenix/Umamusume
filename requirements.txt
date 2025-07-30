@@ -4,3 +4,4 @@ pynput
 pygetwindow
 opencv-python
 pillow
+jiwer

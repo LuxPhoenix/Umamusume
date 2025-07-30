@@ -1,0 +1,41 @@
+{
+    "Kitasan Black (SSR)": {
+        "Chasing Brilliance": "Auto",
+        "Paying It Forward": 0,
+        "We Walk Together": "Auto",
+        "Ah, Friendship": 0,
+        "Ah, Home Sweet Home": 0
+    },
+    "Sweep Tosho (SR)": {
+        "Some Very Green Friends": 0,
+        "Premeditated Mischief": 0,
+        "Miracle ☆ Escape!": 0,
+        "Wonderful ☆ Mistake!": 0
+    },
+    "Super Creek (SSR)": {
+        "Freshly Made in Ample Amounts": "Auto",
+        "The Taste of Warmth": "Auto",
+        "Have a Second Helping!": "Auto",
+        "Leave it to Me to Help Out! ♪": 0,
+        "Leave it to Me to Be Considerate! ♪": 0
+    },
+    "Manhattan Cafe (SR)": {
+        "Invitation on a Rainy Day": "Auto",
+        "Invitation on a Stormy Day": "Auto",
+        "Solo Nighttime Run": 0,
+        "A Taste of Silence": 0
+    },
+    "Marvelous Sunday (SR)": {
+        "Marvelous World Plan ☆": "Auto",
+        "Marvelously Marvelous ☆": "Auto",
+        "Marvelous, No Question ☆": 0,
+        "How To Be More Marvelous ☆": 0
+    },
+    "Agnes Tachyon (SR)": {
+        "Report: Potential of Specialized Training": "Auto",
+        "Report: N/A (On Break)": "Auto",
+        "The Correlation between Sleep and Efficiency": 0,
+        "Happenstance Introduced Through Intervention": 0
+    },
+    "manual_race_day": [30, 31]
+}
