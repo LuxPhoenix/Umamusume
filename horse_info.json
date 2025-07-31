@@ -38,5 +38,21 @@
         "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
         "special_events": ["wonderful mistake"],
         "skill_set": []
+    },
+    "Oguri Cap 2": {
+        "default_supportcard": ["Daitaku Helios (SR)", "Silence Suzuka (SSR)", "Vodka (SSR)", "Tokai Teio (SSR)", "Sweep Tosho (SR)", "Kitasan Black (SSR)"],
+        "friend_supportcard": "Kitasan Black (SSR)",
+        "default_racetable": {"24": "Hopeful S", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
+        "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
+        "special_events": ["wonderful mistake"],
+        "skill_set": []
+    },
+    "Oguri Cap 3": {
+        "default_supportcard": ["Mayano Top Gun (SR)", "Manhattan Cafe (SR)", "Sakura Bakushin O (SSR)", "Special Week (SSR)", "Sweep Tosho (SR)", "Kitasan Black (SSR)"],
+        "friend_supportcard": "Kitasan Black (SSR)",
+        "default_racetable": {"23": "Hanshin Juvenile", "24": "Hopeful S", "32": "Oka Sho", "35": "Japan Derby", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
+        "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
+        "special_events": ["wonderful mistake"],
+        "skill_set": []
     }
 }
