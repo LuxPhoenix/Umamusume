@@ -44,6 +44,7 @@ class HorseGirl:
 Oguri_Cup = HorseGirl("Oguri Cup")
 Daiwa_Scarlet = HorseGirl("Daiwa Scarlet")
 Maruzensky = HorseGirl("Maruzensky")
+El_Condor = HorseGirl("El_Condor")
 
 if __name__ == "__main__":
     print(Oguri_Cup.race_table, Oguri_Cup.supportcard)

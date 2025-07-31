@@ -29,7 +29,22 @@
     "Gold City spe": {
          "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
     },
-    "Matikanefukukitaru wit": {
-         "train_type": "wits", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    "Mayano Top Gun (SR)": {
+         "train_type": "stamina", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Manhattan Cafe (SR)": {
+         "train_type": "stamina", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Sakura Bakushin O (SSR)": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Special Week (SSR)": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Sweep Tosho (SR)": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Kitasan Black (SSR)": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
     }
 }
