@@ -335,19 +335,25 @@ class UmaGame:
         self.change_strategy()
         _, _ = self.wait_choice_event("generaltraining/Result")
         self.nclick(self.cfg["lobby_ui"]["view_result_button"], 3, self.cfg["wait_time"]["_check_mainrace"]["result_button"])
-    
+        # x, y = self.wait_choice_event("generaltraining/Next")
+        # click_true(x, y)
+        x, y = self.wait_choice_event("generaltraining/NextRace")
+        click_true(x, y)
+
     def find_race(self):
         race_name = self.character.race_table[self.turn]
+        print(f"Find {race_name}")
         while True:
-            try:
-                coor = test_image(f"URA/races/{race_name}", returncoordinate=True)
-                click_true(int(coor[0]), int(coor[1]))
-                break
-            except ImageNotFoundException:
+            coor = test_image(f"URA/races/{race_name}", returncoordinate=True)
+            if coor==0:
                 top_x, top_y = self.cfg["race_ui"]["top_race"]
                 bottom_x, bottom_y = self.cfg["race_ui"]["bottom_race"]
                 pyautogui.moveTo(bottom_x+self.x, bottom_y+self.y)
                 pyautogui.dragTo(top_x+self.x, self.y+top_y,1)
+                time.sleep(2)
+            else:
+                click_true(int(coor[0]), int(coor[1]))
+                break
 
     def change_strategy(self):
         if self.turn not in self.character.strategy:
