@@ -1,0 +1,43 @@
+{
+    "Sakura Bakushin O (SSR)": {
+        "Bakushin's Cooking!": "Auto",
+        "Bakushin's Love!": "Auto",
+        "Bakushin's Huge Success!": "Auto",
+        "Genius Efficiency!": 0,
+        "Enough to Break into a Dash!": 0
+    },
+    "Manhattan Cafe (SR)": {
+        "Invitation on a Rainy Day": "Auto",
+        "Invitation on a Stormy Day": "Auto",
+        "Solo Nighttime Run": 0,
+        "A Taste of Silence": 0
+    },
+    "Super Creek (SSR)": {
+        "Freshly Made in Ample Amounts": "Auto",
+        "The Taste of Warmth": "Auto",
+        "Have a Second Helping!": "Auto",
+        "Leave it to Me to Help Out! ♪": 0,
+        "Leave it to Me to Be Considerate! ♪": 0
+    },
+    "Special Week (SSR)": {
+        "Dance in Cleats!": "Auto",
+        "A Roller Coaster of Feelings!": 0,
+        "Our Audience": "Auto",
+        "Watch Where You're Going!": 0,
+        "So Many Options!": 0
+    },
+    "Sweep Tosho (SR)": {
+        "Some Very Green Friends": 0,
+        "Premeditated Mischief": 0,
+        "Miracle ☆ Escape!": 0,
+        "Wonderful ☆ Mistake!": 0
+    },
+    "Kitasan Black (SSR)": {
+        "Chasing Brilliance": "Auto",
+        "Paying It Forward": 0,
+        "We Walk Together": "Auto",
+        "Ah, Friendship": 0,
+        "Ah, Home Sweet Home": 0
+    },
+    "manual_race_day": [18,22,23,30,32,33,34,35,39,32,43,45,46,47,51,53,55,56,58,59,63,65,66,67,69,70,71]
+}

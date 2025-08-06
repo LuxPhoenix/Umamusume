@@ -46,5 +46,17 @@
     },
     "Kitasan Black (SSR)": {
          "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
-    }
+    },
+    "Super Creek (SSR)": {
+         "train_type": "stamina", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Narita Taishin (SR)": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Agnes Tachyon (SR)": {
+     "train_type": "wits", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Marvelous Sunday (SR)": {
+          "train_type": "wits", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     }
 }

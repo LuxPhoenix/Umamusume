@@ -43,6 +43,7 @@ class HorseGirl:
 
 Oguri_Cup = HorseGirl("Oguri Cup")
 Daiwa_Scarlet = HorseGirl("Daiwa Scarlet")
+Daiwa_Scarlet_2 = HorseGirl("Daiwa Scarlet 2")
 Maruzensky = HorseGirl("Maruzensky")
 El_Condor = HorseGirl("El_Condor")
 

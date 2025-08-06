@@ -56,7 +56,8 @@
         "confirm_button": [521, 604],
         "view_result_button": [351, 759],
         "race_button": [487, 762],
-        "next_button": [421, 723]
+        "next_button": [421, 723],
+        "next_race": [517, 780]
     },
     "trouble_shoot": {
         "inheriting": [420, 682]
@@ -77,7 +78,7 @@
     },
     "event_capture": {
         "event_img":{
-            "top_left": [127, 155],
+            "top_left": [125, 155],
             "bottom_right": [187, 215]
         },
         "event_type_color": {
@@ -88,5 +89,12 @@
             "top_left": [190, 170],
             "bottom_right": [448, 215]
         }
+    },
+    "error": {
+        "connection_error": [529, 552]
+    },
+    "region": {
+        "choice": [206, 384, 43, 355],
+        "training": [356, 641, 128, 52]
     }
 }
