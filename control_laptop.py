@@ -132,9 +132,11 @@ class UmaGame:
                 time.sleep(interval)
 
     def wait_choice_event(self, image_path = "generaltraining/hi_g"):
+        print("Start wait")
         while True:
             try:
                 a, b = identify_image(image_path, confidence = 0.8)
+                print("Wait end")
                 break
             except ImageNotFoundException:
                 continue
@@ -150,7 +152,11 @@ class UmaGame:
                     a, b = identify_image("generaltraining/training")
                     return None, None, "training"
                 except ImageNotFoundException:
-                    pass
+                    try:
+                        a, b = identify_image("generaltraining/RaceMain")
+                        return None, None, "race_main"
+                    except ImageNotFoundException:
+                        pass
 
     def wait_text(self, text: str, region=None):
         """Wait for the text to appear in the specified region."""
@@ -204,7 +210,7 @@ class UmaGame:
                 elif self.turn in [30, 54]:
                     self.inspiration_event()
                     self.train_horse()
-                elif self.turn in [24, 38]:
+                elif self.turn in [24, 48]:
                     self.new_year_event()
                     self.train_horse()
                 else:
@@ -212,7 +218,7 @@ class UmaGame:
                     self.train_horse()
             except ContinueException:
                 self.turn += 1
-                time.sleep(6)
+                time.sleep(2)
                 continue
         
     def URA_training(self):
@@ -247,6 +253,8 @@ class UmaGame:
         while True:
             if test_image("generaltraining/Inheriting", confi=0.90):
                 self.click(self.cfg["trouble_shoot"]["inheriting"])
+                logger.info(f"Turn {self.turn}: Inspiration event.")
+                time.sleep(10)
                 break
             else:
                 continue
@@ -286,15 +294,20 @@ class UmaGame:
 
         logger.info(f"Turn {self.turn}: Raceday by schedule")
         self.click(self.cfg["root"]["daily_training"]["race_day"], self.cfg["wait_time"]["_check_mainrace"]["register"])
-        self.click(self.cfg["lobby_ui"]["race_enter"], self.cfg["wait_time"]["_check_mainrace"]["register"])
-        self.click(self.cfg["lobby_ui"]["race_confirm_button"], self.cfg["wait_time"]["_check_mainrace"]["event_wait"])
+        _, _ = self.wait_choice_event('generaltraining/Race1')
+        self.click(self.cfg["lobby_ui"]["race_enter"])
+        _, _ = self.wait_choice_event('generaltraining/Race2')
+        self.click(self.cfg["lobby_ui"]["race_confirm_button"])
 
         #FIXME: make function control the style of the horse here.
 
         _, _ = self.wait_choice_event("generaltraining/Result")
-        self.nclick(self.cfg["lobby_ui"]["view_result_button"], 3, self.cfg["wait_time"]["_check_mainrace"]["result_button"])
+        self.click(self.cfg["lobby_ui"]["view_result_button"], 3)
         self.nclick(self.cfg["lobby_ui"]["race_button"], 3, self.cfg["wait_time"]["_check_mainrace"]["race_button"])
-        self.nclick(self.cfg["lobby_ui"]["next_button"], 2, self.cfg["wait_time"]["_check_mainrace"]["next_button"])
+        _, _ = self.wait_choice_event("generaltraining/Next")
+        self.click(self.cfg["lobby_ui"]["next_button"])
+        _, _ = self.wait_choice_event("generaltraining/Next")
+        self.click(self.cfg["lobby_ui"]["next_button"])
 
         #FIXME: add goal complete check ?
 
@@ -373,9 +386,12 @@ class UmaGame:
         if event == "training":
             logger.info(f"Turn {self.turn}: No choice event, training UI detected.")
             return
-        else:
+        elif event == "choice_event":
             logger.info(f"Turn {self.turn}: Find choice event.")
             self.__check_special__(a, b)
+        else:
+            logger.info(f"Turn {self.turn}: Race Main.")
+
 
     def __check_special__(self, a: float, b: float):
         """Handle clicking for special events.
@@ -394,9 +410,13 @@ class UmaGame:
         
         #FIXME: use jiwer to match event_name with self.list_event keys
         event_name = self._match_event(event_name)
+        if not event_name:
+            # click default
+            click_true(a, b)
+            logger.info(f"Turn {self.turn}: Can not found event in dictionary, choose default")
         if event_name in self.list_event:
-            choice = 1
-            if choice:
+            choice = self.list_event[event_name]
+            if choice!="Auto":
                 click_true(a, b + 82 * (choice - 1), self.cfg["wait_time"]["_check_special_"])
             logger.info(f"Turn {self.turn}: Special event {event_name} detected, choice {choice} selected.")
         else:
@@ -453,6 +473,8 @@ class UmaGame:
             if score < best_score:
                 best_score = score
                 best_match = key
+        if score > 0.5:
+            return False
         return best_match
 
 
@@ -510,7 +532,7 @@ class UmaGame:
             return 0
 
     def _check_energy(self):
-        if test_image("generaltraining/EnergyBar", confi=0.98): #FIXME: add rg
+        if test_image("generaltraining/EnergyBar", confi=0.97): #FIXME: add rg
             logger.info(f"Turn {self.turn}: Energy bar safe.")
             pass
         else:
@@ -520,7 +542,7 @@ class UmaGame:
             raise ContinueException
     
     def __extra_training_event__(self):
-        time.sleep(10)
+        time.sleep(5)
         self.screen_reader.capture_screen(region=(self.x, self.y, self.w, self.h))
 
         # Text region
@@ -529,12 +551,12 @@ class UmaGame:
         bottom, right = event_region["bottom_right"]
 
         event_name = self.screen_reader.detect_text_in_image("test/screenshot.png", (top, left, bottom, right))      
-        if event_name != "extra training":
+        if event_name != "Extra Training":
             logger.info(f"Turn {self.turn}: No extra training event detected, event name: {event_name}")
             return
         else:
             a, b = identify_image("generaltraining/hi_g")
-            click_true(a, b + 81, self.cfg["wait_time"]["_check_extra_training_"])  # Click on the second option.
+            click_true(a, b + 81)  # Click on the second option.
     
     def _check_training(self, mood_score: float):
         logger.debug(f"Turn {self.turn}: Check training options.")
@@ -589,7 +611,6 @@ def test_image(name: str, confi = 0.90, rg = None, returncoordinate = False):
         else:
             x = pyautogui.locateOnScreen(f"figures_lap/{name}.png", confidence=confi, region=rg)
         if returncoordinate:
-            print(x)
             return x
         else:
             return 1
