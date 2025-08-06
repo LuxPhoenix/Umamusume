@@ -39,13 +39,12 @@ class HorseGirl:
         self.training_priority = training_priority if training_priority else self.DI['training_priority']
         self.special_events = special_events if special_events else self.DI['special_events']
         self.skill_set = skill_set if skill_set else tuple(self.DI['skill_set'])
+        self.strategy = {int(k): v for k, v in self.DI["strategy"].items()}
 
 
-Oguri_Cup = HorseGirl("Oguri Cup")
+Oguri_Cap = HorseGirl("Oguri Cap")
 Daiwa_Scarlet = HorseGirl("Daiwa Scarlet")
 Daiwa_Scarlet_2 = HorseGirl("Daiwa Scarlet 2")
 Maruzensky = HorseGirl("Maruzensky")
 El_Condor = HorseGirl("El_Condor")
 
-if __name__ == "__main__":
-    print(Oguri_Cup.race_table, Oguri_Cup.supportcard)

@@ -96,5 +96,9 @@
     "region": {
         "choice": [206, 384, 43, 355],
         "training": [356, 641, 128, 52]
+    },
+    "race_ui": {
+        "top_race": [552, 453],
+        "bottom_race": [549, 603]
     }
 }

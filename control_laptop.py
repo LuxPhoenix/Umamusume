@@ -24,15 +24,14 @@ class ContinueException(Exception):
 class UmaGame:
     """Everything integrated."""
 
-    def __init__(self, support_card: tuple = None, race_day: list = None, manual_race_day: list = None, test: bool = 1, deck_name: str = "Cap"):
+    def __init__(self, support_card: tuple = None, race_day: list = None, manual_race_day: list = None, test: bool = 1, deck_name: str = "Cap", character: HorseGirl = El_Condor):
         """Adjust the coordinate system according to the device."""
 
         self.style = None
         self.pre_trainoption = None
         self.turn = 0
-        self.race_day = race_day
-
-        self.manual_race_day = manual_race_day  #manual race by user declair
+        self.character = character
+        self.strategy = None
 
         self.event_manage, self.cfg = self._settings_config(deck_name)
 
@@ -51,7 +50,7 @@ class UmaGame:
             return {}
         special_events = {}
         for key, value in event_manage.items():
-            if key != "manual_race_day":
+            if key != "manual_race_day" and key != "race_day":
                 for sub_key, sub_value in value.items():
                     special_events[sub_key] = sub_value
         return special_events
@@ -70,8 +69,9 @@ class UmaGame:
                 else:
                     dct_card[key] = 0
         dictionary["manual_race_day"] = []
+        dictionary["race_day"] = []
         
-        with open(f"{deck_name}.json", 'w', encoding='utf-8') as file:
+        with open(f"data/json/{deck_name}.json", 'w', encoding='utf-8') as file:
             json.dump(dictionary, file, ensure_ascii=False, indent=4)
         print("Manual setup completed. Data saved to dictionary.json.")
         return
@@ -97,7 +97,7 @@ class UmaGame:
             cfg = json.load(file)
             
         try:
-            with open(f"{deck_name}.json", 'r', encoding='utf-8') as file:
+            with open(f"data/json/{deck_name}.json", 'r', encoding='utf-8') as file:
                 event_manage = json.load(file)
         except FileNotFoundError:
             event_manage = None
@@ -131,14 +131,13 @@ class UmaGame:
                 pyautogui.click(a1, b1)
                 time.sleep(interval)
 
-    def wait_choice_event(self, image_path = "generaltraining/hi_g"):
-        print("Start wait")
+    def wait_choice_event(self, image_path = "generaltraining/hi_g", confi=0.8):
         while True:
             try:
-                a, b = identify_image(image_path, confidence = 0.8)
-                print("Wait end")
+                a, b = identify_image(image_path, confidence=confi)
                 break
             except ImageNotFoundException:
+                time.sleep(0.5)
                 continue
         return a, b
 
@@ -156,6 +155,10 @@ class UmaGame:
                         a, b = identify_image("generaltraining/RaceMain")
                         return None, None, "race_main"
                     except ImageNotFoundException:
+                        # try:
+                        #     a, b = identify_image("generaltraining/RaceMain")
+                        #     return None, None, "race_main"
+                        # except ImageNotFoundException:
                         pass
 
     def wait_text(self, text: str, region=None):
@@ -167,7 +170,7 @@ class UmaGame:
                 return True
             time.sleep(0.5)
 
-    def train_horse_loop(self, name: str=None, supportcard: tuple = None, style: str = "front", character: HorseGirl = El_Condor, turn = 1):
+    def train_horse_loop(self, name: str=None, supportcard: tuple = None, style: str = "front", turn = 1):
         """Train the horse with following logic.
 
         conduct this loop by day, starting from turn 0:
@@ -201,7 +204,6 @@ class UmaGame:
         self.turn = turn
         self.style = style
         self.pre_trainoption = 0  # The default starting "previous" training is speed.
-        self.character = character
 
         while self.turn <= 80:
             try:
@@ -257,6 +259,7 @@ class UmaGame:
                 time.sleep(10)
                 break
             else:
+                time.sleep(0.5)
                 continue
 
     def connection_error(self):
@@ -287,17 +290,17 @@ class UmaGame:
         # self._trouble_shoot()  # Check if inheriting event or connection error happens.
 
     def _check_mainrace(self):
-        if self.race_day is None or self.turn not in self.race_day:
+        if self.turn not in self.event_manage["race_day"]:
             return
         
-        _, _ = self.wait_choice_event("generaltraining/RaceMain")
+        # _, _ = self.wait_choice_event("generaltraining/RaceMain")
 
-        logger.info(f"Turn {self.turn}: Raceday by schedule")
-        self.click(self.cfg["root"]["daily_training"]["race_day"], self.cfg["wait_time"]["_check_mainrace"]["register"])
-        _, _ = self.wait_choice_event('generaltraining/Race1')
-        self.click(self.cfg["lobby_ui"]["race_enter"])
-        _, _ = self.wait_choice_event('generaltraining/Race2')
-        self.click(self.cfg["lobby_ui"]["race_confirm_button"])
+        # logger.info(f"Turn {self.turn}: Raceday by schedule")
+        # self.click(self.cfg["root"]["daily_training"]["race_day"], self.cfg["wait_time"]["_check_mainrace"]["register"])
+        # _, _ = self.wait_choice_event('generaltraining/Race1')
+        # self.click(self.cfg["lobby_ui"]["race_enter"])
+        # _, _ = self.wait_choice_event('generaltraining/Race2')
+        # self.click(self.cfg["lobby_ui"]["race_confirm_button"])
 
         #FIXME: make function control the style of the horse here.
 
@@ -313,9 +316,9 @@ class UmaGame:
 
         raise ContinueException
 
-    def _infirmary(self):
-        if test_image("generaltraining/Infirmary", confi=0.80):  # Go to the infirmary to treat
-            self.click(self.cfg["wait_time"]["infirmary"], self.cfg["wait_time"]["_check_mainrace"]["register"])
+    def _infirmary(self, confi=1):
+        if test_image("generaltraining/Infirmary", confi=confi):  # Go to the infirmary to treat
+            self.click(self.cfg["root"]["daily_training"]["infirmary"], self.cfg["wait_time"]["_check_mainrace"]["register"])
             time.sleep(4)
             logger.info(f"Turn {self.turn}: Call an ambulance.")
             raise ContinueException
@@ -326,12 +329,40 @@ class UmaGame:
     def _manual_race(self):
         logger.info(f"Turn {self.turn}: Following main agenda to race")
         self.click(self.cfg["root"]["daily_training"]["race_day"], self.cfg["wait_time"]["_check_mainrace"]["register"])
+        self.find_race()
         self.click(self.cfg["lobby_ui"]["race_enter"], self.cfg["wait_time"]["_check_mainrace"]["register"])
         self.click(self.cfg["lobby_ui"]["race_confirm_button"], self.cfg["wait_time"]["_check_mainrace"]["event_wait"])
-
+        self.change_strategy()
         _, _ = self.wait_choice_event("generaltraining/Result")
         self.nclick(self.cfg["lobby_ui"]["view_result_button"], 3, self.cfg["wait_time"]["_check_mainrace"]["result_button"])
     
+    def find_race(self):
+        race_name = self.character.race_table[self.turn]
+        while True:
+            try:
+                coor = test_image(f"URA/races/{race_name}", returncoordinate=True)
+                click_true(int(coor[0]), int(coor[1]))
+                break
+            except ImageNotFoundException:
+                top_x, top_y = self.cfg["race_ui"]["top_race"]
+                bottom_x, bottom_y = self.cfg["race_ui"]["bottom_race"]
+                pyautogui.moveTo(bottom_x+self.x, bottom_y+self.y)
+                pyautogui.dragTo(top_x+self.x, self.y+top_y,1)
+
+    def change_strategy(self):
+        if self.turn not in self.character.strategy:
+            return
+        
+        self.strategy = self.character.strategy[self.turn]
+        x, y = self.wait_choice_event("generaltraining/ChangeStrategy")
+        click_true(x, y)
+
+        x, y = self.wait_choice_event(f"strategy/{self.strategy}")
+        click_true(x, y)
+
+        x, y = self.wait_choice_event(f"strategy/Confirm")
+        click_true(x, y)
+
     def _after_a_race(self):
         """
         Trainee event"""
@@ -349,13 +380,13 @@ class UmaGame:
                     logger.info(f"Turn {self.turn}: Support card event detected.")
                     raise ContinueException
                 except ImageNotFoundException:
-                    try:
-                        a, b = identify_image("generaltraining/TrainingNextDay", confidence=0.99)
-                        click_true(a, b + 82 * 0, self.cfg["wait_time"]["_check_special_"])  # Click on the first option.
-                        logger.info(f"Turn {self.turn}: Training next day event detected.")
-                        raise ContinueException
-                    except ImageNotFoundException:
-                        continue
+                    # try:
+                    #     a, b = identify_image("generaltraining/TrainingNextDay", confidence=0.99)
+                    #     click_true(a, b + 82 * 0, self.cfg["wait_time"]["_check_special_"])  # Click on the first option.
+                    #     logger.info(f"Turn {self.turn}: Training next day event detected.")
+                    #     raise ContinueException
+                    # except ImageNotFoundException:
+                    continue
     
     def _trouble_shoot(self, racemode=0):   #Don't use yet
         if test_image("generaltraining/InsufficientFans"):
