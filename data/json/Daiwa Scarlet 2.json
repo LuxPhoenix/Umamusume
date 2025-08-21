@@ -1,0 +1,41 @@
+{
+    "Manhattan Cafe (SR)": {
+        "Invitation on a Rainy Day": "Auto",
+        "Invitation on a Stormy Day": "Auto",
+        "Solo Nighttime Run": 2,
+        "A Taste of Silence": 1
+    },
+    "Super Creek (SSR)": {
+        "Freshly Made in Ample Amounts": "Auto",
+        "The Taste of Warmth": "Auto",
+        "Have a Second Helping!": "Auto",
+        "Leave it to Me to Help Out! ♪": 1,
+        "Leave it to Me to Be Considerate! ♪": 2
+    },
+    "Sweep Tosho (SR)": {
+        "Some Very Green Friends": 1,
+        "Premeditated Mischief": 1,
+        "Miracle ☆ Escape!": 1,
+        "Wonderful ☆ Mistake!": 2
+    },
+    "Agnes Tachyon (SR)": {
+        "Report: Potential of Specialized Training": "Auto",
+        "Report: N/A (On Break)": "Auto",
+        "The Correlation between Sleep and Efficiency": 1,
+        "Happenstance Introduced Through Intervention": 2
+    },
+    "Narita Taishin (SR)": {
+        "Nighttime Secret": "Auto",
+        "Enjoy the Musical!": "Auto",
+        "Just Leave Me Alone": 1,
+        "Just Don't Bother Me": 2
+    },
+    "Marvelous Sunday (SR)": {
+        "Marvelous World Plan ☆": "Auto",
+        "Marvelously Marvelous ☆": "Auto",
+        "Marvelous, No Question ☆": 2,
+        "How To Be More Marvelous ☆": 1
+    },
+    "manual_race_day": [22, 23, 32, 34, 35, 45, 47, 55, 56, 58, 59, 65, 68, 69],
+    "race_day": [12, 28, 30, 33, 43,44, 53,67, 71]
+}
