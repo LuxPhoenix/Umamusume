@@ -1,4 +1,4 @@
-from control import *
+from .control_m import *
 
 
 # Coordinates of icons

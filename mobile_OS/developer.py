@@ -12,5 +12,5 @@ def probability_of_Kitasan(n: int, k: int, rounding: bool):
 
 
 if __name__ == "__main__":
-   for i in range(5):
-       print(f"The probability of getting {i} Kitasan Black SSR out of 200 polls is {probability_of_Kitasan(600, i, 1)}")
+    for i in range(5):
+        print(f"The probability of getting {i} Kitasan Black SSR out of 200 polls is {probability_of_Kitasan(600, i, 1)}")

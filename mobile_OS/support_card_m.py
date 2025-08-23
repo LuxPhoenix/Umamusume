@@ -12,20 +12,20 @@ class SupportCard():
     5. self.e_mood: mood bonus
     6. self.e_friend: friendship bonus"""
 
-    def __init__(self, name):
+    def __init__(self, name: str, LBlevel: int = 4):
         """train_type is any elements from (spe, sta, pow, gut, wit)"""
         self.name = name
         try:
-            with open('support_card.json', 'r') as file:
+            with open('support_card_m.json', 'r') as file:
                 content = json.load(file)[self.name]
         except FileNotFoundError:
             print("Error: The file 'support_card.json' was not found.")
         except json.JSONDecodeError:
             print("Error: Could not decode JSON from the file. Check for valid JSON format.")
         self.train_type = content["train_type"]
-        self.e_train = float(content["training_effectiveness"])
-        self.e_mood = float(content["mood_bunus"])
-        self.e_friend = float(content["friend_bonus"])
+        self.e_train = float(content["training_effectiveness"][LBlevel])
+        self.e_mood = float(content["mood_bonus"][LBlevel])
+        self.e_friend = float(content["friend_bonus"][LBlevel])
         self.friendship = 0
 
     def _is_specialized(self, training_type: str):
@@ -63,7 +63,7 @@ class SupportCard():
 
 
 if __name__ == "__main__":
-    KitasanBlackSpe = SupportCard("Kitasan Black spe")
-    print(type(KitasanBlackSpe.e_mood))
+    KitasanBlackSpe = SupportCard("Kitasan Black SSR spe", 4)
+    print(KitasanBlackSpe.e_mood)
 
         

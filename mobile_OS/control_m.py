@@ -3,7 +3,7 @@ from pyautogui import ImageNotFoundException
 import time
 from builtins import Exception
 from math import e
-from horse_info import *
+from horse_info_m import *
 
 # Get the screen size
 screen_width, screen_height = pyautogui.size()  # Size in mouse functions' format, different from locate.
@@ -84,12 +84,12 @@ class UmaGame:
         If rg is None, scan the entire screen."""
         try:
             if rg is None:
-                x = pyautogui.locateCenterOnScreen(f"figures/{name}.png", confidence=confi)
+                x = pyautogui.locateCenterOnScreen(f"figures_m/{name}.png", confidence=confi)
             else:
                 a, b, c, d = rg
                 a1, b1 = self._coordinate_for_click(a/2, b/2)  # Keep it for now
                 rg1 = (int(a1*2), int(b1*2), c, d)
-                x = pyautogui.locateCenterOnScreen(f"figures/{name}.png", confidence=confi, region=rg1)
+                x = pyautogui.locateCenterOnScreen(f"figures_m/{name}.png", confidence=confi, region=rg1)
             if returncoordinate:
                 return x
             else:
@@ -110,7 +110,7 @@ class UmaGame:
         else:
             return 0
 
-    def _start_game(self, character: HorseGirl = Oguri_Cup, mode: bool = 0):
+    def _start_game(self, character: HorseGirl = Oguri_Cap, mode: bool = 0):
         """Starting game from home screen."""
         self.nclick(1500, 400, 2)
         self.click(1650,630, 9)
@@ -148,8 +148,8 @@ class UmaGame:
         self.click(1450, 500, 6)
 
         for i in range(5):
-            self.click(1500, 500, 5)  # Click Team Race
-            self.click(1550, 400, 7)
+            self.click(1500, 500, 7)  # Click Team Race
+            self.click(1550, 400, 8)
             self.click(1550, 620, 2)
             self.click(1610, 510, 5)
             while not self.test_image("TeamRace", rg=teamrace_bar):
@@ -167,8 +167,8 @@ class UmaGame:
         self.click(1470, 300, 10)
         self.click(1550, 170)
         for i in range(n):
-            self.click(1500, 200, 4)
-            self.click(1470, 338, 3)
+            self.click(1500, 200, 5)
+            self.click(1470, 338, 5)
             self.click(1560, 480)
             self.click(1550, 630)
             self.nclick(1670, 583, 2)
@@ -218,6 +218,7 @@ class UmaGame:
         self.style = style
         self.pre_trainoption = 0  # The default starting "previous" training is speed.
         self.c = character
+        self.trouble_count = 0
 
         self.click(1550, 240)  # Make sure screen is accessible.
 
@@ -226,7 +227,8 @@ class UmaGame:
                 self.train_horse()
             except ContinueException:
                 self.turn += 1
-                time.sleep(4)
+                self.trouble_count = 0
+                time.sleep(1)
                 continue
 
     def train_horse(self):
@@ -240,6 +242,9 @@ class UmaGame:
         self._trouble_shoot()  # Check if inheriting event or connection error happens.
 
     def _trouble_shoot(self, racemode=0):
+        self.trouble_count += 1
+        if self.trouble_count >= 6:
+            exit("Cannot resolve trouble, ending autoplay.")
         if self.test_image("generaltraining/InsufficientFans"):
             self.click(1490, 520, 2)
         elif self.test_image("generaltraining/ConnectionError"):
@@ -271,8 +276,9 @@ class UmaGame:
             for i in range(3):  # Adding the loop to met situations with consecutive multiple choose events.
                 a, b = identify_image("generaltraining/hi_g")
                 self.__check_special__()
-                click_true(a, b, 7.5)
+                click_true(a, b, 3.5)
                 print("Choose green choice.")
+                self.pre_trainoption = 0
         except ImageNotFoundException:
             pass
         except UmaException:
@@ -288,6 +294,7 @@ class UmaGame:
                 click_image("generaltraining/hi_y")
                 print("Special choice selected.")
                 x = 1
+                self.pre_trainoption = 0
                 time.sleep(2.5)
                 break
         if x:
@@ -340,6 +347,7 @@ class UmaGame:
             self.click(1450, 580)
         print(f"Use turn {self.turn} to raise mood.")
         self.nclick(1630, 490, 2)
+        self.pre_trainoption = 0
         time.sleep(5)
 
     def _check_mood(self):
@@ -366,10 +374,11 @@ class UmaGame:
             if not (self.test_image("generaltraining/Races", rg=race_bar) or self.test_image(f"URA/races/{rl[self.turn]}")):
                 print("Trouble shooting for race preparation...")
                 self._check_multiq()
-                self._trouble_shoot()
+                self._trouble_shoot(1)
                 self._check_race()
             while self.test_image("generaltraining/Races", rg=race_bar):
                 self.click(1615, 625, 4)
+            self._trouble_shoot(1)
             try:
                 click_image(f"URA/races/{rl[self.turn]}")
                 print("Clicking successful")
@@ -427,7 +436,7 @@ class UmaGame:
         except ImageNotFoundException:
             pass
 
-    def __update_friendship__(self, supportcard: SupportCard, rg, confi = 0.999):
+    def __update_friendship__(self, supportcard: SupportCard, rg, confi = 0.97):
         """Check the friendship bar of a support card"""
         if supportcard.friendship:
             pass  # Do not check when already know that the friendship bar turned orange & maxed.
@@ -438,7 +447,7 @@ class UmaGame:
                 print(f"Orange bar identified for {supportcard}")  # Test for orange bar by pixel color
             else:
                 try:
-                    pyautogui.locateOnScreen("figures/generaltraining/friendship_max.png", region=(rg[0]-30, rg[1]+25, 60, 35), confidence=confi)
+                    pyautogui.locateOnScreen("figures_m/generaltraining/friendship_max.png", region=(rg[0]-30, rg[1]+25, 60, 35), confidence=confi)
                     supportcard.friendship = 1
                     print(f"Max bar identified for {supportcard}")
                 except ImageNotFoundException:
@@ -468,7 +477,7 @@ def identify_image(name: str):
     Return the true central coordinate of the image.
     If no image is identified, it will raise
     pyautogui.ImageNotFoundException."""
-    l, t, w, h = pyautogui.locateOnScreen(f"figures/{name}.png", confidence=0.9)
+    l, t, w, h = pyautogui.locateOnScreen(f"figures_m/{name}.png", confidence=0.9)
     # print(l, t, w, h)
     return (l/2+w/4, t/2+h/4)
 
@@ -492,7 +501,7 @@ def click_image(name: str, interval=2):
 if __name__ == "__main__":
     URA = UmaGame(test=0)
     # URA._team_trial()
-    # URA.remove_expired_followers(15)
+    # URA.remove_expired_followers(35)
     # URA._start_game(Maruzensky, 1)
-    URA.train_horse_loop(Maruzensky, turn=57)
+    URA.train_horse_loop(Maruzensky, turn=1)
     # print(URA.__friendship_bonus_score__("speed", list(Maruzensky.supportcard)))
