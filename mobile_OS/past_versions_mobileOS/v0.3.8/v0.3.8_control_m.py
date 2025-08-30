@@ -4,49 +4,18 @@ import time
 from builtins import Exception
 from math import e
 from horse_info_m import *
-from numbers import Number
 
-# sensible defaults
-pyautogui.FAILSAFE = True
-
-# scaling helpers
-def _detect_scale(default_scale=None):
-    if default_scale is None:
-        shot = pyautogui.screenshot()
-        return shot.width / pyautogui.size()[0]
-    else:
-        return default_scale
-
-SCALE = _detect_scale()
-
-# switch from actual and logical coordinates
-def _fp(content, scalefactor=1):
-    """Adjust the coordinate since pyautogui is fucked.
-    
-    scaleup: let scalefactor = 1
-    scaledown: let scalefactor = -1"""
-    if isinstance(content, Number):
-        return int(content * SCALE**scalefactor)
-    elif isinstance(content, tuple):
-        return tuple(int(i*SCALE**scalefactor) for i in content)
-    else:
-        raise NotImplementedError(f"_fp not implemented for type {type(content)}.")
 
 # Get the screen size
 screen_width, screen_height = pyautogui.size()  # Size in mouse functions' format, different from locate.
 x0, y0 = 1431.0, 133.5  # Coordinate of topleft corner on my macbook.
 ww0, wh0 = 242.0, 553.5 # width and height of window on my macbook.
-ts_rg = (1650, 200, 50, 280)
-rest_bar = (1525, 182, 35, 12)  # Region of locate function for resting judgement.
-racemain_bar = (1575, 615, 37, 30)  # 1580, 620 is actual left top for race bar.
-insufficient_fans_bar = (1525, 355, 180, 200)  # Remainder of insufficient fans pop-up.
-teamrace_bar = (1500, 480, 150, 90)  # Indicator of teamrace label.
-race_bar = (1610, 645, 150, 150)
-teamtrials_bar = (1445, 545, 200, 25)
-teamrace_refresh_bar = (1660, 608, 45, 45)
-RP_bar1 = (1566, 115, 35, 35)
-home_bar = (1500, 650, 100, 60)
-option_bar = (1650, 665, 45, 45)
+ts_rg = (3300, 400, 100, 560)
+rest_bar = (3050, 365, 70, 24)  # Region of locate function for resting judgement.
+racemain_bar = (3150, 1230, 74, 60)  # 1580, 620 is actual left top for race bar.
+insufficient_fans_bar = (3050, 710, 360, 400)  # Remainder of insufficient fans pop-up.
+teamrace_bar = (3000, 960, 300, 180)  # Indicator of teamrace label.
+race_bar = (3220, 1290, 300, 300)
 
 class UmaException(Exception):
     pass
@@ -99,6 +68,10 @@ class UmaGame:
         pyautogui.click(a1, b1)
         time.sleep(interval)
 
+    def wait_for(self):
+        pass
+
+
     def nclick(self, a: float, b: float, n: int, interval=0.5):
         """Click by n times."""
         if n <= 1:
@@ -119,45 +92,15 @@ class UmaGame:
                 x = pyautogui.locateCenterOnScreen(f"figures_m/{name}.png", confidence=confi)
             else:
                 a, b, c, d = rg
-                rg1 = _fp((*self._coordinate_for_click(a, b), c, d))
+                a1, b1 = self._coordinate_for_click(a/2, b/2)  # Keep it for now
+                rg1 = (int(a1*2), int(b1*2), c, d)
                 x = pyautogui.locateCenterOnScreen(f"figures_m/{name}.png", confidence=confi, region=rg1)
             if returncoordinate:
-                return _fp(x, -1)
+                return x
             else:
                 return 1
         except ImageNotFoundException:
             return 0 
-
-    def wait_for(self, name: str, confi=0.9, rg=None, timeout=10.0, check_every=0.25, click=False, interval=0.5):
-        """Wait until an image appears; return its center or None on timeout. Click the centre position if click is True."""
-        t0 = time.time()
-        while time.time() - t0 < timeout:
-            center = self.test_image(name, confi, rg, 1)
-            if center:
-                if click:
-                    click_true(*center, interval)
-                return center
-            time.sleep(check_every)
-        return None
-
-    def wait_for_any(self, *args, logic="or", confi=0.9, rg=None, dir="generaltraining/", timeout=10.0, check_every=0.25):
-        """Wait for any & all of the images in args appears before timeout; return 1 if so and 0 otherwise."""
-        t0 = time.time()
-        while time.time() - t0 < timeout:
-            if self.test_images(*args, confi=confi, rg=rg, logic=logic, dir=dir):
-                return 1
-            time.sleep(check_every)
-        return 0
-
-    def clicks_until(self, position: tuple, name: str, confi=0.9, rg=None, timeout=10.0, check_every=0.1):
-        """Click a position until an image appears."""
-        t0 = time.time()
-        while time.time() - t0 < timeout:
-            center = self.test_image(name, confi, rg, 1)
-            if center:
-                return 1
-            self.click(*position, interval=check_every)
-        return None
 
     def test_images(self, *args: str, confi = 0.9, rg = None, logic = "or", dir="generaltraining/"):
         """Return 1 if images present following and & or logic."""
@@ -171,24 +114,6 @@ class UmaGame:
                 return 0
         else:
             return 0
-
-    def _team_trial(self):
-            """Conduct team trial from home screen, until no stamina."""
-            if self.wait_for("teamtrial/RP", rg=RP_bar1, confi=0.99, timeout=3) is None:
-                print("No RP for team trials.")
-                return None
-            self.nclick(1500, 400, 3)
-            self.click(1620, 680)  # Click race
-            self.wait_for("teamtrial/TeamTrials", rg=teamtrials_bar, click=1)
-            while self.wait_for("teamtrial/RP", rg=RP_bar1, confi=0.99, timeout=8):
-                self.wait_for("teamtrial/TeamRace", rg=teamrace_bar, click=1)
-                self.wait_for("refresh", rg=teamrace_refresh_bar)
-                self.click(1550, 400)  # Click the second opponent.
-                self.wait_for("generaltraining/next", rg=(1500, 600, 100, 35), click=1)
-                self.click(1610, 510)
-                while not self.test_image("teamtrial/TeamRace", rg=teamrace_bar):
-                    self.nclick(1580, 650, 10, 0.1)
-            self.wait_for("home", rg=home_bar, click=1)
 
     def _start_game(self, character: HorseGirl = Oguri_Cap, mode: bool = 0):
         """Starting game from home screen."""
@@ -220,6 +145,25 @@ class UmaGame:
             self.click(1550, 520, 2.5)
             self.nclick(1510, 690, 2, 1.5)
             time.sleep(3.5)
+
+    def _team_trial(self):
+        """Conduct team trial from home screen, untill no stamina."""
+        self.nclick(1500, 400, 3)
+        self.click(1620, 680, 3)  # Click race
+        self.click(1450, 500, 6)
+
+        for i in range(5):
+            self.click(1500, 500, 7)  # Click Team Race
+            self.click(1550, 400, 8)
+            self.click(1550, 620, 2)
+            self.click(1610, 510, 5)
+            while not self.test_image("TeamRace", rg=teamrace_bar):
+                self.nclick(1580, 650, 10, 0.1)
+            if i == 4:
+                self.nclick(1550, 680, 3)
+                self.click(1580, 650)
+                self.click(1550, 680, 3)
+                break
     
     def remove_expired_followers(self, n: int = 10):
         """Remove followers that does not log in."""
@@ -277,10 +221,7 @@ class UmaGame:
         """
         self.turn = turn
         self.style = style
-        if turn == 1:
-            self.pre_trainoption = 0  # The default starting "previous" training is speed.
-        else:
-            self.pre_trainoption = 3  # Avoid hitting same option immediately. Rarely train guts so click guts first.
+        self.pre_trainoption = 0  # The default starting "previous" training is speed.
         self.c = character
         self.trouble_count = 0
 
@@ -301,8 +242,8 @@ class UmaGame:
         self._infirmary()
         self._check_race()  # Put this priority below infirmary since health is always the first, haha.
         mood_score = 3 if self._check_mood() else 0
-        if self._check_energy():
-            self._check_training(mood_score)
+        self._check_energy()
+        self._check_training(mood_score)
         self._trouble_shoot()  # Check if inheriting event or connection error happens.
 
     def _trouble_shoot(self, racemode=0):
@@ -340,9 +281,9 @@ class UmaGame:
             for i in range(3):  # Adding the loop to met situations with consecutive multiple choose events.
                 a, b = identify_image("generaltraining/hi_g")
                 self.__check_special__()
-                click_true(a, b)
-                time.sleep(2.5)
+                click_true(a, b, 3.5)
                 print("Choose green choice.")
+                self.pre_trainoption = 0
         except ImageNotFoundException:
             pass
         except UmaException:
@@ -358,30 +299,31 @@ class UmaGame:
                 click_image("generaltraining/hi_y")
                 print("Special choice selected.")
                 x = 1
+                self.pre_trainoption = 0
+                time.sleep(2.5)
                 break
         if x:
             raise UmaException("Special event detected.")
 
     def _check_mainrace(self):
-        if self.wait_for_any("RaceMain", "RaceURA", confi=0.98, rg=racemain_bar, dir="generaltraining/", timeout=2, check_every=0):
-            self.click(1615, 625)
+        if self.test_images("RaceMain", "RaceURA", confi=0.98, rg=racemain_bar, dir="generaltraining/"):  #  or test_image("URA/RaceURA")
+            self.click(1615, 625, 1)
         else:
             return None
         print(f"Following main agenda to race on turn {self.turn}.")
-        self.wait_for("generaltraining/Race", rg=(1580, 610, 100, 30), click=1)
-        self.click(1620, 520)
-        if self.style != "changed":
-            time.sleep(7)
+        self.click(1610, 620, 1)
+        self.click(1610, 520, 7.5)
+        if self.style == "front":
             self.nclick(1635, 455, 2, 1)  # change to front style. 
-            self.click(1620, 520)
+            self.click(1620, 520, 5)
             self.style = "changed"
         else:
             pass
-        if self.wait_for("generaltraining/Result", rg=(1456, 640, 100, 40), click=1) is None:
+        if self.test_image("generaltraining/Result"):
+            self.click(1500, 660, 5)
+            self.nclick(1565, 660, 6, 4.5)
+        else:
             raise NotImplementedError
-        self.clicks_until((1565, 660), "generaltraining/Option", rg=option_bar, timeout=15)
-        time.sleep(1.5)
-        self.nclick(1565, 660, 4, 4.5)
         raise ContinueException
 
     def _check_skill(self):
@@ -398,6 +340,7 @@ class UmaGame:
             print(f"Use turn {self.turn} to heal.")
             self.click(1470, 640)
             self.nclick(1620, 480, 2)
+            time.sleep(4)
             raise ContinueException
         else:
             pass
@@ -409,7 +352,8 @@ class UmaGame:
             self.click(1450, 580)
         print(f"Use turn {self.turn} to raise mood.")
         self.nclick(1630, 490, 2)
-        self.pre_trainoption = 3
+        self.pre_trainoption = 0
+        time.sleep(5)
 
     def _check_mood(self):
         """Always spend turn to raise mood when below good, and return mood score 3 for good, 0 for great."""
@@ -437,75 +381,86 @@ class UmaGame:
                 self._check_multiq()
                 self._trouble_shoot(1)
                 self._check_race()
-            self.wait_for("generaltraining/Races", rg=race_bar, click=1)
+            while self.test_image("generaltraining/Races", rg=race_bar):
+                self.click(1615, 625, 4)
             self._trouble_shoot(1)
-            if self.wait_for(f"URA/races/{rl[self.turn]}", click=1) is None:
+            try:
+                click_image(f"URA/races/{rl[self.turn]}")
+                print("Clicking successful")
+            except ImageNotFoundException:
                 self.click(1560, 445)
                 pyautogui.drag(0, 100, 1, button="left")
                 click_image(f"URA/races/{rl[self.turn]}")
-                print("Reclicking successful")
-            else:
                 print("Clicking successful")
-            self.wait_for("generaltraining/Race", rg=(1580, 610, 100, 30), click=1)
-            self.click(1620, 520)
+            self.click(1620, 625, 4)
+            self.click(1620, 520, 10)
             print(f"Use turn {self.turn} to attend {rl[self.turn]}.")
-            self.wait_for("generaltraining/Result", rg=(1456, 640, 100, 40), click=1)
-            self.clicks_until((1565, 660), "generaltraining/Option", rg=option_bar, timeout=15)
+            if self.test_image("generaltraining/Result"):
+                self.click(1500, 660, 5)
+                self.nclick(1565, 660, 4, 4.5)
+            else:
+                raise NotImplementedError
             raise ContinueException
 
 
     def _check_energy(self):
-        if self.wait_for(f"generaltraining/Training", confi=0.99, timeout=3) is None:
-            return 0
+        if not self.test_image(f"generaltraining/Training", confi=0.99):
+            pass
         elif self.test_image("generaltraining/EnergyBar", confi=0.98, rg=rest_bar):
-            return 1
+            pass
         else:
             print(f"Use turn {self.turn} to rest.")
             self.click(1450, 586)
             self.nclick(1620, 480, 2)
+            time.sleep(4)
             raise ContinueException
     
     def _check_training(self, mood_score: float):
         training_ls = ["speed", "stamina", "power", "guts", "wits"]
         unpresented_supportcardlist = list(self.c.supportcard)
-        if self.wait_for("generaltraining/Training", timeout=7, click=1) is None:
-            return None
-        score = self.c.training_priority + [mood_score]
-        order = [(self.pre_trainoption + i)%5 for i in range(1, 6)]  # Avoid single cicking of previous option.
-        for i in order:
-            self.click(1450 + 50*i, 620, 0)
-            score[i] += self.__friendship_bonus_score__(training_ls[i], unpresented_supportcardlist)
-            score[i] += 0.3 * self.test_image("URA/Director", rg=ts_rg)
-            score[i] += 0.3 * self.test_image("URA/Reporter", rg=ts_rg)
-            print(f"The score under {i + 1}th training option is {int(score[i]*100)/100}")
-        max_index = score.index(max(score))
-        if max_index == 5:
-            self.click(1440, 684, 1)  # Click back
-            self.__raise_mood__()
-            raise ContinueException
-        else:
-            self.nclick(1450 + max_index * 50, 620, 2)
-            self.pre_trainoption = max_index
-            print(f"Use turn {self.turn} to train {training_ls[max_index]}")
-            raise ContinueException
+        try:
+            click_image("generaltraining/Training")
+            score = self.c.training_priority + [mood_score]
+            order = [(self.pre_trainoption + i)%5 for i in range(1, 6)]  # Avoid single cicking of previous option.
+            for i in order:
+                self.click(1450 + 50*i, 620, 0)
+                score[i] += self.__friendship_bonus_score__(training_ls[i], unpresented_supportcardlist)
+                score[i] += 0.3 * self.test_image("URA/Director", rg=ts_rg)
+                score[i] += 0.3 * self.test_image("URA/Reporter", rg=ts_rg)
+                print(f"The score under {i + 1}th training option is {int(score[i]*100)/100}")
+            max_index = score.index(max(score))
+            if max_index == 5:
+                self.click(1440, 684, 1)  # Click back
+                self.__raise_mood__()
+                raise ContinueException
+            else:
+                self.nclick(1450 + max_index * 50, 620, 2)
+                self.pre_trainoption = max_index
+                print(f"Use turn {self.turn} to train {training_ls[max_index]}")
+                raise ContinueException
+        except ImageNotFoundException:
+            pass
 
     def __update_friendship__(self, supportcard: SupportCard, rg, confi = 0.97):
         """Check the friendship bar of a support card"""
         if supportcard.friendship:
             pass  # Do not check when already know that the friendship bar turned orange & maxed.
         else:
-            r, g, b = pyautogui.pixel(1672*2, _fp(rg[1])+40)
+            r, g, b = pyautogui.pixel(1672*2, rg[1]+40)
             if (r-243)**2 + (g-177)**2 + (b-69)**2 < 72:
                 supportcard.friendship = 1
                 print(f"Orange bar identified for {supportcard}")  # Test for orange bar by pixel color
             else:
                 try:
-                    r1, g1 = _fp(rg)
-                    pyautogui.locateOnScreen("figures_m/generaltraining/friendship_max.png", region=(r1-30, g1+25, 60, 35), confidence=confi)
+                    pyautogui.locateOnScreen("figures_m/generaltraining/friendship_max.png", region=(rg[0]-30, rg[1]+25, 60, 35), confidence=confi)
                     supportcard.friendship = 1
                     print(f"Max bar identified for {supportcard}")
                 except ImageNotFoundException:
                     print(f"Empty relationship bar ({supportcard.friendship}) is identified for {supportcard}")
+
+                
+
+
 
     def __friendship_bonus_score__(self, training_type: str, supportcards: tuple):
         """Check from unpresented supportcard list and add scores for each present support card. Once a support card is present,
@@ -527,8 +482,9 @@ def identify_image(name: str):
     Return the true central coordinate of the image.
     If no image is identified, it will raise
     pyautogui.ImageNotFoundException."""
-    l, t, w, h = _fp(pyautogui.locateOnScreen(f"figures_m/{name}.png", confidence=0.9), -1)
-    return (l+w/2, t+h/2)
+    l, t, w, h = pyautogui.locateOnScreen(f"figures_m/{name}.png", confidence=0.9)
+    # print(l, t, w, h)
+    return (l/2+w/4, t/2+h/4)
 
 
 def click_true(a: float, b: float, interval=0.5):
@@ -548,9 +504,9 @@ def click_image(name: str, interval=2):
 
 
 if __name__ == "__main__":
-    URA = UmaGame(test=0)
-    URA._team_trial()
+    # URA = UmaGame(test=0)
+    # URA._team_trial()
     # URA.remove_expired_followers(35)
     # URA._start_game(Maruzensky2, 1)
-    # URA.train_horse_loop(Oguri_Cup, turn=75)
-    # print(URA.__friendship_bonus_score__("speed", list(Oguri_Cup.supportcard)))
+    # URA.train_horse_loop(Maruzensky2, turn=50)
+    # print(URA.__friendship_bonus_score__("speed", list(Maruzensky2.supportcard)))

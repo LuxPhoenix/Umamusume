@@ -17,6 +17,15 @@
         "skill_set": ["Early Lead", "Triumphant Pulse", "Homestretch Haste"],
         "strategy": {"22": "Front", "39": "Pace"}
     },
+    "Maruzensky2": {
+        "default_supportcard": ["Super Creek SSR sta", "Yaeno Muteki SSR pow", "Sweep Tosho SR spe", "Agnes Tachyon SR wit", "Kitasan Black SSR spe", "Silence Suzuka SSR spe"],
+        "friend_supportcard": "Yaeno Muteki SSR pow",
+        "default_racetable": {"24": "Hopeful S", "34": "NHK Mile", "45": "Shuka Sho", "47": "Mile C", "59": "Victoria Mile", "72": "Mile C"},
+        "training_priority": [1.5, 0.9, 0.3, 0, 0.6],
+        "special_events": [],
+        "skill_set": ["Early Lead", "Triumphant Pulse", "Homestretch Haste"],
+        "strategy": {"22": "Front", "39": "Pace"}
+    },
     "Tokai Teio": {
         "default_supportcard": ["Sweep Tosho SR spe", "Super Creek SSR sta", "Kitasan Black SSR spe", "Manhattan Cafe SR sta", "King Halo SR spe", "Fine Motion SSR wit"],
         "friend_supportcard": "Fine Motion SSR wit",

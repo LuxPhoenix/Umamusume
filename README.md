@@ -102,3 +102,13 @@ Direction for V0.4:
 3. Making sure both laptop and mobile version could run smoothly.
 
 Note: I was busy preparing for school exams last several weeks, and Coed did everything for the laptop (steam version), which is absolutely amazing. Now that I get back, I should devote more time into this project and make it better!
+
+# V0.3.9
+Implementation of scale adjusting mechanism: _detect_scale, _fp; testing mechanism: wait_for, wait_for_any, clicks_until.
+
+First implementation ensures the scales between logical and actual pixel coordinates are adjusted on any screen. Second implementation saves time by clicking icons immediately upon occurance, and reduces risks of raising errors by waiting for connecting times. Team trial improved speed by 3 folds, training by 2 folds. 
+
+Minor change in logics:
+1. Team trial will run until no RP, and will not start running if no RP in the first place (instead of always run 5 times).
+2. During training, training for any option won't trigger if no energy.
+3. check_race and check_race_main are both accelerated, I do note that the end of check_race_main requires improvement.
