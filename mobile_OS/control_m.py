@@ -193,10 +193,11 @@ class UmaGame:
     def _start_game(self, character: HorseGirl = Oguri_Cap, mode: bool = 0):
         """Starting game from home screen."""
         self.nclick(1500, 400, 2)
-        self.click(1650,630, 9)
         if mode:  # To continue a game.
+            self.click(1650,630, 2)
             self.click(1640,520, 5)
         else:  # To start a new game.
+            self.click(1650,630, 9)
             self.click(1550, 610)  # To character page
             click_image(f"characterselect/{character.name}")  # Select character.
             self.click(1550, 610)  # Confirm
@@ -237,7 +238,7 @@ class UmaGame:
         
 
 
-    def train_horse_loop(self, character: HorseGirl = Daiwa_Scarlet, style: str = "front", turn = 1):
+    def train_horse_loop(self, character: HorseGirl = Daiwa_Scarlet, style: str = "front", turn = 1, hint_priority = 5):
         """Train the horse with following logic.
 
         conduct this loop, starting from turn 1:
@@ -277,10 +278,11 @@ class UmaGame:
         """
         self.turn = turn
         self.style = style
+        self.hint_priority = hint_priority
         if turn == 1:
             self.pre_trainoption = 0  # The default starting "previous" training is speed.
         else:
-            self.pre_trainoption = 3  # Avoid hitting same option immediately. Rarely train guts so click guts first.
+            self.pre_trainoption = 2  # Avoid hitting same option immediately. Rarely train guts so click guts first.
         self.c = character
         self.trouble_count = 0
 
@@ -309,6 +311,16 @@ class UmaGame:
         self.trouble_count += 1
         if self.trouble_count >= 6:
             exit("Cannot resolve trouble, ending autoplay.")
+        try: 
+            click_image("generaltraining/Next")
+            return 0
+        except ImageNotFoundException:
+            pass
+        try:
+            click_image("generaltraining/Cancel")
+            return 0
+        except ImageNotFoundException:
+            pass
         if self.test_image("generaltraining/InsufficientFans"):
             self.click(1490, 520, 2)
         elif self.test_image("generaltraining/ConnectionError"):
@@ -329,19 +341,15 @@ class UmaGame:
         elif self.test_image("generaltraining/Close"):
             click_image("generaltraining/Close")
         else:
-            try: 
-                click_image("generaltraining/Next")
-            except ImageNotFoundException:
-                pass
+            print("problem unresolved.")
 
     def _check_multiq(self):
         """Obtain support card special events (that do not choose green) and check for them then normal events."""
         try: 
             for i in range(3):  # Adding the loop to met situations with consecutive multiple choose events.
                 a, b = identify_image("generaltraining/hi_g")
-                self.__check_special__()
+                # self.__check_special__()
                 click_true(a, b)
-                time.sleep(2.5)
                 print("Choose green choice.")
         except ImageNotFoundException:
             pass
@@ -381,7 +389,10 @@ class UmaGame:
             raise NotImplementedError
         self.clicks_until((1565, 660), "generaltraining/Option", rg=option_bar, timeout=15)
         time.sleep(1.5)
-        self.nclick(1565, 660, 4, 4.5)
+        if self.turn >= 76:
+            self.nclick(1565, 675, 4, 1.5)
+        else:
+            self.nclick(1565, 675, 8, 1.5)
         raise ContinueException
 
     def _check_skill(self):
@@ -477,6 +488,8 @@ class UmaGame:
             score[i] += self.__friendship_bonus_score__(training_ls[i], unpresented_supportcardlist)
             score[i] += 0.3 * self.test_image("URA/Director", rg=ts_rg)
             score[i] += 0.3 * self.test_image("URA/Reporter", rg=ts_rg)
+            if self.hint_priority:
+                score[i] += self.hint_priority * self.test_image("generaltraining/inspiration", rg=ts_rg, confi=0.85)
             print(f"The score under {i + 1}th training option is {int(score[i]*100)/100}")
         max_index = score.index(max(score))
         if max_index == 5:
@@ -494,7 +507,7 @@ class UmaGame:
         if supportcard.friendship:
             pass  # Do not check when already know that the friendship bar turned orange & maxed.
         else:
-            r, g, b = pyautogui.pixel(1672*2, _fp(rg[1])+40)
+            r, g, b = pyautogui.pixel(1672*SCALE, _fp(rg[1])+40)
             if (r-243)**2 + (g-177)**2 + (b-69)**2 < 72:
                 supportcard.friendship = 1
                 print(f"Orange bar identified for {supportcard}")  # Test for orange bar by pixel color
@@ -549,8 +562,8 @@ def click_image(name: str, interval=2):
 
 if __name__ == "__main__":
     URA = UmaGame(test=0)
-    URA._team_trial()
+    # URA._team_trial()
     # URA.remove_expired_followers(35)
-    # URA._start_game(Maruzensky2, 1)
-    # URA.train_horse_loop(Oguri_Cup, turn=75)
-    # print(URA.__friendship_bonus_score__("speed", list(Oguri_Cup.supportcard)))
+    URA._start_game(Oguri_Cap3, 1)
+    URA.train_horse_loop(Oguri_Cap3, turn=1)
+    # print(URA.__friendship_bonus_score__("speed", list(Oguri_Cap3.supportcard)))

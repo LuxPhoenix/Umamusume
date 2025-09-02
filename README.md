@@ -112,3 +112,16 @@ Minor change in logics:
 1. Team trial will run until no RP, and will not start running if no RP in the first place (instead of always run 5 times).
 2. During training, training for any option won't trigger if no energy.
 3. check_race and check_race_main are both accelerated, I do note that the end of check_race_main requires improvement.
+
+# V0.4.0
+This should mark a major leap towards functionality, unfortunately it's 4am and I gotta sleep, so no fancy summary.
+
+Major changes:
+1. Improvement in check race & check race main by fixing ending bugs and distinguishing URA final out of other races.
+2. Inclusion of hints in score calculation, adding changable hint priority (could be adjusted different to suit parent & ace & debuffer & team trial & fan farming).
+3. Improvement in trouble shooting by changing logical order and inclusion of "Cancel" button detection.
+4. More addition of support card infomation and corresponding images.
+
+Minor changes:
+1. Relationship calculation made more exact in wording.
+2. Sorting horse_info_m.json with name corrections.

@@ -1,9 +1,27 @@
 {
-    "Oguri Cup": {
+    "Oguri Cap": {
+        "default_supportcard": ["Manhattan Cafe SR sta", "Super Creek SSR sta", "Sweep Tosho SR spe", "Sakura Bakushin O SSR spe", "Kitasan Black SSR spe", "King Halo SR spe"],
+        "friend_supportcard": "Sakura Bakushin O SSR spe",
+        "default_racetable": {"22": "Asahi Hai Futurity", "23": "Hopeful Stakes", "30": "Satsuki Sho", "33": "Japan Derby", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
+        "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
+        "special_events": ["wonderful mistake"],
+        "skill_set": [],
+        "strategy": {"22": "Front", "39": "Pace"}
+    },
+    "Oguri Cap2": {
         "default_supportcard": ["Sweep Tosho SR spe", "Super Creek SSR sta", "Manhattan Cafe SR sta", "Kitasan Black SSR spe", "King Halo SR spe", "Fine Motion SSR wit"],
         "friend_supportcard": "Fine Motion SSR wit",
         "default_racetable": {"23": "Hanshin Juvenile", "24": "Hopeful S", "32": "Oka Sho", "35": "Japan Derby", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
         "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
+        "special_events": ["wonderful mistake"],
+        "skill_set": [],
+        "strategy": {"22": "Front", "39": "Pace"}
+    },
+    "Oguri Cap3": {
+        "default_supportcard": ["Yaeno Muteki SSR pow", "Super Creek SSR sta", "Matikanefukukitaru SR wit", "Kitasan Black SSR spe", "Hishi Amazon SR pow", "Mejiro McQueen R sta"],
+        "friend_supportcard": "Yaeno Muteki SSR pow",
+        "default_racetable": {"23": "Hanshin Juvenile", "24": "Hopeful S", "32": "Satsuki Sho", "35": "Japan Derby", "45": "Kikuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
+        "training_priority": [2, 1.1, 0.3, -0.5, 0.5],
         "special_events": ["wonderful mistake"],
         "skill_set": [],
         "strategy": {"22": "Front", "39": "Pace"}
@@ -49,15 +67,6 @@
         "friend_supportcard": "Sweep Tosho SR spe",
         "default_racetable": {"23": "Hanshin Juvenile", "24": "Hopeful S", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
         "training_priority": [1.5, 0.6, 0.4, -0.5, 0],
-        "special_events": ["wonderful mistake"],
-        "skill_set": [],
-        "strategy": {"22": "Front", "39": "Pace"}
-    },
-    "Oguri Cap": {
-        "default_supportcard": ["Manhattan Cafe SR sta", "Super Creek SSR sta", "Sweep Tosho SR spe", "Sakura Bakushin O SSR spe", "Kitasan Black SSR spe", "King Halo SR spe"],
-        "friend_supportcard": "Sakura Bakushin O SSR spe",
-        "default_racetable": {"22": "Asahi Hai Futurity", "23": "Hopeful Stakes", "30": "Satsuki Sho", "33": "Japan Derby", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
-        "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
         "special_events": ["wonderful mistake"],
         "skill_set": [],
         "strategy": {"22": "Front", "39": "Pace"}
