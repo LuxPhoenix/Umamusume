@@ -120,7 +120,7 @@ Major changes:
 1. Improvement in check race & check race main by fixing ending bugs and distinguishing URA final out of other races.
 2. Inclusion of hints in score calculation, adding changable hint priority (could be adjusted different to suit parent & ace & debuffer & team trial & fan farming).
 3. Improvement in trouble shooting by changing logical order and inclusion of "Cancel" button detection.
-4. More addition of support card infomation and corresponding images.
+4. More addition of support card information and corresponding images.
 
 Minor changes:
 1. Relationship calculation made more exact in wording.
