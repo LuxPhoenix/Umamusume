@@ -27,6 +27,7 @@ class SupportCard():
         self.e_mood = float(content["mood_bonus"][LBlevel])
         self.e_friend = float(content["friend_bonus"][LBlevel])
         self.friendship = 0
+        self.hint_priority = float(content["hint_priority"])
 
     def _is_specialized(self, training_type: str):
         if self.train_type == training_type:

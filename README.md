@@ -125,3 +125,17 @@ Major changes:
 Minor changes:
 1. Relationship calculation made more exact in wording.
 2. Sorting horse_info_m.json with name corrections.
+
+# V0.4.1
+This is an intermediate version aiming at bug fixes and semi-implementation of hint-value & training value calculation.
+
+Major changes:
+1. Addition of all races information beyond and including G3.
+2. Implementation of trying again after failing goals.
+3. Update the start game function to enable customized parent selection.
+4. Update the mood related functions to make it safer.
+
+Minor changes:
+1. Restrict regions for previously unrestricted testing images, improving efficiency.
+3. Fixing name issue for characters.
+4. Reducing time taken for trouble shooting process.

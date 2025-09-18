@@ -23,14 +23,14 @@ class HorseGirl:
                  friend_support: str = None, race_table: dict = None, 
                  training_priority: list = None, special_events: list = None,
                  skill_set: tuple = None):
-        self.name = name
         try:
             with open('horse_info_m.json', 'r') as file:
-                self.DI = json.load(file)[self.name]
+                self.DI = json.load(file)[name]
         except FileNotFoundError:
             print("Error: The file 'horse_info_m.json' was not found.")
         except json.JSONDecodeError:
             print("Error: Could not decode JSON from the file. Check for valid JSON format.")
+        self.name = self.DI["name"]
         sc = supportcard if supportcard else self.DI['default_supportcard']
         self.supportcard = tuple(SupportCard(i) for i in sc)
         self.friend_support = friend_support if friend_support else self.DI['friend_supportcard']
@@ -42,10 +42,14 @@ class HorseGirl:
         self.strategy = {int(k): v for k, v in self.DI["strategy"].items()}
 
 
+'''
 Oguri_Cap = HorseGirl("Oguri Cap")
 Oguri_Cap3 = HorseGirl("Oguri Cap3")
 Daiwa_Scarlet = HorseGirl("Daiwa Scarlet")
 Maruzensky = HorseGirl("Maruzensky")
 El_Condor = HorseGirl("El_Condor")
 Maruzensky2 = HorseGirl("Maruzensky2")
-
+'''
+Tokai_Teio2 = HorseGirl("Tokai Teio2")
+TM_Opera_O = HorseGirl("T.M. Opera O")
+Maruzensky3 = HorseGirl("Maruzensky3")
