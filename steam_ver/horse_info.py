@@ -47,4 +47,4 @@ Daiwa_Scarlet = HorseGirl("Daiwa Scarlet")
 Daiwa_Scarlet_2 = HorseGirl("Daiwa Scarlet 2")
 Maruzensky = HorseGirl("Maruzensky")
 El_Condor = HorseGirl("El_Condor")
-
+Mayano_Top_Gun_Wedding = HorseGirl("Mayano Top Gun Wedding")

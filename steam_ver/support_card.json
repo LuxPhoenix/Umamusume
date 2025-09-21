@@ -58,5 +58,20 @@
      },
      "Marvelous Sunday (SR)": {
           "train_type": "wits", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Silence Suzuka (SSR)": {
+          "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Daitaku Helios (SR)": {
+          "train_type": "power", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Air Groove (SR)": {
+          "train_type": "guts", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Fuji Kiseki (SR)": {
+          "train_type": "wits", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Yaeno Muteki (SSR)": {
+          "train_type": "power", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
      }
 }
