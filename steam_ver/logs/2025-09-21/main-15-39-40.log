@@ -1,0 +1,7 @@
+2025-09-21 15:43:55,375 - main -   INFO - Turn 0: No choice event, training UI detected.
+2025-09-21 15:43:55,464 - main -  DEBUG - Turn 0: Status good today.
+2025-09-21 15:43:55,557 - main -   INFO - Turn 0: Energy bar low, rest.
+2025-09-21 15:44:10,172 - main -   INFO - Turn 3: No choice event, training UI detected.
+2025-09-21 15:44:10,268 - main -  DEBUG - Turn 3: Status good today.
+2025-09-21 15:44:10,360 - main -   INFO - Turn 3: Energy bar low, rest.
+2025-09-21 15:44:19,357 - main -   INFO - Turn 4: Find choice event.

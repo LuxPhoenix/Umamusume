@@ -554,7 +554,7 @@ class UmaGame:
             logger.info(f"Turn {self.turn}: First turn, no mood check.")
             return 0  # Let it train for the first turn to use some energy.
         for i in bad_mood:
-            if test_image(f"generaltraining/{i}", confi=0.85):
+            if test_image(f"mood/{i}", confi=0.85):
                 self.__raise_mood__()
                 self.__date_event__()
                 raise ContinueException
