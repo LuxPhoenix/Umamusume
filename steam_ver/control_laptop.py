@@ -289,10 +289,14 @@ class UmaGame:
         self._check_training(mood_score)
         # self._trouble_shoot()  # Check if inheriting event or connection error happens.
 
+    def _upgrade_skill(self):
+        ...
+
     def _check_mainrace(self):
         if self.turn not in self.event_manage["race_day"]:
             return
         
+        self._upgrade_skill()
         # _, _ = self.wait_choice_event("generaltraining/RaceMain")
 
         # logger.info(f"Turn {self.turn}: Raceday by schedule")
@@ -341,6 +345,7 @@ class UmaGame:
         click_true(x, y)
 
     def find_race(self):
+        self.click(self.cfg["lobby_ui"]["race_enter"], 0.5)
         race_name = self.character.race_table[self.turn]
         print(f"Find {race_name}")
         while True:
@@ -354,6 +359,8 @@ class UmaGame:
             else:
                 click_true(int(coor[0]), int(coor[1]))
                 break
+        self.click(self.cfg["lobby_ui"]["race"], 0.5)
+        self.click(self.cfg["lobby_ui"]["race_confirm_button"], 0.5)
 
     def change_strategy(self):
         if self.turn not in self.character.strategy:
@@ -467,15 +474,12 @@ class UmaGame:
             pass  # Do not check when already know that the friendship bar turned orange & maxed.
         else:
             r, g, b = pyautogui.pixel(int(rg[0]+10), int(rg[1]+50))
-            # click_true(int(rg[0]+10), int(rg[1]+50))
-            # sys.exit()
-            # print(f"Click position ({rg[0]+10}, {rg[1]+50}) for friendship bar check.")
             if (r-243)**2 + (g-177)**2 + (b-69)**2 < 72:
                 supportcard.friendship = 1
                 print(f"Orange bar identified for {supportcard}")  # Test for orange bar by pixel color
             else:
                 try:
-                    pyautogui.locateOnScreen("figures/generaltraining/friendship_max.png", region=(rg[0]-30, rg[1]+25, 60, 35), confidence=confi)
+                    pyautogui.locateOnScreen("figures_lap/generaltraining/friendship_max.png", region=(rg[0]-30, rg[1]+25, 60, 35), confidence=confi)
                     supportcard.friendship = 1
                     print(f"Max bar identified for {supportcard}")
                 except ImageNotFoundException:
@@ -611,6 +615,7 @@ class UmaGame:
                 score[i] += 0.3 * test_image("URA/Director") 
                 score[i] += 0.3 * test_image("URA/Reporter") 
                 print(f"The score under {i + 1}th training option is {score[i]}")
+                # time.sleep(3)
             max_index = score.index(max(score))
             if max_index == 5:
                 self.click(self.cfg["root"]["back_button"], 1)  # Click back

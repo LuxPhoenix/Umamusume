@@ -45,6 +45,7 @@
     },
     "lobby_ui":{
         "race_enter": [516, 713],
+        "race": [510, 711],
         "race_confirm_button": [517, 610],
         "strategy_button": [627, 499],
         "strategy_type":{

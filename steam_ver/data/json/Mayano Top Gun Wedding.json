@@ -38,6 +38,6 @@
         "Firm and Plain, Yet Close to Virtue": 1,
         "The Will to Protect!": 0
     },
-    "manual_race_day": [],
-    "race_day": []
+    "manual_race_day": [23],
+    "race_day": [12]
 }

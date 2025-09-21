@@ -69,6 +69,6 @@
         "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
         "special_events": ["wonderful mistake"],
         "skill_set": [],
-        "strategy": {"22": "Front"}
+        "strategy": {"23": "Front"}
     }
 }

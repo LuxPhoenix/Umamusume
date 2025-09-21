@@ -26,6 +26,8 @@ class ScreenTextReader:
     def detect_text_in_image(self, image_path: Optional[str] = None, region: Optional[Tuple[int, int, int, int]] = None) -> str:
         """
         Detect text in an image using Tesseract OCR
+        Get the whole image if no region is specified else crop to the region
+        Then read text from the cropped image
         """
         # Use the provided image path or the default screenshot path
         img_path = image_path if image_path else self.screenshot_path

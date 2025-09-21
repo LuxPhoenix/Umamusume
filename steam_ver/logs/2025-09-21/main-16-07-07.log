@@ -1,0 +1,12 @@
+2025-09-21 16:07:11,123 - main -   INFO - Turn 12: Race Main.
+2025-09-21 16:08:09,694 - main -   INFO - Turn 13: No choice event, training UI detected.
+2025-09-21 16:08:09,781 - main -  DEBUG - Turn 13: Status good today.
+2025-09-21 16:08:09,866 - main -   INFO - Turn 13: Energy bar safe.
+2025-09-21 16:08:10,243 - main -   INFO - Turn 13: Mood is GREAT, no need to raise mood.
+2025-09-21 16:08:10,243 - main -  DEBUG - Turn 13: Check training options.
+2025-09-21 16:08:12,996 - main -   INFO - Turn 13: Training stamina with support cards ['Fuji Kiseki (SR)'], score: 1.
+2025-09-21 16:08:20,505 - main -   INFO - Turn 13: Training guts with support cards ['Air Groove (SR)'], score: 1.
+2025-09-21 16:08:24,197 - main -   INFO - Turn 13: Training wits with support cards ['Yaeno Muteki (SSR)'], score: 1.
+2025-09-21 16:08:27,904 - main -   INFO - Turn 13: Training speed with support cards ['Silence Suzuka (SSR)', 'Kitasan Black (SSR)', 'Daitaku Helios (SR)'], score: 3.
+2025-09-21 16:08:35,502 - main -   INFO - Turn 13: Training speed with score 4.5.
+2025-09-21 16:08:40,732 - main -   INFO - Turn 13: No extra training event detected, event name: 
