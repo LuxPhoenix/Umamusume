@@ -292,35 +292,39 @@ class UmaGame:
     def _upgrade_skill(self):
         ...
 
+    def _confirm_goal(self):
+        _, _ = self.wait_choice_event("generaltraining/Next")
+        self.click(self.cfg["lobby_ui"]["next_button"])
+        _, _ = self.wait_choice_event("generaltraining/Next")
+        self.click(self.cfg["lobby_ui"]["next_button"])
+
     def _check_mainrace(self):
         if self.turn not in self.event_manage["race_day"]:
             return
         
         self._upgrade_skill()
-        # _, _ = self.wait_choice_event("generaltraining/RaceMain")
+        _, _ = self.wait_choice_event("generaltraining/RaceMain")
 
-        # logger.info(f"Turn {self.turn}: Raceday by schedule")
-        # self.click(self.cfg["root"]["daily_training"]["race_day"], self.cfg["wait_time"]["_check_mainrace"]["register"])
-        # _, _ = self.wait_choice_event('generaltraining/Race1')
-        # self.click(self.cfg["lobby_ui"]["race_enter"])
-        # _, _ = self.wait_choice_event('generaltraining/Race2')
-        # self.click(self.cfg["lobby_ui"]["race_confirm_button"])
+        logger.info(f"Turn {self.turn}: Raceday by schedule")
+        self.click(self.cfg["root"]["daily_training"]["race_day"], self.cfg["wait_time"]["_check_mainrace"]["register"])
+        _, _ = self.wait_choice_event('generaltraining/Race1')
+        self.click(self.cfg["lobby_ui"]["race_enter"])
+        _, _ = self.wait_choice_event('generaltraining/Race2')
+        self.click(self.cfg["lobby_ui"]["race_confirm_button"])
 
         #FIXME: make function control the style of the horse here.
 
         _, _ = self.wait_choice_event("generaltraining/Result")
         self.click(self.cfg["lobby_ui"]["view_result_button"], 3)
         self.nclick(self.cfg["lobby_ui"]["race_button"], 3, self.cfg["wait_time"]["_check_mainrace"]["race_button"])
-        _, _ = self.wait_choice_event("generaltraining/Next")
-        self.click(self.cfg["lobby_ui"]["next_button"])
-        _, _ = self.wait_choice_event("generaltraining/Next")
-        self.click(self.cfg["lobby_ui"]["next_button"])
+        self._confirm_goal()
 
         #FIXME: add goal complete check ?
 
         raise ContinueException
 
-    def _infirmary(self, confi=1):
+
+    def _infirmary(self, confi=0.993):
         if test_image("generaltraining/Infirmary", confi=confi):  # Go to the infirmary to treat
             self.click(self.cfg["root"]["daily_training"]["infirmary"], self.cfg["wait_time"]["_check_mainrace"]["register"])
             time.sleep(4)
@@ -345,8 +349,8 @@ class UmaGame:
         click_true(x, y)
 
     def find_race(self):
-        self.click(self.cfg["lobby_ui"]["race_enter"], 0.5)
-        race_name = self.character.race_table[self.turn]
+        # self.click(self.cfg["lobby_ui"]["race_enter"], 0.5)
+        race_name = self.event_manage["race_table"][str(self.turn)]
         print(f"Find {race_name}")
         while True:
             coor = test_image(f"URA/races/{race_name}", returncoordinate=True)
@@ -542,18 +546,16 @@ class UmaGame:
 
         a, b, event = self.check_choice_event()
 
-        if event_name in self.data_event:
-            choice = self.special_events[event_name]["selectable"]
-            if choice:
-                click_true(a, b + 82 * (choice - 1), self.cfg["wait_time"]["_check_special_"])
-            logger.info(f"Turn {self.turn}: Special event {event_name} detected, choice {choice} selected.")
+        if event == "choice_event":
+            logger.info(f"Turn {self.turn}: Find date event.")
+            self._check_multiq()
         else:
-            return
-        
+            logger.info(f"Turn {self.turn}: No date event, training UI detected.")
+            return        
 
     def _check_mood(self):
         """Always spend turn to raise mood when below good, and return mood score 3 for good, 0 for great."""
-        bad_mood = ("Awful", "Bad", "Normal")
+        bad_mood = ("Awful", "Bad", "Normal", "Good")
         if self.turn == 0:
             logger.info(f"Turn {self.turn}: First turn, no mood check.")
             return 0  # Let it train for the first turn to use some energy.

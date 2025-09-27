@@ -2,7 +2,7 @@
     "Oguri Cup": {
         "default_supportcard": ["Sweep Tosho spe", "Super Creek sta", "Special Week spe", "Mayano Top Gun sta", "Gold City spe", "Eishin Flash spe"],
         "friend_supportcard": "Sweep Tosho spe",
-        "default_racetable": {"23": "Hanshin Juvenile", "24": "Hopeful S", "32": "Oka Sho", "35": "Japan Derby", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
+        "default_racetable": {"23": "Hanshin Juvenile", "24": "Hopeful S", "32": "Oka Sho", "35": "Japan Derby", "45": "Queen Elizabeth II C", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
         "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
         "special_events": ["wonderful mistake"],
         "skill_set": [],
@@ -56,7 +56,6 @@
     "Oguri Cap": {
         "default_supportcard": ["Manhattan Cafe (SR)", "Super Creek (SSR)", "Sweep Tosho (SR)", "Sakura Bakushin O (SSR)", "Kitasan Black (SSR)", "Special Week (SSR)"],
         "friend_supportcard": "Sweep Tosho spe",
-        "default_racetable": {"22": "Asahi Hai Futurity", "23": "Hopeful Stakes", "30": "Satsuki Sho", "33": "Japan Derby", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
         "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
         "special_events": ["wonderful mistake"],
         "skill_set": [],

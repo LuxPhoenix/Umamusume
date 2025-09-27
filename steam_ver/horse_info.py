@@ -34,8 +34,6 @@ class HorseGirl:
         sc = supportcard if supportcard else self.DI['default_supportcard']
         self.supportcard = tuple(SupportCard(i) for i in sc)
         self.friend_support = friend_support if friend_support else self.DI['friend_supportcard']
-        d = race_table if race_table else self.DI['default_racetable'] 
-        self.race_table = {int(k): v for k, v in d.items()}  # Make sure keys are integers rather than string.
         self.training_priority = training_priority if training_priority else self.DI['training_priority']
         self.special_events = special_events if special_events else self.DI['special_events']
         self.skill_set = skill_set if skill_set else tuple(self.DI['skill_set'])

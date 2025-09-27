@@ -39,6 +39,7 @@
         "Ah, Friendship": 0,
         "Ah, Home Sweet Home": 0
     },
-    "manual_race_day": [18,22,23,30,32,34,35,39,32,43,45,47,51,53,55,56,58,59,63,65,66,67,69,70,71],
-    "race_day": [12,33,46,48,68,72]
+    "race_table": {"23": "Hanshin Juvenile", "24": "Hopeful S", "32": "Oka Sho", "35": "Japan Derby", "45": "Queen Elizabeth II Cup", "51": "February Stakes", "53": "Osaka Hai", "58": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
+    "manual_race_day": [22,23,30,32,33,45,53,58,59,61,72],
+    "race_day": [11,33,44,47,68,72]
 }
