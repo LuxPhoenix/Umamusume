@@ -290,6 +290,55 @@ class UmaGame:
         # self._trouble_shoot()  # Check if inheriting event or connection error happens.
 
     def _upgrade_skill(self):
+        """Upgrade skill if possible.
+        1. Go to skill UI
+        -1. Out skill UI"""
+        self.wait_choice_event("generaltraining/Skills")
+        self.click(self.cfg["race_day"]["skills"])
+        time.sleep(2)
+        upgrade_skill_want = ['Corner Recovery O']
+        while True:
+            if upgrade_skill_want:
+                # Search for blue skill on screen
+                try:
+                    finded = pyautogui.locateOnScreen(f"figures_lap/skill/Blue.png", confidence=0.8, region=(self.x+194, self.y+333, 469, 355))
+                except:
+                    finded = None
+                if finded:
+                    # Get skill name position and capture text
+                    name_position = (int(finded.left) + 48, int(finded.top) - 20, 226, 30)
+                    self.screen_reader.capture_screen(region=name_position)
+                    skill_name = self.screen_reader.detect_text_in_image('test/screenshot.png')
+
+                    # Check if desired skill is found
+                    if 'Corner Recovery' in skill_name:  # Fixed variable name from grade_skill_want
+                        """
+                        pyautogui.getpixel(finded.left+10, finded.top-5)
+                        if not white, skip because not have enough point
+                        else: upgrade and confirm
+                        """
+                        # Click to upgrade the skill
+                        pyautogui.click(int(finded.left) + 48, int(finded.top) - 20)
+                        pyautogui.click(1460, 546)  # Upgrade button
+                        print(f"Find corner recovery o")
+                        upgrade_skill_want.remove('Corner Recovery O')
+                        if not upgrade_skill_want:
+                            print("All skills upgraded")
+                            break
+            # break            
+                # Scroll down to check for more skills
+                try:
+                    end_check = pyautogui.locateOnScreen("figures_lap/skill_end.png", confidence=0.8)
+                    print("Find end check")
+                    break
+                except:
+                    pyautogui.click(x = self.x+493, y = self.y+398)
+                    time.sleep(5)
+                    for _ in range(8):
+                        pyautogui.scroll(-1)
+                    print("Scroll down")
+        self.click(self.cfg["race_day"]["back_button"])    
+        print("Skill upgrade checked.")
         ...
 
     def _confirm_goal(self):
@@ -324,7 +373,7 @@ class UmaGame:
         raise ContinueException
 
 
-    def _infirmary(self, confi=0.993):
+    def _infirmary(self, confi=0.997):
         if test_image("generaltraining/Infirmary", confi=confi):  # Go to the infirmary to treat
             self.click(self.cfg["root"]["daily_training"]["infirmary"], self.cfg["wait_time"]["_check_mainrace"]["register"])
             time.sleep(4)

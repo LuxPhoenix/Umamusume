@@ -31,6 +31,11 @@
         "back_button": [173, 800],
         "enter_race_button": [523, 611]
     },
+    "race_day":{
+        "skills": [322, 719],
+        "back_button": [172, 799]
+
+    },
     "training_option":{
         "speed": [258, 711],
         "stamina": [338, 711],
