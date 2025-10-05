@@ -1,0 +1,43 @@
+{
+    "Silence Suzuka (SSR)": {
+        "Letters → ?": "Auto",
+        "Letters → Feelings → ?": "Auto",
+        "Letters → Feelings → Wait for Me, Okay?": "Auto",
+        "On and On": 1,
+        "What Should I Do?": 2
+    },
+    "Kitasan Black (SSR)": {
+        "Chasing Brilliance": "Auto",
+        "Paying It Forward": 0,
+        "We Walk Together": "Auto",
+        "Ah, Friendship": 0,
+        "Ah, Home Sweet Home": 0
+    },
+    "Daitaku Helios (SR)": {
+        "#BFF #Party!": 1,
+        "#LOL #Party! #Round2": 1,
+        "Encounter With the Sun ☆": 1,
+        "Smiles Forever": 0
+    },
+    "Air Groove (SR)": {
+        "As Dignified as a Moth Orchid": "Auto",
+        "Bloom by the Oak": "Auto",
+        "Strict but Gracious": 1,
+        "Agile but Strong": 1
+    },
+    "Fuji Kiseki (SR)": {
+        "Abracadabra": "Auto",
+        "Out of This World": "Auto",
+        "Sleight of Hand": 0,
+        "Misdirection": 1
+    },
+    "Yaeno Muteki (SSR)": {
+        "Yaeno's Off-Site Training": "Auto",
+        "A Reasonable Diet vs. an Explosive Diet": 0,
+        "Yaeno Muteki's Love Song Nightmare": "Auto",
+        "Firm and Plain, Yet Close to Virtue": 1,
+        "The Will to Protect!": 0
+    },
+    "manual_race_day": [23],
+    "race_day": [12]
+}

@@ -1,0 +1,77 @@
+{
+    "Kitasan Black spe": {
+        "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Special Week spe": {
+        "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Sweep Tosho spe": {
+        "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Silence Suzuka spe": {
+        "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Super Creek sta": {
+         "train_type": "stamina", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Mayano Top Gun sta": {
+         "train_type": "stamina", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Fine Motion wit": {
+         "train_type": "wits", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Eishin Flash spe": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Haru Urara gut": {
+         "train_type": "guts", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Gold City spe": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Mayano Top Gun (SR)": {
+         "train_type": "stamina", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Manhattan Cafe (SR)": {
+         "train_type": "stamina", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Sakura Bakushin O (SSR)": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Special Week (SSR)": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Sweep Tosho (SR)": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Kitasan Black (SSR)": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Super Creek (SSR)": {
+         "train_type": "stamina", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Narita Taishin (SR)": {
+         "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+    },
+    "Agnes Tachyon (SR)": {
+     "train_type": "wits", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Marvelous Sunday (SR)": {
+          "train_type": "wits", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Silence Suzuka (SSR)": {
+          "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Daitaku Helios (SR)": {
+          "train_type": "power", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Air Groove (SR)": {
+          "train_type": "guts", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Fuji Kiseki (SR)": {
+          "train_type": "wits", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Yaeno Muteki (SSR)": {
+          "train_type": "power", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     }
+}
