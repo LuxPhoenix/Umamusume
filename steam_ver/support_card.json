@@ -73,5 +73,11 @@
      },
      "Yaeno Muteki (SSR)": {
           "train_type": "power", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Eishin Flash (SR)": {
+          "train_type": "speed", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
+     },
+     "Mejiro McQueen (SSR)": {
+          "train_type": "stamina", "training_effectiveness": "0.1", "mood_bunus": "0.3", "friend_bonus": "0.2"
      }
 }

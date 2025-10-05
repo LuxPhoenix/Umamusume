@@ -1,0 +1,43 @@
+{
+    "Silence Suzuka (SSR)": {
+        "Letters → ?": "Auto",
+        "Letters → Feelings → ?": "Auto",
+        "Letters → Feelings → Wait for Me, Okay?": "Auto",
+        "On and On": 0,
+        "What Should I Do?": 1
+    },
+    "Kitasan Black (SSR)": {
+        "Chasing Brilliance": "Auto",
+        "Paying It Forward": 0,
+        "We Walk Together": "Auto",
+        "Ah, Friendship": 0,
+        "Ah, Home Sweet Home": 0
+    },
+    "Eishin Flash (SR)": {
+        "A Good Manager": "Auto",
+        "A Good Friend": "Auto",
+        "Unforeseen Lunch": 0,
+        "Responding to the Unforeseen": 1
+    },
+    "Air Groove (SR)": {
+        "As Dignified as a Moth Orchid": "Auto",
+        "Bloom by the Oak": "Auto",
+        "Strict but Gracious": 1,
+        "Agile but Strong": 0
+    },
+    "Fuji Kiseki (SR)": {
+        "Abracadabra": "Auto",
+        "Out of This World": "Auto",
+        "Sleight of Hand": 0,
+        "Misdirection": 0
+    },
+    "Mejiro McQueen (SSR)": {
+        "Expectations Are Power": "Auto",
+        "Expectations Are Affection": "Auto",
+        "Meeting Expectations": "Auto",
+        "To Maintain My Weight": 1,
+        "To Reach the Greatest Heights": 0
+    },
+    "manual_race_day": [],
+    "race_day": []
+}
