@@ -613,7 +613,7 @@ def click_image(name: str, interval=2):
 
 if __name__ == "__main__":
     URA = UmaGame(test=0)
-    # URA._team_trial()
+    URA._team_trial()
     # URA.remove_expired_followers(35)
     # URA._start_game(Maruzensky3, parent=("Opera1star", "TeioGemini"), mode=0)
     URA.train_horse_loop(Maruzensky3, turn=7, hint_priority=0.5)

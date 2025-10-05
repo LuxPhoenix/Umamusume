@@ -1,0 +1,881 @@
+Unchanging
+Greatly increase performance with the same ambition of days past.
+
+The First Storm
+Your Speed and Power stats are increased by 60 in autumn races
+
+First Breeze of Spring
+Your Speed and Power stats are increased by 60 in spring races
+
+Clockwise Demon
+Your Speed and Power stats are increased by 60 on clockwise tracks
+
+Outstanding Step
+Dirt・If your Power stat is 1000 or higher, gain 60 Speed stat; if it's 1200 or higher, gain 80 instead
+
+Mud Master
+Dirt・Your Speed and Power stats are increased by 60 in races with Heavy or Bad track condition
+
+Gambler
+Your Speed, Power, and Guts stats have a chance of being increased by 80 each. The chance is 30% if you're one of the three most popular racers, and 60% otherwise
+
+Cloud Dragon's Metamorphosis
+Mile/Medium・If your base Speed and Power are both at least 1000, they will increase by additional 60 points
+
+Summer Gale
+Your Speed and Power stats are increased by 60 in summer races
+
+Singularity
+Leader・Medium・If your Speed stat is at least 1200, it will further increase by 60; bonus 20 Speed if your Wisdom is also at least 1200
+
+Chilling Wind
+Your Speed and Power stats are increased by 60 in winter races
+
+Connection
+Turf・If there's at least one girl with the Sympathy skill in the race, your Speed stat is increased by 60, and the Sympathy skills of everyone in the race activate
+
+Counterclockwise Demon
+Your Speed and Power stats are increased by 60 on counterclockwise tracks
+
+Exchange Races Demon
+Your Speed and Power stats are increased by 60 in exchange races (Kawasaki, Funabashi, Morioka, and Ooi racetracks)
+
+Child of Yodo
+In Kyoto, your Speed, Stamina, and Wisdom stats are increased by 60
+
+As a Member of the Team
+Your Stamina stat is increased by 80
+
+Child of Longchamp
+At Longchamp, your Speed, Stamina, and Wisdom stats are increased by 60
+
+Child of Fuchu
+In Tokyo, your Speed, Stamina, and Wisdom stats are increased by 60
+
+Good Track Demon
+Your Power and Speed stats are increased by 60 in races with Good track condition
+
+Bad Track Demon
+Your Power and Speed stats are increased by 60 in races with Slightly Heavy, Heavy, or Bad track condition
+
+麒麟児
+Not translated yet
+
+Super Lucky Seven
+Good things may happen when in bracket 7.
+
+Swinging Maestro
+Recover endurance on a corner with efficient turning.
+
+Breath of Fresh Air
+Recover endurance on a straight.
+
+Iron Will
+Recover endurance when the way ahead is jammed early-race.
+
+Indomitable
+Recover endurance when passed by another runner mid-race.
+
+Unruffled
+Recover endurance when surrounded mid-race.
+
+Calm and Collected
+Decrease fatigue early-race. (Pace Chaser)
+
+Race Planner
+Decrease fatigue mid-race. (Pace Chaser)
+
+Sleeping Lion
+Decrease fatigue mid-race. (End Closer)
+
+Keen Eye
+Decrease fatigue when positioned toward the back early-race. (Mile)
+
+Trackblazer
+Decrease fatigue when in the lead mid-race. (Medium)
+
+Cooldown
+Decrease fatigue by taking a breather upon entering a straight. (Long)
+
+Adrenaline Rush
+Regain the energy to run after exhausting strength. (Long)
+
+Miraculous Step
+Decrease fatigue when moving sideways. (Medium)
+
+Restless
+Reduce fatigue on an uphill. (Front Runner)
+
+Gourmand
+Recover endurance mid-race. (Pace Chaser)
+
+Relax
+Recover endurance late-race. (Late Surger)
+
+Go-Home Specialist
+Reduce fatigue on a downhill. (End Closer)
+
+Serenity
+Regain composure by calming down when the way ahead is jammed. (End Closer)
+
+Concealed Readiness
+Betweener・During the second half of the Opening Leg, if you're not in the front, your stamina will recover
+
+VIP Pass
+Long・Your stamina will recover when you're about to overtake someone
+
+Cheers of Admiration
+When Silence Suzuka hears shouts of support in the second half of the race, her stamina will recover
+
+Self-Possessed
+Long・If you're in the middle of the pack during the first half of the Middle Leg, your speed will slightly decrease and your stamina will recover greatly
+
+Sand Expert
+Dirt・If you're in the second half of the pack in the Middle Leg, your stamina will recover and your speed will increase
+
+Single-Minded
+Leader・Long・If you didn't have a late start to the race, your stamina will recover in the first half of the Middle Leg
+
+Ahead of the Game
+Long・At a random point during the Middle Leg, your speed will slightly increase and your stamina will recover
+
+Sand Virtuoso
+Dirt・At a random point during the Middle Leg, if you're in the first half of the pack, your speed will increase and your stamina will recover
+
+Chain Reaction
+During any Middle Leg straight, you will get a slight speed boost and your stamina will recover
+
+Professor of Curvature
+Increase velocity on a corner with skilled turning.
+
+Beeline Burst
+Increase velocity on a straight.
+
+It's On!
+Increase velocity when passing another runner mid-race.
+
+In Body and Mind
+Increase velocity in the last spurt.
+
+Escape Artist
+Increase ability to go to the front mid-race. (Front Runner)
+
+Speed Star
+Increase ability to break out of the pack on the final corner. (Pace Chaser)
+
+Fast & Furious
+Increase velocity mid-race. (Late Surger)
+
+Rising Dragon
+Increase velocity when passing another runner on the outside on the final corner. (Late Surger)
+
+Sturm und Drang
+Move up in preparation to close the gap late-race. (End Closer)
+
+Blinding Flash
+Increase spurting ability when positioned toward the back late-race. (Sprint)
+
+Mile Maven
+Widen the margin when in the lead early-race. (Mile)
+
+Killer Tunes
+Increase positioning ability when positioned toward the front mid-race. (Medium)
+
+Unyielding
+Increase ability to fight back when passed by another runner on the final corner. (Medium)
+
+Innate Experience
+Increase velocity when near the inner rail on the final corner. (Long)
+
+Staggering Lead
+Increase ability to maintain the lead when leading by a large margin mid-race. (Sprint)
+
+Changing Gears
+Increase passing ability when positioned toward the front mid-race. (Mile)
+
+Big-Sisterly
+Increase passing ability. (Mile)
+
+Vanguard Spirit
+Increase ability to maintain the lead when leading by a large margin mid-race. (Long)
+
+Overwhelming Pressure
+Increase velocity when passing another runner late-race. (Long)
+
+15,000,000 CC
+Increase velocity on an uphill. (Late Surger)
+
+Trending in the Charts!
+Increase velocity when engaged in a challenge mid-race. (Dirt)
+
+Uma Mania
+If there are at least three other girls near you after the first 5 seconds of the race, your speed will increase
+
+Prepared to Die
+Medium・If you're in a good position on the Final Straight during the Final Leg, your speed will increase
+
+Tail of Victory
+If you activate at least 3 skills during the Middle Leg, your speed will increase
+
+Dream Run
+If you have a strong desire to run through the finish line with everyone, your speed will increase on the final straight line
+
+Shinuchi
+Long・During the second half of the Middle Leg, if you're in the first half of the pack, your speed will increase
+
+Daring Attack
+Chaser・If you're in the second half of the pack at a random point during the Middle Leg, your speed will increase
+
+Gamester
+Your speed will significantly increase in the second half of the race, but sometimes you will also become very tired
+
+Photon Flash
+Medium・At a random point on a random straight, your speed will increase
+
+In High Spirits
+Short・If you're in the first half of the pack during the second half of the Middle Leg, your speed will increase
+
+Flash of Wind
+Long・At a random point on a random straight, your speed will increase
+
+Top Runner
+Runner・If you've been overtaken or are being blocked from the side during the early stages of the race, your speed will increase
+
+Burning Spirit
+Medium・If you're in the middle of the pack during the Middle Leg and someone is blocking you from the side, your speed will increase and your stamina will slightly recover
+
+Elation
+Medium・If you're in the second half of the pack at a random point during the Middle Leg, your speed will increase
+
+Unstoppable Force
+Mile・If you're in the back of the pack during the last corner, your speed will increase
+
+Daredevil
+Betweener・If you're in the middle of the pack at a random point during the second half of the race, your speed and acceleration will increase
+
+Wild Whirlwind
+Medium・If you're in the front during the Middle Leg, you will drain the speed of the girls behind you and speed up yourself
+
+Sorry, Gotta Go!
+If another girl has been right behind you for at least 3 seconds, your speed will increase
+
+Pushing Forward
+Betweener・At a random point during the Middle Leg, use a little extra stamina to increase your speed greatly
+
+Moonlight Flash
+Chaser・At a random point on a random straight, your speed will increase
+
+Photon Slash
+Medium・At a random point on a random corner, your speed will increase
+
+Victory Opportunity
+Dirt・If you're in the first half of the pack during the second half of the Middle Leg, your speed will increase
+
+Redoubled Efforts
+Dirt・If you're in the second half of the pack during the Middle Leg, your speed will increase
+
+Full Speed Ahead!
+Dirt・If you're in the first half of the pack during the Last Spurt, your speed will increase
+
+Clear and Serene
+Dirt・If you're in the second half of the pack and you've recovered stamina with a skill, your speed will increase in the Middle Leg
+
+Leisurely Dust Bath
+Dirt・If you've been following another girl for at least three seconds, your speed will increase
+
+Unstoppable
+Leader・At a random point in the Middle Leg, your speed will increase
+
+Breakthrough
+Chaser・If you're in the second half of the pack at a random point during the Middle Leg, your speed and lane movement speed will increase
+
+1000% Output!
+Runner・At a random point during the first half of the Middle Leg, use some extra stamina to greatly increase your speed
+
+Lightning Flash
+Short・At a random point on a random straight, your speed will increase
+
+In the Right Place!
+If another girl has been right in front of you for at least three seconds, your speed will increase
+
+Winds of Change
+Leader・During the latter part of the Middle Leg, if you're less than 5 meters away from the 1st place, your speed will increase
+
+Steady Advance
+Leader・Medium・If you're in lead or close to the lead during the second half of the Middle Leg, your speed and acceleration will increase
+
+Incisive Flash
+Betweener・At a random point on a random straight, your speed will increase
+
+Top Gear
+Betweener・On the Final Straight, if you're not in lead but also not more than 10 meters from it, your speed will increase significantly
+
+Untouchable Shadow
+Runner・If you're in the lead during the Final Straight with another girl right behind you, your speed will increase significantly
+
+Hot Pursuit
+Leader/Betweener・If you try to overtake someone in the second half of the race, your speed will increase
+
+Reckless
+Mile・If you're in the first half of the pack during the second half of the Middle Leg, your speed will increase
+
+Gale Slash
+Runner・At a random point on a random corner, your speed will increase
+
+Incisive Slash
+Betweener・At a random point on a random corner, your speed will increase
+
+Supreme Downhiller
+At a random point on a random downhill, your speed will increase
+
+Seamless
+Medium/Long・At a random point during the third corner, if you're in the second half of the pack, your will get a speed boost
+
+Ascendance
+Mile/Medium・At a random point during the Middle Leg, your speed will increase
+
+Dignified
+Betweener・At a random point on the Final Corner, if you're not in the front, your speed will increase, and you will slow down three closest girls both ahead and behind you
+
+Divine Speed
+At a random point in the second half of the race, you will get a speed boost and your stamina will slightly recover
+
+One-shot
+Long・If you're in the second half of the pack during the second half of the Middle Leg, your speed will increase
+
+In One Fell Swoop
+Betweener・Long・If you have surplus strength during the first half of the Final Leg, your speed will increase
+
+Luminescence
+Medium・If you've activated at least 13 skills in the race, you will get a speed boost
+
+Thousand-Mile Journey
+Betweener・If you're in the middle of the pack at a random point during the Middle Leg, your speed will slightly increase
+
+Surging Beat
+Medium/Long・If you're in the middle of the pack during the first half of the Final Leg, you will get a speed boost
+
+Cyclone Slash
+Mile・At a random point on a random corner, your speed will increase
+
+Seriously☆Good↑Vibes
+Long・At a random point during the Middle Leg, your speed will increase and your stamina will slightly recover
+
+Blitzing Spirit
+Betweener・If you're not in the front during the second half of the Middle Leg, your speed will increase
+
+Never Give Up
+During a random Middle Leg corner, your speed will slightly increase
+
+Moonlight Slash
+Chaser・At a random point on a random corner, your speed will increase
+
+Pure Perfection
+Mile/Medium・If you're in the first half of the pack during the 3rd corner, your speed will increase
+
+Unyielding Tenacity
+Short・If you're not near the front during the second half of the Middle Leg, your speed will increase
+
+Send It Flying!
+Leader・If you're in the first half of the pack at a random point in the Middle Leg, your speed will slightly increase
+
+Finishing Touch
+Runner・Long・If you have enough stamina left in the first half of the Final Leg, you will get a speed boost
+
+Call & Response
+Dirt・If you activate any other skill during the Middle Leg, your speed will increase; then, if you activate any other skill during the Final Leg or beyond, you will get a speed boost
+
+Lightning Slash
+Short・At a random point on a random corner, your speed will increase
+
+Clean Sweep
+Chaser・Long・If you have plenty of stamina left during the first half of the Final Leg, your speed will increase
+
+Battle for Initiative
+During the second half of the Opening Leg, your speed will increase
+
+Pioneer of the Sands
+Dirt・If you're in the first half of the pack during the second half of the Opening Leg, your speed will increase
+
+Ardour
+Mile・If you're not in the front during the second half of the Middle Leg, your speed will increase
+
+Soaring Stride
+Chaser・If you're not in the front at a random point during the second half of the Middle Leg, your speed will increase
+
+Gamma Ray Burst
+Leader・If you're in the first half of the pack during the second half of the Middle Leg, your speed will increase
+
+Cyclone Flash
+Mile・At a random point on a random straight, your speed will increase
+
+Undivided Focus
+Chaser・At a random point during the Middle Leg, use a little extra stamina to greatly increase your speed
+
+Exquisite Timing
+At a random point during the Middle Leg, your speed will increase
+
+Manipulation
+Chaser・If you're trying to overtake someone during any Final Leg corner, you will get a speed boost
+
+Lightning Blitz
+Short・At a random point during the Middle Leg, your speed will increase
+
+Wind Rider
+Mile・At a random point during the Middle Leg, your speed will increase
+
+Frontal Attack
+If you're in the first half of the pack at a random point during the Middle Leg, your speed will increase
+
+Fluttering Heart
+Short/Mile・During the first half of the Final Leg, your speed will increase
+
+Unwavering Ambition
+Medium・If you're in the first half of the pack during the second half of the Middle Leg, your speed will increase
+
+Gale Flash
+Runner・At a random point on a random straight, your speed will increase
+
+Proof of Strength
+Leader・Medium・If you're in the first half of the pack at a random point during the Middle Leg, your speed will increase
+
+Sharp-Witted Composure
+Medium・At a random point during the Middle Leg, your speed will slightly increase and your stamina will slightly recover
+
+Pure Instincts
+Betweener/Chaser・If you directly competed for position on the Final Straight in a Showdown (追い比べ), then during the last 200 m of the race, you will get a speed boost
+
+Valiant Flash
+Leader・At a random point on a random straight, your speed will increase
+
+Peerless Boldness
+Mile・If you're in the first half of the pack at a random point during the Middle Leg, you will use a little extra stamina to increase your speed greatly
+
+Tension and Release
+Medium・During the second half of the Opening Leg, your speed will slightly decrease; then, during the first half of the Final Leg, your speed will greatly increase
+
+Embracing Virtue and Vice
+Dirt・At a random point during the Middle Leg, your speed will increase and your stamina will recover
+
+Quick Work
+Runner・If you're in the first half of the pack at a random point during the Middle Leg, your speed will slightly increase
+
+Breaking Free
+Leader・At a random point during the Middle Leg, use a little extra stamina to increase your speed greatly
+
+Curtain Closer
+Leader・If you're leading or at most 2.5 m from the lead during the Final Straight, your speed will greatly increase
+
+Like a Blaze
+Medium/Long・At a random point during the first half of the Final Leg, if you're in the middle or the back of the pack, you will get a speed boost
+
+Peak Ferocity
+Long・At a random point during the Middle Leg, your speed will increase
+
+Flash
+Medium・At a random point during the Middle Leg, your speed will increase
+
+Complete Combustion
+Chaser・During the Final Straight, if you're not in the first place but also no more than 10 meters away from it, your speed will greatly increase
+
+Thorough Preparation
+Betweener・If you're not in the front at a random point during the first half of the Middle Leg, your speed will increase
+
+Pursuer
+Chaser・Medium・If you're not in the front at a random point during the Middle Leg, your speed will increase
+
+Brave and Bold
+Mile・If you're not in the front at a random point during the Middle Leg, use a little extra stamina to greatly increase your speed
+
+Relentless Approach
+Chaser・If you try to overtake someone during the second half of the race, your speed will increase
+
+Fruits of Labor
+Leader・Long・If you're in the first half of the pack at a random point during the Middle Leg, your speed will increase
+
+Forthright
+Leader・At a random point during the first half of the Last Spurt, your speed will increase
+
+Seize the Initiative
+Medium/Long・When another girl activates a speed skill during the Final Corner or beyond, you will get a speed boost
+
+Gallant Figure
+Runner・Medium・If you're in the first half of the pack at a random point on the third corner, you will get a speed boost
+
+Preeminent
+Runner・If someone tries to overtake you during the second half of the race, your speed will increase
+
+Furious Sprint
+Runner/Leader・If you participated in at least one Showdown (追い比べ) during the Final Straight, then with 200 m remaining in the race, you will get a speed boost
+
+Bravery Slash
+Leader・At a random point on a random corner, your speed will increase
+
+Sandstorm Slash
+Dirt・At a random point on a random corner, your speed will increase
+
+Brilliant Mind
+Medium・At a random point during the first half of the Last Spurt, your speed will increase
+
+Unpredecented Prodigy
+At a random point during the Middle Leg, you will get a speed boost
+
+Domineering Glare
+Medium/Long・If you're not in the front at a random point during the first half of the Middle Leg, your speed will increase and your stamina will slightly recover
+
+Wind Slash
+Long・At a random point on a random corner, your speed will increase
+
+Sandstorm Flash
+Dirt・At a random point on a random straight, your speed will increase
+
+Breach
+Medium・If you're not in the front at a random point during the second half of the Middle Leg, your speed will increase
+
+Independence
+Betweener・At a random point during the first half of the Last Spurt, your speed will increase
+
+Magnificent Sand Stride
+Dirt・If another girl has been right behind you for at least three seconds, your speed will increase
+
+Sum of Small Efforts
+Dirt・At a random point during the first half of the Last Spurt, your speed will increase
+
+Straight Heart
+Betweener・Medium・If you're not in the front at a random point on a random Middle Leg straight, your speed will slightly increase
+
+One and Only
+Medium・At a random point during the second half of the race, your speed will increase
+
+Proven Mettle
+If you're not in the front at a random point during the Middle Leg, your speed will increase
+
+Pathfinder
+Medium/Long・At a random point during the Middle Leg, your speed will increase
+
+Long Haul
+Medium/Long・At a random point during the Middle Leg, your speed will slightly increase
+
+Heat Haze
+Betweener・At a random point during the Middle Leg, your speed will increase; if you're not in the front, you will get a speed boost instead
+
+Latent Fighting Spirit
+Betweener・Medium・If you're NOT in the front at a random point during the Middle Leg, your speed will increase
+
+Energetic
+Long・At a random point during the first half of the Middle Leg, your speed will increase and your stamina will slightly recover
+
+Moment of Opportunity
+Betweener・Medium・If you overtake someone on any corner during the second half of the race, you will get a speed boost
+
+Afterimage
+Chaser・At a random point during the Middle Leg, your speed will increase
+
+Killer Instict
+Mile/Medium・If you're NOT in the front at a random point on the third corner, you will get a speed boost
+
+Unshackled Passion
+Mile/Medium・At a random point during the Middle Leg, your speed will increase; then, at a random point during the Final Leg, you will get a speed boost
+
+Brains and Beauty
+Not translated yet
+
+Curiosity
+Not translated yet
+
+Freewheeling
+Not translated yet
+
+Swift Decision
+Chaser・At a random point during the first half of the Last Spurt, your speed will increase
+
+Thunderflash
+Short・If you're trying to overtake someone, your speed will increase
+
+Foregone Conclusion
+Short・If you're in the first half of the pack at a random point during the Middle Leg, your speed will increase
+
+Radiant Treasure
+Betweener・Short・If you're NOT in the front at a random point during the Middle Leg, your speed will increase
+
+Battle-Hardened
+Not translated yet
+
+まばたき厳禁！
+Not translated yet
+
+不抜の気概
+Not translated yet
+
+Unfolding Horror
+As the trainer's fears become more vivid, your speed is significantly decreased
+
+Corner Connoisseur
+Increase acceleration on a corner with masterful turning.
+
+Rushing Gale!
+Increase acceleration on a straight.
+
+No Stopping Me!
+Increase maneuverability when the way ahead is blocked in the last spurt.
+
+Taking the Lead
+Increase ability to go to the front early-race. (Front Runner)
+
+Unrestrained
+Increase ability to keep the lead on the final corner. (Front Runner)
+
+On Your Left!
+Increase acceleration late-race. (Late Surger)
+
+Encroaching Shadow
+Increase acceleration on a straight in the last spurt. (End Closer)
+
+Turbo Sprint
+Increase acceleration on a straight. (Sprint)
+
+Furious Feat
+Increase passing ability when positioned toward the back late-race. (Mile)
+
+Plan X
+Increase passing ability when positioned toward the front mid-race. (Sprint)
+
+Step on the Gas!
+Increase acceleration when passing another runner mid-race. (Mile)
+
+Reignition
+Increase acceleration when positioned toward the back mid-race. (Front Runner)
+
+Technician
+Moderately increase ability to navigate smoothly. (Pace Chaser)
+
+Determined Descent
+Moderately improve running on a downhill. (Pace Chaser)
+
+Shatterproof
+Moderately increase acceleration when positioned toward the back mid-race. (Pace Chaser)
+
+Hard Worker
+Moderately increase passing ability. (Late Surger)
+
+Rise From the Ashes
+Medium・During the first half of the Final Leg, if you're not near the front, your acceleration will increase
+
+Fierce Competition
+Leader・During the first half of the Final Leg, if you're in the first half of the pack, your acceleration will increase
+
+Aim for the Center!
+Dirt・If you're in the first half of the pack during the Final Leg, your acceleration will increase
+
+Blast Mode!
+Dirt・If you're in the second half of the pack during the Final Leg, your acceleration will increase
+
+Lightning Speed
+Short/Mile・If you're about to overtake someone in the second half of the pack during the Final Leg, your acceleration will increase
+
+Lose Yourself
+Betweener・Long・During the Last Spurt, if you're not in the front, use some stamina to increase your acceleration
+
+Monster
+Leader・Long・If you were within 10 meters from the lead around the end of the Middle Leg, then in the Final Leg, your acceleration will increase
+
+Unrivaled Wits
+Chaser・If you stay in the back of the pack without panicking (kakari) for the first 2/3 of the race, your acceleration will increase in the first half of the Final Leg
+
+Miracle Pathmaker
+Short・At a random point in the Final Leg, your acceleration will increase
+
+Unshakable Stance
+If you've activated at least 3 skills during the Opening Leg, your acceleration will increase
+
+High Voltage
+Mile・If you're in the first half of the pack during the first half of the Final Leg, your acceleration will increase
+
+Further Than Anyone
+Medium・At the start of the race, your acceleration will increase
+
+Check
+Leader/Betweener・If you're on the final corner in the Final Leg, you're not in the back of the pack, and there's at least 600 m remaining in the race, your acceleration will greatly increase
+
+One Sky, One Goal
+Runner・Long・If you're 3rd or better during any last spurt straight, your acceleration will increase
+
+Rocket Start
+Short・At the start of the race, your acceleration will increase
+
+Reign
+Chaser・Medium・If you're not in the front during the Final Corner in the Final Leg, your acceleration will increase
+
+Ultimate Hill Climber
+At a random point on a random uphill, your acceleration will increase
+
+Stamp on the Ground
+Leader・Dirt・If you're in the first half of the pack during the first half of the Final Leg, your acceleration will increase
+
+Just Rule
+Medium・If you're in the first half of the pack during the first half of the Final Leg, your acceleration will increase
+
+Laser-Focused
+Leader・Long・If you're in the first half of the pack around the start of the Final Leg, your acceleration will increase
+
+Golden Opportunity
+Chaser・Long・At a random point during the first quarter of the Final Leg, if you're not in the front of the pack, your acceleration will increase
+
+The Fight's Not Over Yet!
+Runner・Medium・If you're third or better during the Final Corner or beyond, your acceleration will increase
+
+Initiative
+Runner・Short・If you're in the first half of the pack during the first half of the Final Leg, your acceleration will increase
+
+Fierce Clash
+Leader・Short・If you're in the first half of the pack during the first half of the Final Leg, your acceleration will increase
+
+Carefree Stride
+Mile・If you're not in the front at a random point during the first half of the Final Leg, your acceleration will increase
+
+To the Stage of Dreams
+Leader・Medium・If you're in the first half of the pack at a random point during the first quarter of the Final Leg, your acceleration will increase
+
+Showdown
+Leader・If you're spurting on any straight, your acceleration will increase
+
+Natural Talent
+Not translated yet
+
+Binding Fog
+During the Final Leg, your acceleration will hopelessly decrease
+
+Center Stage
+Increase navigation early-race.
+
+Lane Legerdemain
+Increase navigation late-race.
+
+Perfect Prep!
+Prepare to make for the finish line mid-race. (Sprint)
+
+Lightning Step
+Avoid becoming surrounded when positioned toward the back mid-race. (Medium)
+
+Sixth Sense
+Avoid becoming surrounded early-race. (Front Runner)
+
+Aim for the Front Row!
+Dirt・During the Final Leg, your overtaking abilities will increase
+
+Concentration
+Decrease time lost to slow starts.
+
+Clairvoyance
+Widen field of view with heightened observation early-race. (Medium)
+
+The Bigger Picture
+Widen field of view with heightened observation mid-race. (Late Surger)
+
+The Coast Is Clear!
+Moderately widen field of view with situational awareness when moving sideways. (End Closer)
+
+Crusader
+Widen field of view when positioned toward the back late-race. (End Closer)
+
+Burning Spirit SPD
+Burn bright with team spirit, increasing velocity in proportion to the total Speed of racing team members mid-race.
+
+Burning Spirit GUTS
+Burn bright with team spirit, increasing vigor in proportion to the total Guts of racing team members late-race.
+
+Burning Spirit STA
+Burn bright with team spirit, recovering endurance in proportion to the total Stamina of racing team members mid-race.
+
+Burning Spirit PWR
+Burn bright with team spirit, increasing acceleration in proportion to the total Power of racing team members late-race.
+
+Burning Spirit WIT
+Burn bright with team spirit, increasing strategic navigation in proportion to the total Wit of racing team members early-race.
+
+The First Star
+In the second half of the race, the more wins you've achieved in the training, the more your speed and acceleration increase, and your stamina recovers
+
+I Want to Win With You
+In the second half of the race, if you're not in the back of the pack, your speed and acceleration will increase (scales with the number of fans)
+
+Beyond the Limits
+Increases speed during the Last Spurt (special scaling under investigation)
+
+Wisdom of the Sun
+During the Middle Leg, if you've been blocked from the side for at least 2 seconds, your speed will increase based on the number of skills you have (up to 20)
+
+Wisdom of the Land
+During the second half of the Final Leg, your speed will increase based on the number of skills you have (up to 20)
+
+Wisdom of the Ocean
+During the first half of the Opening Leg, your acceleration will increase based on the number of skills you have (up to 20)
+
+Dreaming of the Peak
+During the Final Straight, your speed is increased depending on the cumulative level of your Overseas Aptitudes
+
+Blazing Radiance!
+Mile/Medium・At a random point during the Middle Leg, your speed will increase; the effect is stronger the more U.A.F. tournament wins you have
+
+The Races We Run
+Short/Mile・During the Last Spurt, your speed will increase; the effect scales with the number of Cooking Points you got during training
+
+For a Fleeting View
+Medium/Long・During the Final Straight, your speed will increase; the effect is stronger the higher your total Research Level is
+
+Forger of Legends
+At a random point during the first half of the Last Spurt, your speed will increase; the value scales with the number of your fans
+
+Guided by Instinct
+Medium/Long・During the Final Straight, your speed will increase based on how many Development Points you have
+
+Greed for Speed
+Moderately steal velocity from runners behind when in the lead mid-race. (Mile)
+
+Dominator
+Decrease velocity of runners ahead when positioned toward the back late-race. (Medium)
+
+Petrifying Gaze
+Unnerve runners in focus late-race. (End Closer)
+
+Adored by All
+Intimidate runners behind when positioned toward the front early-race. (Sprint)
+
+Dancer of the Sands
+Dirt・If you're in the lead during the Opening Leg and there's another girl right behind you, she will slow down
+
+Don't Let Your Guard Down
+Dirt・If an enemy character uses a recovery skill in the second half of the race, she will slow down
+
+Battle Formation
+Dull movement for runners ahead when positioned toward the back early-race. (Mile)
+
+You've Got No Shot
+Cause panic in runners ahead when positioned toward the back early-race. (Sprint)
+
+Mystifying Murmur
+Disturb runners directly ahead mid-race. (Medium)
+
+Stamina Siphon
+Moderately steal endurance from runners ahead when positioned toward the back mid-race. (Long)
+
+All-Seeing Eyes
+Startle other runners late-race. (Late Surger)
+
+Captivating Trick
+If you're in the first half of the pack during the Middle Leg, tire out girls that are behind you and distracted
+
+Illusionist
+Narrow the field of view for runners ahead late-race. (Long)
+
+Dazzling Disorientation
+Moderately narrow the field of view for runners behind when positioned toward the front late-race. (Pace Chaser)
+
+Great Escape
+Runner・Your strategy changes to "Great Escape" (a strategy even more aggressive than Runner)
+
+#1 Horsegirl in Japan
+Long・Your speed will increase on the Final Corner
+
+The Future in My Hands
+Mile/Medium・At a random point during the second half of the race, you will get a speed boost and your stamina will slightly recover

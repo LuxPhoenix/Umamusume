@@ -28,6 +28,10 @@ class SupportCard():
         self.e_friend = float(content["friend_bonus"][LBlevel])
         self.friendship = 0
         self.hint_priority = float(content["hint_priority"])
+        self.skill_h = [Skill(i) for i in content["skill_hint"]]
+        self.event_skill = [Skill(i) for i in content["event_skill"]]
+        self.h_level = content["hint_levels"][LBlevel]  # It's not the "h" you are thinking about!
+        self.h_frequency = content["hint_frequency"][LBlevel]
 
     def _is_specialized(self, training_type: str):
         if self.train_type == training_type:
@@ -60,11 +64,42 @@ class SupportCard():
         return f"Support Card: {self.name}, current friendship: {self.friendship}"
 
     def __repr__(self):
-        return f"SupportCard({self.name})"
+        return f"SupportCard({self.name})" 
+
+    @property
+    def h_score(self):
+        """The average priority of the skills from hints will represent the h_score."""
+        return sum(skill.priority for skill in self.skill_h) / max(len(self.skill_h), 1)
+
+
+class Skill:
+    def __init__(self, name: str, priority: int = 0):
+        self.name = name
+        self.priority = priority
+
+    def __str__(self):
+        return self.name
+
+    def __repr__(self):
+        return f"Skill({self.name}, {self.priority})"
+
+    def __eq__(self, other):
+        if isinstance(other, str):
+            return self.name == other
+        elif isinstance(other, Skill):
+            return (self.name == other.name and self.priority == other.priority)
+
+    def __hash__(self):
+        return 0
 
 
 if __name__ == "__main__":
     KitasanBlackSpe = SupportCard("Kitasan Black SSR spe", 4)
     print(KitasanBlackSpe.e_mood)
+    print(KitasanBlackSpe.h_level, KitasanBlackSpe.skill_h)
+    print("I love Umamusume" == Skill("I love Umamusume"))
+    print("A" in [Skill("A"), Skill("B")])
+    print(Skill("A") in ("A", "B"))
+    print(KitasanBlackSpe.h_score)
 
         

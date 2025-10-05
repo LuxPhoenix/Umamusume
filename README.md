@@ -139,3 +139,48 @@ Minor changes:
 1. Restrict regions for previously unrestricted testing images, improving efficiency.
 3. Fixing name issue for characters.
 4. Reducing time taken for trouble shooting process.
+
+# V0.4.2
+Huge update to the skill system!
+
+Major update agenda:
+
+1. Collect skills available from hints and events (separately) for each support card.
+--> All information together with skills are gathered for all SSR, SR and a few R cards.
+--> Need to check the veracity for some values later, especially event skills.
+
+2. Collect skills needed for each CM cup
+--> Collected skills needed for Cancer cup front runners.
+--> Need to replenish other running styles and other cups.
+
+3. Write a class method for skills so each skill will have the following property: description, distance, strategy, usefulness (good skill like swinging maestro vs bad skill like iron will)
+--> Skipped, I don't think this is necessary. If needed skills are already appended to
+the CM, then we don't need to compare anymore.
+
+4. Talk with Coed about the events from each support cards, and which choice to select to get which skill.
+
+
+5. Add initial skills, initial aptitudes for each umamusume.
+--> Added for existing Umas.
+
+6. Write a function or method that could find useful skills out of the initial skills and support cards' skills for a certain scenario (If the horse is trained for CM, then prioritize CM's skills; debuffer; team trial; regular training (select skills based on initial aptitudes for the horse).)
+--> Implemented hashable class "Skill" under support_card_m.py.
+--> Added "load" method under horse_info_m.py, which will change the priority of skills based on scenerio (like CM cups) and change the overall priority to pick up hints based on training purposes.
+
+7. When training, refine the hint detecting function so that we will know which exact card has the hint.
+--> Implemented by pixel testing
+--> Needs to find better testing technique to increase accuracy or adjust pixel collecitng position & multiple pixel collecting.
+
+8. Add a score function for the hint of a particular support card
+hint_priority = sum(usefulskill[i].importance) / number_of_available_hints * (1+ A*hint_levels) 
+--> Implemented, need to fine tune the value.
+
+9. Add a function to detect if a skill has already been obtained at certain turns.
+So for instance if groundwork already is obtained, then we no longer need this hint from airgroove so it will be removed from air groove's useful skill list
+Same with standard distance from Eishin Flash
+So the result is that if we find we have picked up those two skills, we no longer care about hints from Air groove and Eishin Flash
+This will increase efficiency so we can prioritize on stats gaining and also obtaining hints for other needed skills.
+--> Function Added to detect available skills
+
+10. Implement a function that ranks available skills in terms of priority, and pick skills in the most efficient way with limited skill points. the goal is to always pick skills at higher priority level. but with skills on the same level, we should try to spend our points on as much skills as possible and leave as fewer skill points as possible.
+

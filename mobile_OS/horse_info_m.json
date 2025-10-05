@@ -6,6 +6,8 @@
         "default_racetable": {"22": "Asahi Hai Futurity", "23": "Hopeful Stakes", "30": "Satsuki Sho", "33": "Japan Derby", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
         "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
         "special_events": ["wonderful mistake"],
+        "Aptitude": ["A", "B", "E", "A", "A", "B", "F", "A", "A", "D"],
+        "initial_skill": ["Triumphant Pulse", "Cloudy Days", "Corner Connoisseur", "Corner Acceleration", "Nimble Navigator", "Acceleration", "Gourmand", "Hydrate"],
         "skill_set": [],
         "strategy": {"1": "Front", "39": "Pace"}
     },
@@ -16,6 +18,8 @@
         "default_racetable": {"23": "Hanshin Juvenile", "24": "Hopeful S", "32": "Oka Sho", "35": "Japan Derby", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
         "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
         "special_events": ["wonderful mistake"],
+        "Aptitude": ["A", "B", "E", "A", "A", "B", "F", "A", "A", "D"],
+        "initial_skill": ["Triumphant Pulse", "Cloudy Days", "Corner Connoisseur", "Corner Acceleration", "Nimble Navigator", "Acceleration", "Gourmand", "Hydrate"],
         "skill_set": [],
         "strategy": {"1": "Front", "39": "Pace"}
     },
@@ -26,6 +30,8 @@
         "default_racetable": {"23": "Hanshin Juvenile", "24": "Hopeful S", "32": "Satsuki Sho", "35": "Japan Derby", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
         "training_priority": [2, 1.1, 0.3, -0.5, 0.5],
         "special_events": ["wonderful mistake"],
+        "Aptitude": ["A", "B", "E", "A", "A", "B", "F", "A", "A", "D"],
+        "initial_skill": ["Triumphant Pulse", "Cloudy Days", "Corner Connoisseur", "Corner Acceleration", "Nimble Navigator", "Acceleration", "Gourmand", "Hydrate"],
         "skill_set": [],
         "strategy": {"1": "Front", "39": "Pace"}
     },
@@ -36,6 +42,8 @@
         "default_racetable": {"24": "Hopeful S", "34": "NHK Mile", "45": "Shuka Sho", "47": "Mile C", "59": "Victoria Mile", "72": "Mile C"},
         "training_priority": [1.5, 0.9, 0.3, 0, 0.6],
         "special_events": [],
+        "Aptitude": ["A", "D", "B", "A", "B", "C", "A", "E", "G", "G"],
+        "initial_skill": ["Red Shift/LP1211-M", "Straightaway Adept", "Focus", "Early Lead", "Changing Gears", "Shifting Gears", "Acceleration"],
         "skill_set": ["Early Lead", "Triumphant Pulse", "Homestretch Haste"],
         "strategy": {"1": "Front", "58": "Late"}
     },
@@ -46,6 +54,8 @@
         "default_racetable": {"24": "Hopeful S", "34": "NHK Mile", "45": "Shuka Sho", "47": "Mile C", "59": "Victoria Mile", "72": "Mile C"},
         "training_priority": [1.5, 0.9, 0.3, 0, 0.6],
         "special_events": [],
+        "Aptitude": ["A", "D", "B", "A", "B", "C", "A", "E", "G", "G"],
+        "initial_skill": ["Red Shift/LP1211-M", "Straightaway Adept", "Focus", "Early Lead", "Changing Gears", "Shifting Gears", "Acceleration"],
         "skill_set": ["Early Lead", "Triumphant Pulse", "Homestretch Haste"],
         "strategy": {"1": "Front", "58": "Late"}
     },
@@ -58,6 +68,8 @@
                               "58": "G2/Millers C", "59": "Victoria Mile", "62": "Takarazuka Kinen", "67": "G2/Centaur S", "68": "Sprinters S", "71": "Queen Elizabeth II C", "72": "Japan C", "74": "Arima Kinen"},
         "training_priority": [1.4, 0.9, 0.3, 0, 0.4],
         "special_events": [],
+        "Aptitude": ["A", "D", "B", "A", "B", "C", "A", "E", "G", "G"],
+        "initial_skill": ["Red Shift/LP1211-M", "Straightaway Adept", "Focus", "Early Lead", "Changing Gears", "Shifting Gears", "Acceleration"],
         "skill_set": ["Early Lead", "Triumphant Pulse", "Homestretch Haste"],
         "strategy": {"1": "Front"}
     },
@@ -68,6 +80,8 @@
         "default_racetable": {"24": "Hopeful S", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
         "training_priority": [1.4, 0.7, 0, -0.5, 0.1],
         "special_events": ["wonderful mistake"],
+        "Aptitude": ["A", "G", "F", "E", "A", "B", "D", "A", "C", "E"],
+        "initial_skill": ["Sky-High Teio Step", "Prudent Positioning", "Go with the flow", "Thunderbolt Step", "Technician", "Shrewd Step"],
         "skill_set": [],
         "strategy": {"1": "Front", "39": "Pace"}
     },
@@ -78,6 +92,8 @@
         "default_racetable": {"24": "Hopeful S", "37": "Takarazuka Kinen", "47": "Japan C", "49": "Arima Kinen", "55": "Osaka hai", "70": "Tenno Sho Autumn"},
         "training_priority": [2, 1, 0.3, -0.5, 0.5],
         "special_events": [],
+        "Aptitude": ["A", "G", "F", "E", "A", "B", "D", "A", "C", "E"],
+        "initial_skill": ["Sky-High Teio Step", "Prudent Positioning", "Go with the flow", "Thunderbolt Step", "Technician", "Shrewd Step"],
         "skill_set": [],
         "strategy": {"1": "Pace", "45": "Late"}
     },
@@ -88,8 +104,22 @@
         "default_racetable": {"24": "Hopeful S", "45": "Shuka Sho", "55": "Osaka hai", "58": "Tenno Sho Spring", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
         "training_priority": [1.5, 0.6, 0.5, -0.5, 0.1],
         "special_events": ["wonderful mistake"],
+        "Aptitude": ["A", "B", "F", "A", "A", "B", "E", "A", "A", "C"],
+        "initial_skill": ["Victoria por plancha", "Straightaway Adept", "Stamina to Spare", "Hawkeye", "Pace Chaser Straightaways"],
         "skill_set": [],
         "strategy": {"1": "Front", "39": "Pace"}
+    },
+    "El Condor1": {
+        "name": "El Condor",
+        "default_supportcard": ["Eishin Flash SR spe", "Daitaku Helios SR pow", "Fuji Kiseki SR wit", "Yaeno Muteki SSR pow", "Silence Suzuka SSR spe", "Kitasan Black SSR spe"],
+        "friend_supportcard": "Yaeno Muteki SSR pow",
+        "default_racetable": {"24": "Hopeful S", "32": "Satsuki Sho", "37":"Takarazuka Kinen", "46": "Queen Elizabeth II C", "47": "Mile C", "55": "Osaka hai", "59": "Victoria Mile", "61": "Yasuda Kinen", "70": "Tenno Sho Autumn"},
+        "training_priority": [1.5, 1, 0.6, 0, 0],
+        "special_events": [],
+        "Aptitude": ["A", "B", "F", "A", "A", "B", "E", "A", "A", "C"],
+        "initial_skill": ["Victoria por plancha", "Straightaway Adept", "Stamina to Spare", "Hawkeye", "Pace Chaser Straightaways"],
+        "skill_set": [],
+        "strategy": {"1": "Front", "35": "Late"}
     },
     "Daiwa Scarlet": {
         "name": "Daiwa Scarlet",
@@ -98,8 +128,22 @@
         "default_racetable": {"23": "Hanshin Juvenile", "24": "Hopeful S", "59": "Victoria Mile", "61": "Yasuda Kinen", "72": "Japan C"},
         "training_priority": [1.5, 0.6, 0.4, -0.5, 0],
         "special_events": ["wonderful mistake"],
+        "Aptitude": ["A", "G", "F", "A", "A", "B", "A", "A", "E", "G"],
+        "initial_skill": ["Resplendent Red Ace", "Competitive Spirit", "Stamina to Spare", "Race Planner", "Preferred Position", "Prepare to Pass", "Killer Tunes", "Up-Tempo"],
         "skill_set": [],
         "strategy": {"1": "Front", "39": "Pace"}
+    },
+    "Vodca": {
+        "name": "Vodca",
+        "default_supportcard": ["Eishin Flash SR spe", "Daitaku Helios SR pow", "Fuji Kiseki SR wit", "Yaeno Muteki SSR pow", "Silence Suzuka SSR spe", "Air Groove SR gut"],
+        "friend_supportcard": "Yaeno Muteki SSR pow",
+        "default_racetable": {"24": "Hopeful S", "34": "NHK Mile", "37":"Takarazuka Kinen", "47": "Mile C", "55": "Osaka hai", "62": "Takarazuka Kinen", "72": "Japan C"},
+        "training_priority": [1.5, 1, 0.6, 0, 0],
+        "special_events": [],
+        "Aptitude": ["A", "G", "F", "A", "A", "F", "C", "B", "A", "F"],
+        "initial_skill": ["Cut and Drive!", "Straightaway Acceleration", "Breath of Fresh Air", "Straightaway Recovery", "Slick Surge", "Furious Feat", "Updrafters", "Mile Straightaways"],
+        "skill_set": [],
+        "strategy": {"1": "Front", "35": "Late"}
     },
     "T.M. Opera O": {
         "name": "T.M. Opera O",
@@ -108,6 +152,8 @@
         "default_racetable": {"24": "Hopeful S", "37": "Takarazuka Kinen", "45": "Kikuka Sho", "47": "Japan C", "55": "Osaka hai", "70": "Tenno Sho Autumn"},
         "training_priority": [1.7, 0.8, 0.3, -0.5, 0.5],
         "special_events": [],
+        "Aptitude": ["A", "E", "G", "E", "A", "A", "C", "A", "A", "G"],
+        "initial_skill": ["This Dance is for Vittoria!", "Non-Standard Distance", "Straightaway Adept", "Stamina to Spare", "Speed Star", "Prepare to Pass", "Up-Tempo"],
         "skill_set": [],
         "strategy": {"1": "Pace", "45": "Late"}
     }

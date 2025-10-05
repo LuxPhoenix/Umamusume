@@ -1,0 +1,1550 @@
+Right-Handed ◎
+Increase performance on right-handed tracks.
+
+Right-Handed ○
+Moderately increase performance on right-handed tracks.
+
+Left-Handed ◎
+Increase performance on left-handed tracks.
+
+Left-Handed ○
+Moderately increase performance on left-handed tracks.
+
+Spring Runner ◎
+Increase performance in spring.
+
+Spring Runner ○
+Moderately increase performance in spring.
+
+Summer Runner ◎
+Increase performance in summer.
+
+Summer Runner ○
+Moderately increase performance in summer.
+
+Fall Runner ◎
+Increase performance in fall.
+
+Fall Runner ○
+Moderately increase performance in fall.
+
+Winter Runner ◎
+Increase performance in winter.
+
+Winter Runner ○
+Moderately increase performance in winter.
+
+Outer Post Proficiency ◎
+Increase performance in brackets 6–8.
+
+Outer Post Proficiency ○
+Moderately increase performance in brackets 6–8.
+
+Maverick ◎
+Increase performance when no other runners are using the same strategy.
+
+Maverick ○
+Moderately increase performance when no other runners are using the same strategy.
+
+Long Shot ◎
+Increase performance when 4th favorite or below.
+
+Long Shot ○
+Moderately increase performance when 4th favorite or below.
+
+Sympathy
+Moderately increase performance when many runners share a sympathetic heart.
+
+Lone Wolf
+Moderately increase performance when no other runners have the heart of a lone wolf.
+
+Scenery of Dreams
+Frantically chasing after the scenery, your Speed stat is increased by 40
+
+Running Towards the Unknown
+Silence Suzuka's Speed stat is increased by 40
+
+Proud Derby Girl
+Your Speed stat is increased by 40
+
+Exchange Races ◎
+Your Speed stat is increased by 60 in exchange races (Kawasaki, Funabashi, Morioka, and Ooi racetracks)
+
+Exchange Races ○
+Your Speed stat is increased by 40 in exchange races (Kawasaki, Funabashi, Morioka, and Ooi racetracks)
+
+Skillful Step
+Dirt・If your Power stat is 1000 or higher, gain 20 Speed stat; if it's 1200 or higher, gain 40 instead
+
+Mud Play ◎
+Dirt・Your Speed stat is increased by 60 in races with Heavy or Bad track condition
+
+Mud Play ○
+Dirt・Your Speed stat is increased by 40 in races with Heavy or Bad track condition
+
+Gambling Spirit
+Your Speed, Power, and Guts stats have a chance of being increased by 40 each. The chance is 15% if you're one of the three most popular racers, and 30% otherwise
+
+Short-Distance Racing Passion
+Turf・Short・Your Speed stat is increased by 60
+
+Self-Assured
+Mile/Medium・If your base Speed and Power are both at least 1000, they will increase by additional 20 points
+
+Inquisitive Mind
+Leader・Medium・If your Speed stat is at least 1200, it will further increase by 20; bonus 20 Speed if your Wisdom is also at least 1200
+
+Straight Course ◎
+Your Speed stat is increased by 60 on tracks with no corners
+
+Straight Course ○
+Your Speed stat is increased by 40 on tracks with no corners
+
+Mental Strength
+Betweener・Medium・If your base Speed is at least 1200, it will increase by another 20; if your base Power is also at least 1200, the Speed increase will be 40 instead
+
+Right-Handed ×
+Moderately decrease performance on right-handed tracks.
+
+Left-Handed ×
+Moderately decrease performance on left-handed tracks.
+
+Spring Runner ×
+Moderately decrease performance in spring.
+
+Summer Runner ×
+Moderately decrease performance in summer.
+
+Fall Runner ×
+Moderately decrease performance in fall.
+
+Winter Runner ×
+Moderately decrease performance in winter.
+
+Outer Post Averseness
+Moderately decrease performance in brackets 6–8.
+
+G1 Averseness
+Moderately decrease performance in G1 or otherwise important races.
+
+Uneven Nail
+Your Speed stat is decreased by 40 in races with Good track condition
+
+Spreading Fear
+As the trainer's fears spread, your Speed stat is decreased by 40
+
+Exchange Races ×
+Your Speed stat is decreased by 40 in exchange races (Kawasaki, Funabashi, Morioka, and Ooi racetracks)
+
+Mud Play ×
+Dirt・Your Speed stat is decreased by 40 in races with Heavy or Bad track condition
+
+Straight Course ×
+Your Speed stat is decreased by 40 on tracks with no corners
+
+Oppressive Cage
+Your Speed stat is decreased by 500
+
+Unconscious Shackles
+Your Speed, Stamina, and Wisdom stats are lowered by 100
+
+Tokyo Racecourse ◎
+Increase performance at Tokyo Racecourse.
+
+Tokyo Racecourse ○
+Moderately increase performance at Tokyo Racecourse.
+
+Nakayama Racecourse ◎
+Increase performance at Nakayama Racecourse.
+
+Nakayama Racecourse ○
+Moderately increase performance at Nakayama Racecourse.
+
+Hanshin Racecourse ◎
+Increase performance at Hanshin Racecourse.
+
+Hanshin Racecourse ○
+Moderately increase performance at Hanshin Racecourse.
+
+Kyoto Racecourse ◎
+Increase performance at Kyoto Racecourse.
+
+Kyoto Racecourse ○
+Moderately increase performance at Kyoto Racecourse.
+
+Chukyo Racecourse ◎
+Increase performance at Chukyo Racecourse.
+
+Chukyo Racecourse ○
+Moderately increase performance at Chukyo Racecourse.
+
+Sapporo Racecourse ◎
+Increase performance at Sapporo Racecourse.
+
+Sapporo Racecourse ○
+Moderately increase performance at Sapporo Racecourse.
+
+Hakodate Racecourse ◎
+Increase performance at Hakodate Racecourse.
+
+Hakodate Racecourse ○
+Moderately increase performance at Hakodate Racecourse.
+
+Fukushima Racecourse ◎
+Increase performance at Fukushima Racecourse.
+
+Fukushima Racecourse ○
+Moderately increase performance at Fukushima Racecourse.
+
+Niigata Racecourse ◎
+Increase performance at Niigata Racecourse.
+
+Niigata Racecourse ○
+Moderately increase performance at Niigata Racecourse.
+
+Kokura Racecourse ◎
+Increase performance at Kokura Racecourse.
+
+Kokura Racecourse ○
+Moderately increase performance at Kokura Racecourse.
+
+Standard Distance ◎
+Increase performance over standard distances (multiples of 400m).
+
+Standard Distance ○
+Moderately increase performance over standard distances (multiples of 400m).
+
+Non-Standard Distance ◎
+Increase performance over non-standard distances (non-multiples of 400m).
+
+Non-Standard Distance ○
+Moderately increase performance over non-standard distances (non-multiples of 400m).
+
+Oi Racecourse ◎
+Increase performance at Oi Racecourse.
+
+Oi Racecourse ○
+Moderately increase performance at Oi Racecourse.
+
+Unquenched Thirst
+Moderately increase performance with the desire to race.
+
+Pray For a Fast Run!
+Silence Suzuka's Stamina stat is increased by 40
+
+Long-Distance Racing Passion
+Turf・Long・Your Stamina stat is increased by 60
+
+Kawasaki Racetrack ◎
+In Kawasaki, your Stamina stat is increased by 60
+
+Kawasaki Racetrack ○
+In Kawasaki, your Stamina stat is increased by 40
+
+Funabashi Racetrack ◎
+In Funabashi, your Stamina stat is increased by 60
+
+Funabashi Racetrack ○
+In Funabashi, your Stamina stat is increased by 40
+
+Morioka Racetrack ◎
+In Morioka, your Stamina stat is increased by 60
+
+Morioka Racetrack ○
+In Morioka, your Stamina stat is increased by 40
+
+Longchamp Racecourse ◎
+At Longchamp, your Stamina stat is increased by 60
+
+Longchamp Racecourse ○
+At Longchamp, your Stamina stat is increased by 40
+
+Tokyo Racecourse ×
+Moderately decrease performance at Tokyo Racecourse.
+
+Nakayama Racecourse ×
+Moderately decrease performance at Nakayama Racecourse.
+
+Hanshin Racecourse ×
+Moderately decrease performance at Hanshin Racecourse.
+
+Kyoto Racecourse ×
+Moderately decrease performance at Kyoto Racecourse.
+
+Chukyo Racecourse ×
+Moderately decrease performance at Chukyo Racecourse.
+
+Sapporo Racecourse ×
+Moderately decrease performance at Sapporo Racecourse.
+
+Hakodate Racecourse ×
+Moderately decrease performance at Hakodate Racecourse.
+
+Fukushima Racecourse ×
+Moderately decrease performance at Fukushima Racecourse.
+
+Niigata Racecourse ×
+Moderately decrease performance at Niigata Racecourse.
+
+Kokura Racecourse ×
+Moderately decrease performance at Kokura Racecourse.
+
+Standard Distance ×
+Moderately decrease performance over standard distances (multiples of 400m).
+
+Non-Standard Distance ×
+Moderately decrease performance over non-standard distances (non-multiples of 400m).
+
+Paddock Fright
+Moderately decrease performance when the favorite.
+
+Oi Racecourse ×
+Moderately decrease performance at Oi Racecourse.
+
+Kawasaki Racetrack ×
+In Kawasaki, your Stamina stat is decreased by 40
+
+Funabashi Racetrack ×
+In Funabashi, your Stamina stat is decreased by 40
+
+Morioka Racetrack ×
+In Morioka, your Stamina stat is decreased by 40
+
+Longchamp Racecourse ×
+At Longchamp, your Stamina stat is decreased by 40
+
+Firm Conditions ◎
+Increase performance on firm ground.
+
+Firm Conditions ○
+Moderately increase performance on firm ground.
+
+Wet Conditions ◎
+Increase performance on good, soft, and heavy ground.
+
+Wet Conditions ○
+Moderately increase performance on good, soft, and heavy ground.
+
+Competitive Spirit ◎
+Increase performance when at least 5 other runners are using the same strategy.
+
+Competitive Spirit ○
+Moderately increase performance when at least 5 other runners are using the same strategy.
+
+As a Friend, as a Rival
+Silence Suzuka's Power stat is increased by 40
+
+Mile Racing Passion
+Turf・Mile・Your Power stat is increased by 60
+
+Firm Conditions ×
+Moderately decrease performance on firm ground.
+
+Wet Conditions ×
+Moderately decrease performance on good, soft, and heavy ground.
+
+Wallflower
+Moderately decrease performance when at least 5 other runners are using the same strategy.
+
+Sunny Days ◎
+Increase performance in sunny weather.
+
+Sunny Days ○
+Moderately increase performance in sunny weather.
+
+Cloudy Days ◎
+Increase performance in cloudy weather.
+
+Cloudy Days ○
+Moderately increase performance in cloudy weather.
+
+Rainy Days ◎
+Increase performance in rainy weather.
+
+Rainy Days ○
+Moderately increase performance in rainy weather.
+
+Snowy Days ◎
+Increase performance in snowy weather.
+
+Snowy Days ○
+Moderately increase performance in snowy weather.
+
+Target in Sight ◎
+Increase performance when the favorite is using the same strategy.
+
+Target in Sight ○
+Moderately increase performance when the favorite is using the same strategy.
+
+Dirt Racing Passion
+Dirt・Medium・Your Guts stat is increased by 60
+
+Rainy Days ×
+Moderately decrease performance in rainy weather.
+
+99 Problems
+Your Guts and Wisdom stat are decreased by 40
+
+Inner Post Proficiency ◎
+Increase performance in brackets 1–3.
+
+Inner Post Proficiency ○
+Moderately increase performance in brackets 1–3.
+
+Front Runner Savvy ◎
+Increase ability to get into a good position. (Front Runner)
+
+Front Runner Savvy ○
+Moderately increase ability to get into a good position. (Front Runner)
+
+Pace Chaser Savvy ◎
+Increase ability to get into a good position. (Pace Chaser)
+
+Pace Chaser Savvy ○
+Moderately increase ability to get into a good position. (Pace Chaser)
+
+Late Surger Savvy ◎
+Increase ability to get into a good position. (Late Surger)
+
+Late Surger Savvy ○
+Moderately increase ability to get into a good position. (Late Surger)
+
+End Closer Savvy ◎
+Increase ability to get into a good position. (End Closer)
+
+End Closer Savvy ○
+Moderately increase ability to get into a good position. (End Closer)
+
+Self-Control
+Your Wisdom stat is increased by 60 and you're a little harder to panic
+
+Medium-Distance Racing Passion
+Turf・Medium・Your Wisdom stat is increased by 60
+
+Nocturnal ◎
+Your Wisdom stat is increased by 60 in races at night
+
+Nocturnal ○
+Your Wisdom stat is increased by 40 in races at night
+
+Tight Turns ◎
+Your Wisdom stat is increased by 60 at racetracks with tight corners
+
+Tight Turns ○
+Your Wisdom stat is increased by 40 at racetracks with tight corners
+
+天才肌
+Not translated yet
+
+Inner Post Averseness
+Moderately decrease performance in brackets 1–3.
+
+Nocturnal ×
+Your Wisdom stat is decreased by 40 in races at night
+
+Tight Turns ×
+Your Wisdom stat is decreased by 40 at racetracks with tight corners
+
+Favorite, For Reals?!
+The chance of kakari (panicking) is increased
+
+Hyper Excitement
+Your stats are lowered by 20, and your chance of kakari is increased
+
+Lucky Seven
+Moderately good things may happen when in bracket 7.
+
+Impulse
+Betweener・Turf・All your stats are increased by 20
+
+Corner Recovery ○
+Slightly recover endurance on a corner with efficient turning.
+
+Corner Recovery ×
+Moderately lose endurance on a corner with inefficient turning.
+
+Straightaway Recovery
+Slightly recover endurance on a straight.
+
+Ramp Revulsion
+Moderately increase fatigue on an uphill.
+
+Packphobia
+Moderately lose endurance when surrounded.
+
+Lay Low
+Slightly recover endurance when the way ahead is jammed early-race.
+
+Pace Strategy
+Slightly recover endurance when passed by another runner mid-race.
+
+Calm in a Crowd
+Slightly recover endurance when surrounded mid-race.
+
+Running Idle
+Moderately increase fatigue when in the lead by too large of a margin.
+
+Stamina to Spare
+Slightly decrease fatigue early-race. (Pace Chaser)
+
+Preferred Position
+Slightly decrease fatigue mid-race. (Pace Chaser)
+
+Standing By
+Slightly decrease fatigue mid-race. (End Closer)
+
+Wait-and-See
+Slightly decrease fatigue when positioned toward the back mid-race. (Sprint)
+
+Watchful Eye
+Slightly decrease fatigue when positioned toward the back early-race. (Mile)
+
+Rosy Outlook
+Slightly decrease fatigue when in the lead mid-race. (Medium)
+
+Deep Breaths
+Slightly decrease fatigue by taking a breather upon entering a straight. (Long)
+
+Extra Tank
+Slightly regain the energy to run after exhausting strength. (Long)
+
+Soft Step
+Slightly decrease fatigue when moving sideways. (Medium)
+
+Passing Pro
+Slightly decrease fatigue when determined to pass another runner. (Long)
+
+Moxie
+Slightly reduce fatigue on an uphill. (Front Runner)
+
+Hydrate
+Slightly recover endurance mid-race. (Pace Chaser)
+
+A Small Breather
+Slightly recover endurance late-race. (Late Surger)
+
+After-School Stroll
+Slightly reduce fatigue on a downhill. (End Closer)
+
+Levelheaded
+Slightly regain composure by calming down when the way ahead is jammed. (End Closer)
+
+Triple 7s
+Slightly gain energy with 777m remaining.
+
+Shake It Out
+Slightly recover endurance after activating many skills late-race.
+
+Quiet Breathing
+Betweener・During the second half of the Opening Leg, if you're not in the front, your stamina will slightly recover
+
+Sandstorm Practice
+Dirt・If you're behind in the Middle Leg, your stamina will slightly recover
+
+My Own Pace
+Long・If you're in the middle of the pack during the first half of the Middle Leg, your speed will slightly decrease and your stamina will recover
+
+Faultless
+Leader・Long・If you didn't have a late start to the race, your stamina will recover a little in the first half of the Middle Leg
+
+Stay the Course
+Long・At a random point during the Middle Leg, your speed will marginally increase and your stamina will slightly recover
+
+Dust Off
+Dirt・At a random point during the Middle Leg, if you're in the first half of the pack, your stamina will slightly recover
+
+Immovable Spirit
+Chaser・If you're in the second half of the pack during the second half of the Opening Leg, your stamina will slightly recover
+
+Fuse
+During any Middle Leg straight, you will get a marginal speed boost and your stamina will slightly recover
+
+Corner Adept ○
+Slightly increase velocity on a corner with skilled turning.
+
+Straightaway Adept
+Slightly increase velocity on a straight.
+
+Ramp Up
+Slightly increase velocity when passing another runner mid-race.
+
+Homestretch Haste
+Slightly increase velocity in the last spurt.
+
+Fast-Paced
+Slightly increase ability to go to the front mid-race. (Front Runner)
+
+Prepared to Pass
+Slightly increase ability to break out of the pack on the final corner. (Pace Chaser)
+
+Position Pilfer
+Slightly increase velocity mid-race. (Late Surger)
+
+Outer Swell
+Slightly increase velocity when passing another runner on the outside on the final corner. (Late Surger)
+
+Masterful Gambit
+Slightly move up in preparation to close the gap late-race. (End Closer)
+
+Gap Closer
+Slightly increase spurting ability when positioned toward the back late-race. (Sprint)
+
+Productive Plan
+Slightly widen the margin when in the lead early-race. (Mile)
+
+Up-Tempo
+Slightly increase positioning ability when positioned toward the front mid-race. (Medium)
+
+Steadfast
+Slightly increase ability to fight back when passed by another runner on the final corner. (Medium)
+
+Inside Scoop
+Slightly increase velocity when near the inner rail on the final corner. (Long)
+
+Sprint Straightaways ◎
+Moderately increase velocity on a straight. (Sprint)
+
+Sprint Straightaways ○
+Slightly increase velocity on a straight. (Sprint)
+
+Sprint Corners ◎
+Moderately increase velocity on a corner. (Sprint)
+
+Sprint Corners ○
+Slightly increase velocity on a corner. (Sprint)
+
+Huge Lead
+Slightly increase ability to maintain the lead when leading by a large margin mid-race. (Sprint)
+
+Mile Straightaways ◎
+Moderately increase velocity on a straight. (Mile)
+
+Mile Straightaways ○
+Slightly increase velocity on a straight. (Mile)
+
+Mile Corners ◎
+Moderately increase velocity on a corner. (Mile)
+
+Mile Corners ○
+Slightly increase velocity on a corner. (Mile)
+
+Shifting Gears
+Slightly increase passing ability when positioned toward the front mid-race. (Mile)
+
+Unyielding Spirit
+Slightly increase passing ability. (Mile)
+
+Medium Straightaways ◎
+Moderately increase velocity on a straight. (Medium)
+
+Medium Straightaways ○
+Slightly increase velocity on a straight. (Medium)
+
+Medium Corners ◎
+Moderately increase velocity on a corner. (Medium)
+
+Medium Corners ○
+Slightly increase velocity on a corner. (Medium)
+
+Long Straightaways ◎
+Moderately increase velocity on a straight. (Long)
+
+Long Straightaways ○
+Slightly increase velocity on a straight. (Long)
+
+Long Corners ◎
+Moderately increase velocity on a corner. (Long)
+
+Long Corners ○
+Slightly increase velocity on a corner. (Long)
+
+Keeping the Lead
+Slightly increase ability to maintain the lead when leading by a large margin mid-race. (Long)
+
+Pressure
+Slightly increase velocity when passing another runner late-race. (Long)
+
+Front Runner Straightaways ◎
+Moderately increase velocity on a straight. (Front Runner)
+
+Front Runner Straightaways ○
+Slightly increase velocity on a straight. (Front Runner)
+
+Front Runner Corners ◎
+Moderately increase velocity on a corner. (Front Runner)
+
+Front Runner Corners ○
+Slightly increase velocity on a corner. (Front Runner)
+
+Leader's Pride
+Slightly avoid being passed early-race. (Front Runner)
+
+Pace Chaser Straightaways ◎
+Moderately increase velocity on a straight. (Pace Chaser)
+
+Pace Chaser Straightaways ○
+Slightly increase velocity on a straight. (Pace Chaser)
+
+Pace Chaser Corners ◎
+Moderately increase velocity on a corner. (Pace Chaser)
+
+Pace Chaser Corners ○
+Slightly increase velocity on a corner. (Pace Chaser)
+
+Late Surger Straightaways ◎
+Moderately increase velocity on a straight. (Late Surger)
+
+Late Surger Straightaways ○
+Slightly increase velocity on a straight. (Late Surger)
+
+Later Surger Corners ◎
+Moderately increase velocity on a corner. (Late Surger)
+
+Late Surger Corners ○
+Slightly increase velocity on a corner. (Late Surger)
+
+1,500,000 CC
+Slightly increase velocity on an uphill. (Late Surger)
+
+End Closer Straightaways ◎
+Moderately increase velocity on a straight. (End Closer)
+
+End Closer Straightaways ○
+Slightly increase velocity on a straight. (End Closer)
+
+End Closer Corners ◎
+Moderately increase velocity on a corner. (End Closer)
+
+End Closer Corners ○
+Slightly increase velocity on a corner. (End Closer)
+
+Uma Stan
+Slightly increase velocity when close to many runners.
+
+Tail Held High
+Slightly increase velocity after activating many skills mid-race.
+
+Slipstream
+Slightly decrease wind resistance when following directly behind another runner.
+
+Playtime's Over!
+Slightly increase velocity when followed by another runner directly behind for a long time.
+
+Top Pick
+Slightly increase velocity when engaged in a challenge mid-race. (Dirt)
+
+All That There Is
+Medium・If you're in a good position on the Final Straight during the Final Leg, your speed will slightly increase
+
+Kageuchi
+Long・During the second half of the Middle Leg, if you're in the first half of the pack, your speed will slightly increase
+
+Early Gambit
+Chaser・If you're in the second half of the pack at a random point during the Middle Leg, your speed will slightly increase
+
+Questionable Strategy
+Your speed will increase in the second half of the race, but sometimes you will also become very tired
+
+Nimble Step
+Short・If you're in the first half of the pack during the second half of the Middle Leg, your speed will slightly increase
+
+Fighting Spirit
+Medium・If you're in the middle of the pack during the Middle Leg and someone is blocking you from the side, your speed will slightly increase and your stamina will marginally recover
+
+Tumbling Forward
+Medium・If you're in the second half of the pack at a random point during the Middle Leg, your speed will slightly increase
+
+Sufficient Spirit
+Mile・If you're in the back of the pack during the last corner, your speed will slightly increase
+
+Fearless Heart
+Betweener・If you're in the middle of the pack at a random point during the second half of the race, your speed and acceleration will slightly increase
+
+With Verve
+Medium・If you're in the front during the Middle Leg, you will slightly drain the speed of the girls behind you and slightly speed up yourself
+
+Full Throttle
+Betweener・At a random point during the Middle Leg, use a little extra stamina to increase your speed
+
+Downhill Adept
+At a random point on a random downhill, your speed will slightly increase
+
+Promising Omen
+Dirt・If you're in the first half of the pack during the second half of the Middle Leg, your speed will slightly increase
+
+Turnaround
+Dirt・If you're in the second half of the pack during the Middle Leg, your speed will slightly increase
+
+At Full Speed
+Dirt・If you're in the first half of the pack during the Last Spurt, your speed will slightly increase
+
+Clear Head
+Dirt・If you're in the second half of the pack and you've recovered stamina with a skill, your speed will slightly increase in the Middle Leg
+
+Dust Bath ○
+Dirt・If you've been following another girl for at least three seconds, your speed will slightly increase
+
+Attack Stance
+Leader・At a random point in the Middle Leg, your speed will slightly increase
+
+Breakthrough Plan
+Chaser・If you're in the second half of the pack at a random point during the Middle Leg, your speed and lane movement speed will slightly increase
+
+Frantic State
+Runner・At a random point during the first half of the Middle Leg, use some extra stamina to increase your speed
+
+Ambitions
+Leader・During the latter part of the Middle Leg, if you're less than 5 meters away from the 1st place, your speed will slightly increase
+
+Firm Step
+Leader・Medium・If you're in lead or close to the lead during the second half of the Middle Leg, your speed and acceleration will slightly increase
+
+Razor-Sharp Stride
+Betweener・On the Final Straight, if you're not in lead but also not more than 10 meters from it, your speed will increase
+
+Steadfast
+Runner・If you're in the lead during the Final Straight with another girl right behind you, your speed will increase
+
+Tooth and Tail
+Leader/Betweener・If you try to overtake someone in the second half of the race, your speed will slightly increase
+
+Rushing in Blind
+Mile・If you're in the first half of the pack during the second half of the Middle Leg, your speed will slightly increase
+
+Mold Breaker
+Medium/Long・At a random point during the third corner, if you're in the second half of the pack, you will get a slight speed boost
+
+Graceful Step
+Mile/Medium・At a random point during the Middle Leg, your speed will slightly increase
+
+Pressure
+Betweener・At a random point on the Final Corner, if you're not in the front, your speed will slightly increase, and you will slightly slow down three closest girls both ahead and behind you
+
+Rapid
+At a random point in the second half of the race, you will get a slight speed boost and your stamina will marginally recover
+
+Lock On
+Long・If you're in the second half of the pack during the second half of the Middle Leg, your speed will slightly increase
+
+Great Haste
+Betweener・Long・If you have surplus strength during the first half of the Final Leg, your speed will slightly increase
+
+Ignition
+Medium・If you've activated at least 13 skills in the race, you will get a slight speed boost
+
+Overflowing Passion
+Betweener・If you're not in the front during the second half of the Opening Leg, your speed will slightly increase
+
+On the Move
+Betweener・If you're not in the front during the second half of the Middle Leg, your speed will slightly increase
+
+From the First Step
+Betweener・If you're in the middle of the pack at a random point during the Middle Leg, your speed will marginally increase
+
+Rising Passion
+Medium/Long・If you're in the middle of the pack during the first half of the Final Leg, you will get a slight speed boost
+
+Up the Vibes
+Long・At a random point during the Middle Leg, your speed will slightly increase and your stamina will marginally recover
+
+Unbreakable Mind
+During a random Middle Leg corner, your speed will marginally increase
+
+Refined Conduct
+Mile/Medium・If you're in the first half of the pack during the 3rd corner, your speed will slightly increase
+
+Single-Minded Advance
+Short・If you're not near the front during the second half of the Middle Leg, your speed will slightly increase
+
+Toward Victory
+Leader・If you're in the first half of the pack at a random point in the Middle Leg, your speed will marginally increase
+
+Middle Leg Adept
+At a random point during the Middle Leg, your speed will slightly increase
+
+Opening Leg Adept
+During the second half of the Opening Leg, your speed will slightly increase
+
+Finale
+Runner・Long・If you have enough stamina left in the first half of the Final Leg, you will get a small speed boost
+
+Backup Planning
+Dirt・If you activate any other skill during the Middle Leg, your speed will marginally increase; then, if you activate any other skill during the Final Leg or beyond, you will get a marginal speed boost
+
+Rapid Overtakes
+Chaser・Long・If you have plenty of stamina left during the first half of the Final Leg, your speed will slightly increase
+
+Boiling Blood
+Chaser・During the Final Straight, if you're not in the first place but also no more than 10 meters away from it, your speed will increase
+
+Sufficient Thrust
+Chaser・If you're not in the front at a random point during the second half of the Middle Leg, your speed will slightly increase
+
+Cleave
+Chaser・If you're in the second half of the pack at a random point during the Final Corner, your speed will slightly increase, and the speed of the closest three girls in front and three girls behind you will slightly decrease
+
+No Reluctance
+Chaser・At a random point during the Middle Leg, use a little extra stamina to increase your speed
+
+Shadowstepper
+Chaser・If you try to overtake someone during the second half of the race, your speed will slightly increase
+
+Ghastly
+Chaser・Medium・If you're in the second half of the pack at a random point during the Middle Leg, your speed will slightly increase, and you will slightly lower speed of the five closest girls in front of you
+
+Pioneer
+Dirt・If you're in the first half of the pack during the second half of the Opening Leg, your speed will slightly increase
+
+Boiling Emotions
+Mile・If you're not in the front during the second half of the Middle Leg, your speed will slightly increase
+
+Leap Premonition
+Leader・If you're in the first half of the pack during the second half of the Middle Leg, your speed will slightly increase
+
+Art of Coaxing
+Chaser・If you're trying to overtake someone during any Final Leg corner, you will get a marginal speed boost
+
+Explosive Force
+Short・At a random point during the Middle Leg, your speed will slightly increase
+
+Wind Vane
+Mile・At a random point during the Middle Leg, your speed will slightly increase
+
+An Honest Step
+If you're in the first half of the pack at a random point during the Middle Leg, your speed will slightly increase
+
+Pounding Chest
+Short/Mile・During the first half of the Final Leg, your speed will slightly increase
+
+Unshakeable Faith
+Medium・If you're in the first half of the pack during the second half of the Middle Leg, your speed will slightly increase
+
+No Second Thoughts
+Short・If there's no one in front of you at the second furlong, your speed will marginally increase; the effect is stronger if you're not on a corner
+
+No Third Chances
+Short・If there's no one in front of you at the third furlong, your speed will marginally increase; the effect is stronger if you're not on a corner
+
+Dirt Straights ◎
+Dirt・At a random point on a random straight, your speed will slightly increase
+
+Dirt Straights ○
+Dirt・At a random point on a random straight, your speed will slightly increase
+
+Dirt Corners ◎
+Dirt・At a random point on a random corner, your speed will slightly increase
+
+Dirt Corners ○
+Dirt・At a random point on a random corner, your speed will slightly increase
+
+To Greater Heights
+Leader・Medium・If you're in the first half of the pack at a random point during the Middle Leg, your speed will slightly increase
+
+Decisive Blow
+Leader・If you're leading or at most 2.5 m from the lead during the Final Straight, your speed will slightly increase
+
+Self-Restraint
+Medium・At a random point during the Middle Leg, your speed will marginally increase and your stamina will marginally recover
+
+Bare Passion
+Betweener/Chaser・If you directly competed for position on the Final Straight in a Showdown (追い比べ), then during the last 200 m of the race, you will get a slight speed boost
+
+Fearless Advance
+Mile・If you're in the first half of the pack at a random point during the Middle Leg, you will use a little extra stamina to increase your speed slightly
+
+Switch Over Pro
+Medium・During the second half of the Opening Leg, your speed will slightly decrease; then, during the first half of the Final Leg, your speed will increase
+
+Contradicting Emotions
+Dirt・At a random point during the Middle Leg, your speed will slightly increase and your stamina will marginally recover
+
+Not Even a Glimpse
+Runner・If you're in the first half of the pack at a random point during the Middle Leg, your speed will marginally increase
+
+Free-Spirited
+Runner・Long・If you're 3rd or better during the Final Straight, you will get a slight speed boost; the effect is stronger if your motivation is Good or better
+
+Aggressive
+Leader・At a random point during the Middle Leg, use a little extra stamina to increase your speed
+
+Restless Step
+Leader・At a random point during the second half of the Opening Leg, your speed will slightly increase
+
+Surprise Attack
+Medium/Long・At a random point during the first half of the Final Leg, if you're in the middle or the back of the pack, you will get a slight speed boost
+
+Spearhead
+Runner・At a random point during the second half of the Opening Leg, your speed will slightly increase
+
+Fervor
+Long・At a random point during the Middle Leg, your speed will slightly increase
+
+Towards the Light
+Medium・At a random point during the Middle Leg, your speed will slightly increase
+
+Preliminary Preparation
+Betweener・If you're not in the front at a random point during the first half of the Middle Leg, your speed will slightly increase
+
+Creeping Footsteps
+Chaser・Medium・If you're not in the front at a random point during the Middle Leg, your speed will slightly increase
+
+High Pitch
+Mile・If you're not in the front at a random point during the Middle Leg, use a little extra stamina to increase your speed
+
+Forward Step by Step
+If you're not in the front at a random point during the Middle Leg, your speed will slightly increase
+
+Steady Effort
+Leader・Long・If you're in the first half of the pack at a random point during the Middle Leg, your speed will slightly increase
+
+Believe in Yourself
+Leader・At a random point during the first half of the Last Spurt, your speed will slightly increase
+
+Striking Back
+Medium/Long・When another girl activates a speed skill during the Final Corner or beyond, you will get a marginal speed boost
+
+Unprecedented
+Runner・Medium・If you're in the first half of the pack at a random point on the third corner, you will get a slight speed boost
+
+Dynamic Motion
+Medium・At a random point during the first half of the Last Spurt, your speed will slightly increase
+
+Outstanding Step
+Runner・If someone tries to overtake you during the second half of the race, your speed will slightly increase
+
+Overflowing Fighting Spirit
+Runner/Leader・If you participated in at least one Showdown (追い比べ) during the Final Straight, then with 200 m remaining in the race, you will get a slight speed boost
+
+Peerless
+At a random point during the Middle Leg, you will get a slight speed boost
+
+High Ambitions
+Medium/Long・If you're not in the front at a random point during the first half of the Middle Leg, your speed will slightly increase and your stamina will marginally recover
+
+Gateway to Success
+Chaser・At a random point on a random uphill, your speed will slightly increase
+
+Step Up
+Mile・If you're not in the front at a random point during the Middle Leg, your speed will slightly increase
+
+Fierce Struggle
+Long・At a random point during the first half of the Last Spurt, your speed will slightly increase
+
+Foothold
+Medium・If you're not in the front at a random point during the second half of the Middle Leg, your speed will slightly increase
+
+Capture
+Chaser・At a random point during the Middle Leg, your speed will slightly increase; the effect is strongner if you're at least 20 meters away from the first place
+
+Pushing Through!
+Betweener・At a random point during the first half of the Last Spurt, your speed will slightly increase
+
+Sand Stride
+Dirt・If another girl has been right behind you for at least three seconds, your speed will slightly increase
+
+Diligence
+Dirt・At a random point during the first half of the Last Spurt, your speed will slightly increase
+
+Straight Steps
+Betweener・Medium・If you're not in the front at a random point on a random Middle Leg straight, your speed will marginally increase
+
+Dream-Fulfilling Challenge
+Medium・At a random point during the second half of the race, your speed will slightly increase
+
+Luminance
+Medium/Long・If you're in the first half of the pack at a random point during the first half of the Final Leg, you will get a slight speed boost
+
+Find a Way!
+Medium/Long・At a random point during the Middle Leg, your speed will slightly increase
+
+Trekker
+Medium/Long・At a random point during the Middle Leg, your speed will marginally increase
+
+Simmering Heat
+Betweener・At a random point during the Middle Leg, your speed will slightly increase; if you're not in the front, you will get a slight speed boost instead
+
+Ceaseless Training
+Betweener・Medium・If you're NOT in the front at a random point during the Middle Leg, your speed will slightly increase
+
+Take the Plunge
+Leader・Long・If you have enough stamina for a full spurt at a random point in the first half of the Final Leg, you will get a slight speed boost
+
+Enthusiastic
+Long・At a random point during the first half of the Middle Leg, your speed will marginally increase and your stamina will marginally recover
+
+Exploit the Gap
+Betweener・Medium・If you overtake someone on any corner during the second half of the race, you will get a slight speed boost
+
+Chasing the Shadow
+Chaser・At a random point during the Middle Leg, your speed will slightly increase
+
+Give Chase
+Chaser・At a random point during the first half of the Last Spurt, your speed will slightly increase
+
+Unwavering Heart
+Long・At a random point during the Middle Leg, your speed will slightly increase
+
+Belligerent
+Mile/Medium・If you're NOT in the front at a random point on the third corner, you will get a slight speed boost
+
+Unquenched Longing
+Mile/Medium・At a random point during the Middle Leg, your speed will marginally increase; then, at a random point during the Final Leg, you will get a marginal speed boost
+
+Beast Within
+Not translated yet
+
+Model Student
+Not translated yet
+
+Intrigued
+Not translated yet
+
+Carefree Step
+Not translated yet
+
+Bouncy Step
+Short・If you're trying to overtake someone, your speed will slightly increase
+
+In No Time
+Short・If you're in the first half of the pack at a random point during the Middle Leg, your speed will slightly increase
+
+With Pride
+Betweener・Short・If you're NOT in the front at a random point during the Middle Leg, your speed will slightly increase
+
+Prelude
+Short・If you're NOT in the front at a random point during the Middle Leg, your speed will slightly increase
+
+No Concern for Appearances
+Dirt・If you're in the first half of the pack at a random point during the Middle Leg, you will use a little extra stamina to increase your speed
+
+Vitality
+Dirt・If you're in the first half of the pack at a random point on the third corner, you will get a slight speed boost
+
+Step Toward Mastery
+Not translated yet
+
+シビれる走り
+Not translated yet
+
+気丈な姿勢
+Not translated yet
+
+Corner Adept ×
+Moderately decrease velocity on a corner with clumsy turning.
+
+Defeatist
+Moderately increase urge to give up when positioned around the very back on the final straight.
+
+Reckless
+Moderately increase carelessness when in the lead with around 200m remaining.
+
+Dust Bath ×
+Dirt・If you've been following another girl for at least three seconds, your speed will slightly decrease
+
+Corner Acceleration ○
+Slightly increase acceleration on a corner with masterful turning.
+
+Straightaway Acceleration
+Slightly increase acceleration on a straight.
+
+Nimble Navigator
+Slightly increase maneuverability when the way ahead is blocked in the last spurt.
+
+Early Lead
+Slightly increase ability to go to the front early-race. (Front Runner)
+
+Final Push
+Slightly increase ability to keep the lead on the final corner. (Front Runner)
+
+Slick Surge
+Slightly increase acceleration late-race. (Late Surger)
+
+Straightaway Spurt
+Slightly increase acceleration on a straight in the last spurt. (End Closer)
+
+Sprinting Gear
+Slightly increase acceleration on a straight. (Sprint)
+
+Updrafters
+Slightly increase passing ability when positioned toward the back late-race. (Mile)
+
+Countermeasure
+Slightly increase passing ability when positioned toward the front mid-race. (Sprint)
+
+Acceleration
+Slightly increase acceleration when passing another runner mid-race. (Mile)
+
+Second Wind
+Slightly increase acceleration when positioned toward the back mid-race. (Front Runner)
+
+Shrewd Step
+Slightly increase ability to navigate smoothly. (Pace Chaser)
+
+Straight Descent
+Slightly improve running on a downhill. (Pace Chaser)
+
+Tactical Tweak
+Slightly increase acceleration when positioned toward the back mid-race. (Pace Chaser)
+
+Fighter
+Slightly increase passing ability. (Late Surger)
+
+Highlander
+Slightly improve running on an uphill.
+
+Groundwork
+Slightly increase acceleration after activating many skills early-race.
+
+Head-To-Head
+Leader・During the first half of the Final Leg, if you're in the first half of the pack, your acceleration will slightly increase
+
+One Chance
+Medium・During the first half of the Final Leg, if you're not near the front, your acceleration will slightly increase
+
+Full of Zeal
+Dirt・If you're in the first half of the pack during the Final Leg, your acceleration will slightly increase
+
+Rapid Ascent
+Dirt・If you're in the second half of the pack during the Final Leg, your acceleration will slightly increase
+
+Mighty Leap
+Short/Mile・If you're about to overtake someone in the second half of the pack during the Final Leg, your acceleration will slightly increase
+
+Devil-May-Care
+Betweener・Long・During the Last Spurt, if you're not in the front, use some stamina to slightly increase your acceleration
+
+True Worth
+Leader・Long・If you were within 10 meters from the lead around the end of the Middle Leg, then in the Final Leg, your acceleration will slightly increase
+
+Witful
+Chaser・If you stay in the back of the pack without panicking (kakari) for the first 2/3 of the race, your acceleration will slightly increase in the first half of the Final Leg
+
+High Hopes
+Mile・If you're in the first half of the pack during the first half of the Final Leg, your acceleration will slightly increase
+
+Early Bird
+Medium・At the start of the race, your acceleration will slightly increase
+
+Satisfying Pace
+Leader/Betweener・If you're on the final corner in the Final Leg, you're not in the back of the pack, and there's at least 600 m remaining in the race, your acceleration will slightly increase
+
+Honing In
+Leader・Long・If you're in the first half of the pack around the start of the Final Leg, your acceleration will slightly increase
+
+No Hesitation
+Runner・Long・If you're 3rd or better during any last spurt straight, your acceleration will slightly increase
+
+Swift Takeoff
+Short・At the start of the race, your acceleration will slightly increase
+
+Mighty Step
+Chaser・Medium・If you're not in the front during the Final Corner in the Final Leg, your acceleration will slightly increase
+
+Seize the Chance
+Chaser・Long・At a random point in the first quarter of the Final Leg, if you're not in the front of the pack, your acceleration will slightly increase
+
+With All My Might
+Leader・Dirt・If you're in the first half of the pack during the first half of the Final Leg, your acceleration will slightly increase
+
+Frontal Breakthrough
+Medium・If you're in the first half of the pack during the first half of the Final Leg, your acceleration will slightly increase
+
+Firm Resolve
+Runner・Long・If you're in the first half of the pack around the start of the Final Leg, your acceleration will slightly increase
+
+Descent
+Betweener・At a random point on a random downhill, your acceleration will slightly increase
+
+Pulling Away
+Runner・Medium・If you're third or better during the Final Corner or beyond, your acceleration will slightly increase
+
+Riding the Tailwind
+Runner・Medium・If you're in the first half of the pack at a random point during the first quarter of the Final Leg, your acceleration will slightly increase
+
+Surpassing Ambitions
+Leader・Medium・If you're in the first half of the pack at a random point during the first quarter of the Final Leg, your acceleration will slightly increase
+
+Turning Point
+Betweener・Short・If you're not in the front at a random point during the first half of the Final Leg, your acceleration will slightly increase
+
+Unyielding Step
+Runner・Short・If you're in the first half of the pack during the first half of the Final Leg, your acceleration will slightly increase
+
+Flying Sparks
+Leader・Short・If you're in the first half of the pack during the first half of the Final Leg, your acceleration will slightly increase
+
+Glimpse of Light
+Chaser・Medium・If you're not in the front at a random point during the first quarter of the Final Leg, your acceleration will slightly increase
+
+Footloose
+Mile・If you're not in the front at a random point during the first half of the Final Leg, your acceleration will slightly increase
+
+One Brave Step
+Leader・If you're spurting on any straight, your acceleration will slightly increase
+
+Aim for the Summit
+Not translated yet
+
+Heat Up
+Chaser・Short・If you're NOT in the front at a random point during the first half of the Final Leg, your acceleration will slightly increase
+
+Nosedive
+Chaser・At a random point on a random downhill, your acceleration will slightly increase
+
+Corner Acceleration ×
+Moderately decrease acceleration on a corner with awkward turning.
+
+Prudent Positioning
+Moderately increase navigation early-race.
+
+Go with the Flow
+Moderately increase navigation late-race.
+
+Meticulous Measures
+Moderately prepare to make for the finish line mid-race. (Sprint)
+
+Thunderbolt Step
+Moderately avoid becoming surrounded when positioned toward the back mid-race. (Medium)
+
+Dodging Danger
+Moderately avoid becoming surrounded early-race. (Front Runner)
+
+Front Row Aim
+Dirt・During the Final Leg, your overtaking abilities will slighty increase
+
+Focus
+Slightly decrease time lost to slow starts.
+
+Gatekept
+Moderately increase time lost to slow starts.
+
+Dilly-Dally
+Guarantees a late start and lowers your acceleration tremendously. This skill will disappear at the end of the training.
+
+Don't Tell Me What to Do!
+Your Wisdom stat is decreased by 40 and you are guaranteed to start late
+
+Hawkeye
+Moderately widen field of view with heightened observation early-race. (Medium)
+
+Studious
+Slightly widen field of view with heightened observation mid-race. (Late Surger)
+
+I Can See Right Through You
+Slightly widen field of view with situational awareness when moving sideways. (End Closer)
+
+Strategist
+Slightly widen field of view when positioned toward the back late-race. (End Closer)
+
+Ignited Spirit SPD
+Burn bright with team spirit, slightly increasing velocity in proportion to the total Speed of racing team members mid-race.
+
+Ignited Spirit GUTS
+Burn bright with team spirit, very slightly increasing vigor in proportion to the total Guts of racing team members late-race.
+
+Ignited Spirit STA
+Burn bright with team spirit, slightly recovering endurance in proportion to the total Stamina of racing team members mid-race.
+
+Ignited Spirit PWR
+Burn bright with team spirit, slightly increasing acceleration in proportion to the total Power of racing team members late-race.
+
+Ignited Spirit WIT
+Burn bright with team spirit, slightly increasing strategic navigation in proportion to the total Wit of racing team members early-race.
+
+Glittering Stars
+In the second half of the race, the more wins you've achieved in the training, the more your speed and acceleration increase, and your stamina recovers
+
+Halfway to a Dream
+In the second half of the race, if you're not in the back of the pack, your speed and acceleration will increase (scales with the number of fans)
+
+Eyes on the Horizon
+Increases speed during the Last Spurt (special scaling under investigation)
+
+Essence of Racing・Speed
+Your speed will slightly increase during the second half of the Middle Leg
+
+Essence of Racing・Stamina
+During the Last Spurt, use a little stamina to increase your speed a little
+
+Essence of Racing・Power
+If you try to overtake someone during the Last Spurt, your speed will increase a little
+
+Essence of Racing・Wisdom
+If you activate at least 2 skills in the second half of the race, your speed will increase a little
+
+Essence of Racing・Guts
+When directly competing for position on the Final Straight in a Showdown (追い比べ), your acceleration will increase a little
+
+Essence of Racing・Energy
+Your Stamina, Guts, and Wisdom stats are increased by 40 if your Motivation is Good or better
+
+Blessing of the Sun
+During the Middle Leg, if you've been blocked from the side for at least 2 seconds, your speed will increase based on the number of skills you have (up to 20)
+
+Blessing of the Land
+During the second half of the Final Leg, your speed will increase based on the number of skills you have (up to 20)
+
+Blessing of the Ocean
+During the first half of the Opening Leg, your acceleration will increase based on the number of skills you have (up to 20)
+
+Bearer of Hope
+During the Final Straight, your speed will slightly increase
+
+Burning Soul
+Mile/Medium・At a random point during the Middle Leg, your speed will slightly increase
+
+Athlete's Spirit
+Mile/Medium・At a random point during the second half of the race, your speed will slightly increase; the effect is stronger if you have at least 1200 Guts
+
+Forever Healthy
+Short/Mile・During the Last Spurt, your speed will slightly increase
+
+Essence of Food
+Short/Mile・At a random point during the Middle Leg, you will get a slight speed boost; the effect is stronger if you have at least 1200 base Power
+
+Reproducing a Dream
+Medium/Long・During the Final Straight, your speed will slightly increase
+
+Herald of a New Age
+At a random point during the first half of the Last Spurt, your speed will slightly increase
+
+Be Myself
+Medium/Long・During the Final Straight, your speed will slightly increase
+
+Hesitant Front Runners
+Slightly decrease velocity of front runners late-race.
+
+Hesitant Pace Chasers
+Slightly decrease velocity of pace chasers late-race.
+
+Hesitant Late Surgers
+Slightly decrease velocity of late surgers late-race.
+
+Hesitant End Closers
+Slightly decrease velocity of end closers late-race.
+
+Intimidate
+Moderately intimidate runners behind when positioned toward the front early-race. (Sprint)
+
+Speed Eater
+Slightly steal velocity from runners behind when in the lead mid-race. (Mile)
+
+Tether
+Slightly decrease velocity of runners ahead when positioned toward the back late-race. (Medium)
+
+Intense Gaze
+Slightly unnerve runners in focus late-race. (End Closer)
+
+Cloud of Dust
+Dirt・If you're in the lead during the Opening Leg and there's another girl right behind you, she will slow down a little
+
+Pressing Feeling
+Dirt・If an enemy character uses a recovery skill in the second half of the race, she will slow down a little
+
+Opening Gambit
+Slightly dull movement for runners ahead when positioned toward the back early-race. (Mile)
+
+Restart
+Slightly startle runners ahead when failing to get a lead early-race. (Front Runner)
+
+Frenzied Front Runners
+Increase time needed for front runners to calm down when they become rushed.
+
+Frenzied Pace Chasers
+Increase time needed for pace chasers to calm down when they become rushed.
+
+Frenzied Late Surgers
+Increase time needed for late surgers to calm down when they become rushed.
+
+Frenzied End Closers
+Increase time needed for end closers to calm down when they become rushed.
+
+Trick (Front)
+Slightly increase fatigue for rushed runners behind when positioned toward the front mid-race.
+
+Trick (Rear)
+Slightly increase fatigue for rushed runners ahead when positioned toward the back mid-race.
+
+Subdued Front Runners
+Slightly increase fatigue for front runners early-race.
+
+Flustered Front Runners
+Slightly increase fatigue for front runners mid-race.
+
+Subdued Pace Chasers
+Slightly increase fatigue for pace chasers early-race.
+
+Flustered Pace Chasers
+Slightly increase fatigue for pace chasers mid-race.
+
+Subdued Late Surgers
+Slightly increase fatigue for late surgers early-race.
+
+Flustered Late Surgers
+Slightly increase fatigue for late surgers mid-race.
+
+Subdued End Closers
+Slightly increase fatigue for end closers early-race.
+
+Flustered End Closers
+Slightly increase fatigue for end closers mid-race.
+
+Stop Right There!
+Slightly cause panic in runners ahead when positioned toward the back early-race. (Sprint)
+
+Murmur
+Slightly disturb runners directly ahead mid-race. (Medium)
+
+Stamina Eater
+Very slightly steal endurance from runners ahead when positioned toward the back mid-race. (Long)
+
+Sharp Gaze
+Slightly startle other runners late-race. (Late Surger)
+
+Smoke Screen
+Moderately narrow the field of view for runners ahead late-race. (Long)
+
+Disorient
+Slightly narrow the field of view for runners behind when positioned toward the front late-race. (Pace Chaser)
+
+Carnival Bonus (obsolete)
+Bonus points will be added to the carnival points obtained. This skill will disappear at the end of the event.
+
+Carnival Bonus (obsolete)
+Your stats will be raised by x％ and there is a y％ chance for your motivation to be raised to Perfect during carnival races. This skill will disappear at the end of the event.
+
+Carnival Bonus (obsolete)
+Your stats will be raised by x％ and there is a y％ chance for your motivation to be raised to Perfect during carnival races. This skill will disappear at the end of the event.
+
+Carnival Bonus (obsolete)
+Your stats will be raised by x％ and there is a y％ chance for your motivation to be raised to Perfect during carnival races. This skill will disappear at the end of the event.
+
+Carnival Bonus (obsolete)
+Your stats will be raised by x％ and there is a y％ chance for your motivation to be raised to Perfect during carnival races. This skill will disappear at the end of the event.
+
+Carnival Bonus (obsolete)
+Your stats will be raised by x％ and there is a y％ chance for your motivation to be raised to Perfect during carnival races. This skill will disappear at the end of the event.
+
+Carnival Bonus
+Your stats will be raised by x％ and there is a y％ chance for your motivation to be raised to Perfect during carnival races. This skill will disappear at the end of the event.
+
+Voltage Hero
+If your motivation is Perfect, your acceleration will permanently marginally increase, you will get a bonus of 60 to all base stats, and you will become immune to debuffs
+
+Sunrise Hero
+If it's sunny and the track condition is good, your acceleration will permanently marginally increase, and you will get a bonus of 80 to all base stats
+
+Rainy Hero
+If it's raining and the track condition is bad, your acceleration will permanently slightly increase, and you will get a bonus of 100 to Speed and Stamina stats
+
+Outside Hero
+If you've started the race in gate block 6, 7, or 8, you will get a bonus of 100 to Speed, Stamina, and Power, and then during the Final Leg, your acceleration will slightly increase
+
+Linkage Hero
+During the Final Leg, if your team has activated at least 6 skills combined during the race, your acceleration will increase and your stamina will recover; bonus effect if the skill count is 10 or more
+
+Inside Hero
+If you've started the race in gate block 1, 2, or 3, your speed and acceleration will slightly increase at the start, and then during the Final Leg, your acceleration will slightly increase and your stamina will recover
+
+Spurt Hero
+During the Final Leg, your acceleration will slightly increase, you'll get a great speed boost, and your stamina will recover

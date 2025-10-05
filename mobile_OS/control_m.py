@@ -47,11 +47,12 @@ teamtrials_bar = (1445, 545, 200, 25)
 teamrace_refresh_bar = (1660, 608, 45, 45)
 RP_bar1 = (1566, 115, 35, 35)
 home_bar = (1500, 650, 100, 60)
-option_bar = (1650, 665, 45, 45)
+option_bar = (1650, 665, 45, 45) 
 control_panel = (1400, 550, 300, 160)
 mood_bar = (1620, 175, 75, 35)
 summer_training = (38, 39, 40, 41, 63, 64, 65, 66)
 race_selection_bar = (1405, 420, 100, 190)
+screen_rg = (1400, 120, 300, 600)
 
 class UmaException(Exception):
     pass
@@ -248,7 +249,8 @@ class UmaGame:
         
 
 
-    def train_horse_loop(self, character: HorseGirl, turn = 1, hint_priority = 0.5):
+    def train_horse_loop(self, character: HorseGirl, turn = 1, purpose: str = "fan farming",
+                          scenerio: str = "URA"):
         """Train the horse with following logic.
 
         conduct this loop, starting from turn 1:
@@ -288,7 +290,7 @@ class UmaGame:
         """
         self.turn = turn
         self.style = "Initial"
-        self.hint_priority = hint_priority
+        self.hint_priority = character.load(purpose, scenerio)["hint_priority"]
         if turn == 1:
             self.pre_trainoption = 0  # The default starting "previous" training is speed.
         else:
@@ -319,7 +321,7 @@ class UmaGame:
             self._check_training(mood_score)
         self._trouble_shoot()  # Check if inheriting event or connection error happens.
 
-    def _special_turns(self, script="URA"):
+    def _special_turns(self):
         """Process inheriting events & new year & other script events at specific turns"""
         if self.turn == 56 or self.turn == 31:
             self.wait_for("generaltraining/Inheriting",click=True, interval=5)
@@ -347,21 +349,21 @@ class UmaGame:
             return 0
         except ImageNotFoundException:
             pass
-        if self.test_image("generaltraining/InsufficientFans"):
+        if self.test_image("generaltraining/InsufficientFans", rg=screen_rg):
             self.click(1490, 520, 2)
-        elif self.test_image("generaltraining/ConnectionError"):
+        elif self.test_image("generaltraining/ConnectionError", rg=screen_rg):
             self.click(1625, 485, 2)
-        elif self.test_image("generaltraining/RaceRecommendation"):
+        elif self.test_image("generaltraining/RaceRecommendation", rg=screen_rg):
             self.click(1560, 635, 2)
         # Skip following check during race trouble shooting.
         if racemode and self.trouble_count < 4:
             pass
-        elif self.test_image("generaltraining/DollGame"):
+        elif self.test_image("generaltraining/DollGame", rg=screen_rg):
             for i in range(3):
                 self.click(1550, 640, 3.5)
             self.click(1550, 620, 2)
-            self.wait_for("generaltraining/OK", click=1)
-        elif self.test_image("generaltraining/Close"):
+            self.wait_for("generaltraining/OK", click=1, rg=screen_rg)
+        elif self.test_image("generaltraining/Close", rg=screen_rg):
             click_image("generaltraining/Close")
         else:
             print("problem unresolved.")
@@ -370,12 +372,11 @@ class UmaGame:
         """Obtain support card special events (that do not choose green) and check for them then normal events."""
         try: 
             for i in range(3):  # Adding the loop to met situations with consecutive multiple choose events.
-                a, b = identify_image("generaltraining/hi_g")
-                # self.__check_special__()
-                click_true(a, b)
-                print("Choose green choice.")
-        except ImageNotFoundException:
-            pass
+                x = self.test_image("generaltraining/hi_g", rg=screen_rg, returncoordinate=1)
+                if x:  # If a green option is present, start checking if the mcq is special, or just click green.
+                    self.__check_special__()
+                    self.click(*x)
+                    print("Choose green choice.")
         except UmaException:
             pass
 
@@ -385,7 +386,8 @@ class UmaGame:
         You really should not call this function alone."""
         x = 0
         for i in self.c.special_events:
-            if self.test_image(f"specialevents/{i}"):
+            xi = self.test_image(f"specialevents/{i}", rg=screen_rg)
+            if xi:
                 click_image("generaltraining/hi_y")
                 print("Special choice selected.")
                 x = 1
@@ -539,8 +541,6 @@ class UmaGame:
             score[i] += self.__friendship_bonus_score__(training_ls[i], unpresented_supportcardlist)
             score[i] += 0.3 * self.test_image("URA/Director", rg=ts_rg)
             score[i] += 0.3 * self.test_image("URA/Reporter", rg=ts_rg)
-            if self.hint_priority:
-                score[i] += self.hint_priority * self.test_image("generaltraining/inspiration", rg=ts_rg, confi=0.85)
             print(f"The score under {i + 1}th training option is {int(score[i]*100)/100}")
         max_index = score.index(max(score))
         if max_index == 5:
@@ -571,6 +571,15 @@ class UmaGame:
                 except ImageNotFoundException:
                     print(f"Empty relationship bar ({supportcard.friendship}) is identified for {supportcard}")
 
+    def __check_h_supcard__(self, supportcard: SupportCard, rg):
+        r, g, b = pyautogui.pixel(1691*SCALE, _fp(rg[1]-12))
+        if (r-235)**2 + (g-80)**2 + (b-124)**2 < 72:
+            s = supportcard.h_score
+            print(f"Hint identified for {supportcard}, with hint score {s}.")  # Test for orange bar by pixel color
+            return s
+        else:
+            return 0
+
     def __friendship_bonus_score__(self, training_type: str, supportcards: tuple):
         """Check from unpresented supportcard list and add scores for each present support card. Once a support card is present,
         remove it from unpresented support card list."""
@@ -582,17 +591,26 @@ class UmaGame:
                 self.__update_friendship__(j, rg=ti)  # Check the friendship status of the support card.
                 supportcards.remove(j)  # Remove the support card from unpresented support card list.
                 score += j.score(training_type, 1)
+                score += self.__check_h_supcard__(j, rg=ti) * self.hint_priority * (1 + 0.2*j.h_level)
         return score
 
+    def _check_available_skill(self):
+        """Return a list of already available skills"""
+        self.click(1652, 584)
 
-def identify_image(name: str):
+
+def identify_image(name: str, rg=None):
     """Identify the required png. 
     
     Return the true central coordinate of the image.
     If no image is identified, it will raise
     pyautogui.ImageNotFoundException."""
-    l, t, w, h = _fp(pyautogui.locateOnScreen(f"figures_m/{name}.png", confidence=0.9), -1)
-    return (l+w/2, t+h/2)
+    if rg is None:
+        l, t, w, h = _fp(pyautogui.locateOnScreen(f"figures_m/{name}.png", confidence=0.9), -1)
+        return (l+w/2, t+h/2)
+    else:
+        l, t, w, h = _fp(pyautogui.locateOnScreen(f"figures_m/{name}.png", confidence=0.9, region=rg), -1)
+        return (l+w/2, t+h/2)
 
 
 def click_true(a: float, b: float, interval=0.5):
@@ -615,6 +633,6 @@ if __name__ == "__main__":
     URA = UmaGame(test=0)
     # URA._team_trial()
     # URA.remove_expired_followers(35)
-    # URA._start_game(Maruzensky3, parent=("Opera1star", "TeioGemini"), mode=0)
-    URA.train_horse_loop(Maruzensky3, turn=7, hint_priority=0.5)
+    # URA._start_game(Vodca, parent=("ElCondorGround1star", "TeioGemini"), mode=0)
+    URA.train_horse_loop(El_Condor1, turn=1, purpose="parent farming", scenerio="CMCancerCup")
     # print(URA.__friendship_bonus_score__("speed", list(Oguri_Cap3.supportcard)))

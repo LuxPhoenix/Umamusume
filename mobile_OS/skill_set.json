@@ -1,0 +1,11 @@
+{
+    "CMCancerCup": {
+       "Front": {
+        "8": ["Groundwork"],
+        "3": ["Speed Eater", "Focus", "Left-Handed", "Tokyo Racecourse", "Front Runner Savvy", "Standard Distance", "Wet Conditions", "Summer Runner", "Lone Wolf"],
+        "2": ["Front Runner Corners", "Front Runner Straightaways", "Leader's Pride", "Mile Corners", "Mile Straightaways", "Unyielding Spirit",
+              "Ramp Up", "Slipstream", "It's On", "Final Push", "Unrestrained", "Fast-Paced"],
+        "1": ["Straightaway Acceleration", "Corner Recovery", "Early Lead", "Straightaway Recovery", "Trick (Front)"]
+       }
+    }
+}
