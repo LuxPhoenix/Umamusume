@@ -89,5 +89,12 @@
             "top_left": [190, 170],
             "bottom_right": [448, 215]
         }
+    },
+    "stat_position": {
+        "speed": [239, 565],
+        "stamina": [308, 565],
+        "power": [378, 565],
+        "guts": [453, 565],
+        "wisdom": [519, 565]
     }
 }

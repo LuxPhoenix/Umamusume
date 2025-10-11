@@ -131,6 +131,10 @@ class UmaGame:
                 pyautogui.click(a1, b1)
                 time.sleep(interval)
 
+    def get_current_stat(self):
+        stats = self.screen_reader.detect_stat(self.x, self.y)
+        return stats
+
     def wait_choice_event(self, image_path = "generaltraining/hi_g", confi=0.8):
         while True:
             try:
@@ -514,7 +518,7 @@ class UmaGame:
         if event_name in self.list_event:
             choice = self.list_event[event_name]
             if choice!="Auto":
-                click_true(a, b + 82 * (choice - 1), self.cfg["wait_time"]["_check_special_"])
+                click_true(a, b + 82 * (choice), self.cfg["wait_time"]["_check_special_"])
             logger.info(f"Turn {self.turn}: Special event {event_name} detected, choice {choice} selected.")
         else:
             click_true(a, b, self.cfg["wait_time"]["_check_multiq"])  
@@ -567,7 +571,7 @@ class UmaGame:
             if score < best_score:
                 best_score = score
                 best_match = key
-        if score > 0.5:
+        if score < 0.25:
             return False
         return best_match
 
@@ -634,7 +638,7 @@ class UmaGame:
             raise ContinueException
     
     def __extra_training_event__(self):
-        time.sleep(5)
+        time.sleep(2)
         self.screen_reader.capture_screen(region=(self.x, self.y, self.w, self.h))
 
         # Text region
@@ -647,7 +651,7 @@ class UmaGame:
             logger.info(f"Turn {self.turn}: No extra training event detected, event name: {event_name}")
             return
         else:
-            a, b = identify_image("generaltraining/hi_g")
+            a, b = self.wait_choice_event("generaltraining/hi_g")
             click_true(a, b + 81)  # Click on the second option.
     
     def _check_training(self, mood_score: float):
@@ -666,7 +670,7 @@ class UmaGame:
                 score[i] += 0.3 * test_image("URA/Director") 
                 score[i] += 0.3 * test_image("URA/Reporter") 
                 print(f"The score under {i + 1}th training option is {score[i]}")
-                # time.sleep(3)
+                # time.sleep(2)
             max_index = score.index(max(score))
             if max_index == 5:
                 self.click(self.cfg["root"]["back_button"], 1)  # Click back
