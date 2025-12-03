@@ -58,7 +58,7 @@ class UmaGame:
     def _manual_setup(self, support_cards: list = None, deck_name: str = "manual"):
         dictionary = {}
         for card in support_cards:
-            with open(f"data/SupportCardData/{card}.json", 'r', encoding='utf-8') as file:
+            with open(f"data/support_card_data/{card}.json", 'r', encoding='utf-8') as file:
                 data = json.load(file)
 
             dictionary[card] = {}
