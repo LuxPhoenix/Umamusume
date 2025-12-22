@@ -45,3 +45,4 @@ class SupportCard:
         self.level = level or 1
         self.limit_break = limit_break or 0
         self.data = data or {}
+        self.friendship = 0

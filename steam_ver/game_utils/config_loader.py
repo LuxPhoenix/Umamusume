@@ -1,20 +1,23 @@
 """
 Configuration file loading utilities.
 
+DEPRECATED: This module is kept for backward compatibility.
+New code should use services.ConfigService instead.
+
 This module handles loading JSON configuration files.
 """
 
-import json
-from pathlib import Path
-from typing import Dict, Any, Optional
-
-from utils.logger import Logger
-
-logger = Logger.get_logger()
+from typing import Dict, Any
+from services import ConfigService
 
 
 class ConfigLoader:
-    """Handles configuration file loading."""
+    """
+    Handles configuration file loading.
+
+    DEPRECATED: Use services.ConfigService instead.
+    This class now wraps ConfigService for backward compatibility.
+    """
 
     @staticmethod
     def load_dictionary() -> Dict[str, Any]:
@@ -23,13 +26,14 @@ class ConfigLoader:
 
         Returns:
             Dictionary configuration.
+
+        Deprecated:
+            Use ConfigService.load_dictionary() instead.
         """
-        config_path = Path("data/json/dictionary.json")
-        with open(config_path, "r", encoding="utf-8") as file:
-            return json.load(file)
+        return ConfigService.load_dictionary()
 
     @staticmethod
-    def load_deck_config(deck_name: str) -> Optional[Dict[str, Any]]:
+    def load_deck_config(deck_name: str) -> Dict[str, Any]:
         """
         Load deck-specific configuration.
 
@@ -38,17 +42,14 @@ class ConfigLoader:
 
         Returns:
             Deck configuration or None if not found.
+
+        Deprecated:
+            Use ConfigService.load_deck_config() instead.
         """
-        config_path = Path(f"data/json/{deck_name}.json")
-        try:
-            with open(config_path, "r", encoding="utf-8") as file:
-                return json.load(file)
-        except FileNotFoundError:
-            logger.warning(f"Deck config not found: {deck_name}")
-            return None
+        return ConfigService.load_deck_config(deck_name, use_default_on_error=True)
 
     @staticmethod
-    def load_support_card_data(card_name: str) -> Dict[str, Any]:
+    def load_support_card_event(card_name: str) -> Dict[str, Any]:
         """
         Load support card data.
 
@@ -57,7 +58,8 @@ class ConfigLoader:
 
         Returns:
             Support card data dictionary.
+
+        Deprecated:
+            Use ConfigService.load_support_card_data() instead.
         """
-        card_path = Path(f"data/support_card_data/{card_name}.json")
-        with open(card_path, "r", encoding="utf-8") as file:
-            return json.load(file)
+        return ConfigService.load_support_card_event(card_name)

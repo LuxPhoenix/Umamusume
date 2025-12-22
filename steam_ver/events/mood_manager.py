@@ -9,7 +9,7 @@ from typing import Optional
 from core.constants import ImagePath, MoodScore, WaitTime, GameTurn
 from core.models import MoodLevel, ContinueException
 from ui.image_recognition import ImageRecognition
-from utils.logger import Logger
+from shared.utils.logger import Logger
 
 logger = Logger.get_logger()
 
@@ -25,17 +25,11 @@ class MoodManager:
         Returns:
             MoodLevel enum or None if mood is Great.
         """
-        bad_moods = [
-            MoodLevel.AWFUL,
-            MoodLevel.BAD,
-            MoodLevel.NORMAL,
-            MoodLevel.GOOD
-        ]
+        bad_moods = [MoodLevel.AWFUL, MoodLevel.BAD, MoodLevel.NORMAL, MoodLevel.GOOD]
 
         for mood in bad_moods:
-            if ImageRecognition.test_image(
-                f"{ImagePath.MOOD}/{mood.value}",
-                confidence=0.85
+            if ImageRecognition.check_image_exists(
+                f"{ImagePath.MOOD}/{mood.value}", confidence=0.85
             ):
                 return mood
 
@@ -51,14 +45,10 @@ class MoodManager:
             cfg: Game configuration.
             turn: Current turn number.
         """
-        if ImageRecognition.test_image(
-            f"{ImagePath.GENERAL_TRAINING}/Recreation",
-            confidence=0.90
+        if ImageRecognition.check_image_exists(
+            f"{ImagePath.GENERAL_TRAINING}/Recreation", confidence=0.90
         ):
-            click_func(
-                cfg["root"]["daily_training"]["recreation"],
-                WaitTime.SHORT
-            )
+            click_func(cfg["root"]["daily_training"]["recreation"], WaitTime.SHORT)
             logger.info(f"Turn {turn}: Raising mood via recreation")
         else:
             # Fallback for summer training
@@ -66,14 +56,11 @@ class MoodManager:
             logger.info(f"Turn {turn}: Raising mood (summer)")
 
         import time
+
         time.sleep(cfg["wait_time"]["_raise_mood_"])
 
     @staticmethod
-    def check_mood(
-        turn: int,
-        raise_mood_func,
-        check_date_event_func
-    ) -> int:
+    def check_mood(turn: int, raise_mood_func, check_date_event_func) -> int:
         """
         Check mood and raise if needed.
 
@@ -93,13 +80,13 @@ class MoodManager:
             return MoodScore.GREAT
 
         mood = MoodManager.get_mood_level()
-        
+
         if mood is not None:
             raise_mood_func()
             check_date_event_func()
             raise ContinueException
 
-        if ImageRecognition.test_image(f"{ImagePath.GENERAL_TRAINING}/Good"):
+        if ImageRecognition.check_image_exists(f"{ImagePath.GENERAL_TRAINING}/Good"):
             logger.info(f"Turn {turn}: Mood is GOOD")
             return MoodScore.GOOD
         else:

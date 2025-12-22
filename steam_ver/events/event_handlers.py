@@ -9,16 +9,14 @@ from typing import Optional, Tuple, Dict, Any
 
 from pyautogui import ImageNotFoundException
 
-from core.constants import (
-    ImagePath, ChoiceOffset, WaitTime, MoodScore, ImageConfidence
-)
+from core.constants import ImagePath, ChoiceOffset, WaitTime, MoodScore, ImageConfidence
 from core.models import Coordinate, EventType, MoodLevel, ContinueException
 from ui.image_recognition import ImageRecognition
 from ui.click_handler import ClickHandler
 from game_utils.event_matcher import EventMatcher
-from utils.logger import Logger
+from shared.utils.logger import Logger
 
-logger = Logger.get_logger()
+logger = Logger.get_logger("EventHandlers")
 
 
 class EventHandlers:
@@ -30,7 +28,7 @@ class EventHandlers:
         event_list: Dict[str, Any],
         cfg: Dict[str, Any],
         screen_reader,
-        turn: int
+        turn: int,
     ) -> None:
         """
         Handle special event that requires choice selection.
@@ -45,7 +43,7 @@ class EventHandlers:
         # Capture event text
         region = screen_reader.get_event_text_region(cfg)
         event_name = screen_reader.capture_event_text(region)
-        
+
         logger.info(f"Turn {turn}: Event detected: {event_name}")
 
         matched_event = EventMatcher.match_event(event_name, event_list)
@@ -53,6 +51,7 @@ class EventHandlers:
         if matched_event is None:
             logger.info(f"Turn {turn}: Event not in dictionary, using default")
             ClickHandler.click_coordinate(coord)
+            time.sleep(WaitTime.MEDIUM)
             return
 
         if matched_event in event_list:
@@ -81,9 +80,8 @@ class EventHandlers:
             turn: Current turn number.
         """
         while True:
-            if ImageRecognition.test_image(
-                f"{ImagePath.GENERAL_TRAINING}/Inheriting",
-                confidence=0.90
+            if ImageRecognition.check_image_exists(
+                f"{ImagePath.GENERAL_TRAINING}/Inheriting", confidence=0.90
             ):
                 # Need to click using cfg coordinate
                 logger.info(f"Turn {turn}: Inspiration event")
@@ -93,9 +91,7 @@ class EventHandlers:
 
     @staticmethod
     def handle_new_year_event(
-        wait_for_image_func,
-        cfg: Dict[str, Any],
-        turn: int
+        wait_for_image_func, cfg: Dict[str, Any], turn: int
     ) -> None:
         """
         Handle new year event.
@@ -110,7 +106,7 @@ class EventHandlers:
         logger.info(f"Turn {turn}: New year event detected")
 
         wait_time = cfg["wait_time"]["_check_special_"]
-        
+
         if turn == 30:
             # Second choice (energy)
             offset_coord = coord.offset(dy=ChoiceOffset.SECOND_CHOICE)
@@ -129,7 +125,7 @@ class EventHandlers:
         """
         # Check for choice event
         try:
-            coord = ImageRecognition.identify_image(
+            coord = ImageRecognition.find_image_center(
                 f"{ImagePath.GENERAL_TRAINING}/hi_g"
             )
             return coord, EventType.CHOICE_EVENT
@@ -138,18 +134,14 @@ class EventHandlers:
 
         # Check for training screen
         try:
-            ImageRecognition.identify_image(
-                f"{ImagePath.GENERAL_TRAINING}/training"
-            )
+            ImageRecognition.find_image_center(f"{ImagePath.GENERAL_TRAINING}/training")
             return None, EventType.TRAINING
         except ImageNotFoundException:
             pass
 
         # Check for race main
         try:
-            ImageRecognition.identify_image(
-                f"{ImagePath.GENERAL_TRAINING}/RaceMain"
-            )
+            ImageRecognition.find_image_center(f"{ImagePath.GENERAL_TRAINING}/RaceMain")
             return None, EventType.RACE_MAIN
         except ImageNotFoundException:
             pass
@@ -158,11 +150,7 @@ class EventHandlers:
         return None, EventType.TRAINING
 
     @staticmethod
-    def check_for_date_event(
-        detect_event_func,
-        handle_special_func,
-        turn: int
-    ) -> None:
+    def check_for_date_event(detect_event_func, handle_special_func, turn: int) -> None:
         """
         Check for and handle date events after mood raising.
 
@@ -183,9 +171,7 @@ class EventHandlers:
 
     @staticmethod
     def handle_after_race_events(
-        wait_for_image_func,
-        cfg: Dict[str, Any],
-        turn: int
+        wait_for_image_func, cfg: Dict[str, Any], turn: int
     ) -> None:
         """
         Handle events that may occur after a race.
@@ -201,11 +187,11 @@ class EventHandlers:
         while True:
             # Check for trainee event
             try:
-                ImageRecognition.identify_image(
+                ImageRecognition.find_image_center(
                     f"{ImagePath.GENERAL_TRAINING}/TraineeEvent",
-                    confidence=ImageConfidence.VERY_HIGH
+                    confidence=ImageConfidence.VERY_HIGH,
                 )
-                coord = ImageRecognition.identify_image(
+                coord = ImageRecognition.find_image_center(
                     f"{ImagePath.GENERAL_TRAINING}/hi_g"
                 )
                 ClickHandler.click_coordinate(coord)
@@ -215,9 +201,9 @@ class EventHandlers:
 
             # Check for support card event
             try:
-                coord = ImageRecognition.identify_image(
+                coord = ImageRecognition.find_image_center(
                     f"{ImagePath.GENERAL_TRAINING}/SupportCardEvent",
-                    confidence=ImageConfidence.VERY_HIGH
+                    confidence=ImageConfidence.VERY_HIGH,
                 )
                 offset_coord = coord.offset(dy=ChoiceOffset.FIRST_CHOICE)
                 wait_time = cfg["wait_time"]["_check_special_"]
@@ -232,9 +218,7 @@ class EventHandlers:
 
     @staticmethod
     def check_extra_training_event(
-        wait_for_image_func,
-        capture_text_func,
-        turn: int
+        wait_for_image_func, capture_text_func, turn: int
     ) -> None:
         """
         Check for and handle extra training event.
@@ -244,7 +228,7 @@ class EventHandlers:
             capture_text_func: Function to capture event text.
             turn: Current turn number.
         """
-        time.sleep(WaitTime.MEDIUM)
+        time.sleep(WaitTime.VERY_LONG)
         event_name = capture_text_func()
 
         if event_name == "Extra Training":
@@ -254,6 +238,4 @@ class EventHandlers:
             ClickHandler.click_coordinate(offset_coord)
             logger.info(f"Turn {turn}: Extra training event")
         else:
-            logger.debug(
-                f"Turn {turn}: No extra training (detected: {event_name})"
-            )
+            logger.debug(f"Turn {turn}: No extra training (detected: {event_name})")

@@ -5,6 +5,14 @@ This module contains all magic numbers, thresholds, and configuration
 constants used throughout the game automation.
 """
 
+from pathlib import Path
+import sys
+
+parent_dir = Path(__file__).resolve().parent.parent.parent
+print(f"Adding to sys.path: {parent_dir}")
+sys.path.append(str(parent_dir))
+
+
 
 class GameWindow:
     """Game window configuration constants."""
@@ -24,7 +32,7 @@ class GameTurn:
 class ImageConfidence:
     """Default confidence levels for image recognition."""
     DEFAULT = 0.9
-    HIGH = 0.97
+    HIGH = 0.96
     VERY_HIGH = 0.99
     INFIRMARY = 0.997
 
@@ -32,17 +40,17 @@ class ImageConfidence:
 class WaitTime:
     """Default wait times in seconds."""
     SHORT = 0.5
-    MEDIUM = 2.0
-    LONG = 4.0
+    MEDIUM = 4.0
+    LONG = 6.0
     VERY_LONG = 10.0
 
 
 class ImagePath:
     """Image path constants."""
-    BASE_DIR = "figures_lap"
+    BASE_DIR = parent_dir / "assets"
     GENERAL_TRAINING = "generaltraining"
     MOOD = "mood"
-    URA = "URA"
+    URA = "tscard"
     STRATEGY = "strategy"
     SKILL = "skill"
 

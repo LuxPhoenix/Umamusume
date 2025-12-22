@@ -17,11 +17,7 @@ class ClickHandler:
     """Handles click operations."""
 
     @staticmethod
-    def click_absolute(
-        x: float,
-        y: float,
-        interval: float = WaitTime.SHORT
-    ) -> None:
+    def click_absolute(x: float, y: float, interval: float = WaitTime.SHORT) -> None:
         """
         Click at absolute screen coordinates.
 
@@ -34,10 +30,7 @@ class ClickHandler:
         time.sleep(interval)
 
     @staticmethod
-    def click_coordinate(
-        coord: Coordinate,
-        interval: float = WaitTime.SHORT
-    ) -> None:
+    def click_coordinate(coord: Coordinate, interval: float = WaitTime.SHORT) -> None:
         """
         Click at a Coordinate object.
 
@@ -58,5 +51,5 @@ class ClickHandler:
         Raises:
             ImageNotFoundException: If image is not found.
         """
-        coord = ImageRecognition.identify_image(name)
+        coord = ImageRecognition.find_image_center(name)
         ClickHandler.click_coordinate(coord, WaitTime.MEDIUM)
