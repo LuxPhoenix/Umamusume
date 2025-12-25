@@ -53,7 +53,7 @@ class HorseGirl:
 
     def load(self, purpose: str = "fan farming", scenerio: str = "URA"):
         """Load different scenerios with different purposes."""
-        if "CM" in scenerio:
+        if "CM" in scenerio:  #Champions Meeting
             self._load_CM(scenerio)
         if purpose in ["parent farming", "debuffer training", "team trial"]:
             return {"hint_priority": 4.5}

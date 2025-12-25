@@ -113,7 +113,7 @@
         "name": "El Condor",
         "default_supportcard": ["Eishin Flash SR spe", "Daitaku Helios SR pow", "Fuji Kiseki SR wit", "Yaeno Muteki SSR pow", "Silence Suzuka SSR spe", "Kitasan Black SSR spe"],
         "friend_supportcard": "Yaeno Muteki SSR pow",
-        "default_racetable": {"24": "Hopeful S", "32": "Satsuki Sho", "37":"Takarazuka Kinen", "46": "Queen Elizabeth II C", "47": "Mile C", "55": "Osaka hai", "59": "Victoria Mile", "61": "Yasuda Kinen", "70": "Tenno Sho Autumn"},
+        "default_racetable": {"23": "Hanshin Juvenile", "24": "Hopeful S", "32": "Oka Sho", "37":"Takarazuka Kinen", "45": "Shuka Sho","46": "Queen Elizabeth II C", "47": "Mile C", "49": "Arima Kinen", "55": "Osaka hai", "59": "Victoria Mile", "61": "Yasuda Kinen", "70": "Tenno Sho Autumn", "74": "Arima Kinen"},
         "training_priority": [1.5, 1, 0.6, 0, 0],
         "special_events": [],
         "Aptitude": ["A", "B", "F", "A", "A", "B", "E", "A", "A", "C"],

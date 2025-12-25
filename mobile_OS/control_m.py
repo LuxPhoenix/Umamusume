@@ -5,6 +5,8 @@ from builtins import Exception
 from math import e
 from horse_info_m import *
 from numbers import Number
+from random import randint
+from concurrent.futures import ThreadPoolExecutor
 
 # sensible defaults
 pyautogui.FAILSAFE = True
@@ -92,7 +94,7 @@ class UmaGame:
             a1, b1 = a, b  # If window on topright corner of my screen, do not conduct screen adjustment.
         return a1, b1
 
-    def click(self, a: float, b: float, interval=0.5, connecting_mode=False):
+    def click(self, a: float, b: float, interval=0.5):
         """Click on the x-y position on computer screen.
 
         The position is set to be the coordinate on my macbook,
@@ -459,13 +461,14 @@ class UmaGame:
 
     def __raise_mood__(self):
         if self.turn in summer_training:
-            self.wait_for("generaltraining/RecreationS", confi=0.99, click=1, rg=control_panel)
+            a = self.wait_for("generaltraining/RecreationS", confi=0.99, click=1, rg=control_panel)
             print(f"Use turn {self.turn} to rest and raise mood.")
         else:
-            self.wait_for("generaltraining/Recreation", confi=0.99, click=1, rg=control_panel)
+            a = self.wait_for("generaltraining/Recreation", confi=0.99, click=1, rg=control_panel)
             print(f"Use turn {self.turn} to raise mood.")
-        self.nclick(1630, 490, 2)
-        self.pre_trainoption = 3
+        if a:
+            self.nclick(1630, 490, 2)
+            self.pre_trainoption = 3
 
     def _check_mood(self):
         """Always spend turn to raise mood when below good, and return mood score 3 for good, 0 for great."""
@@ -572,13 +575,26 @@ class UmaGame:
                     print(f"Empty relationship bar ({supportcard.friendship}) is identified for {supportcard}")
 
     def __check_h_supcard__(self, supportcard: SupportCard, rg):
-        r, g, b = pyautogui.pixel(1691*SCALE, _fp(rg[1]-12))
-        if (r-235)**2 + (g-80)**2 + (b-124)**2 < 72:
+        r, g, b = pyautogui.pixel(1691*SCALE, _fp(rg[1]-12+randint(-3, 3)))
+        residue = (r-235)**2 + (g-80)**2 + (b-124)**2
+        if residue < 300:
             s = supportcard.h_score
-            print(f"Hint identified for {supportcard}, with hint score {s}.")  # Test for orange bar by pixel color
+            print("okok")
             return s
-        else:
-            return 0
+        return 0
+
+    def __check_hh__(self, supportcard: SupportCard, rg):
+        executor = ThreadPoolExecutor(max_workers=8)
+        futures = [
+            executor.submit(self.__check_h_supcard__, supportcard, rg)
+            for _ in range(8)
+        ]
+        results = [future.result() for future in futures]
+        executor.shutdown(wait=True)
+        if results and max(results) > 0:
+            print(f"Hint identified for {supportcard}, with hint score {max(results)}.")
+            return max(results)
+        return 0
 
     def __friendship_bonus_score__(self, training_type: str, supportcards: tuple):
         """Check from unpresented supportcard list and add scores for each present support card. Once a support card is present,
@@ -591,12 +607,12 @@ class UmaGame:
                 self.__update_friendship__(j, rg=ti)  # Check the friendship status of the support card.
                 supportcards.remove(j)  # Remove the support card from unpresented support card list.
                 score += j.score(training_type, 1)
-                score += self.__check_h_supcard__(j, rg=ti) * self.hint_priority * (1 + 0.2*j.h_level)
+                score += self.__check_hh__(j, rg=ti) * self.hint_priority * (1 + 0.2*j.h_level)
         return score
 
     def _check_available_skill(self):
         """Return a list of already available skills"""
-        self.click(1652, 584)
+        self.click(1652, 584) 
 
 
 def identify_image(name: str, rg=None):
@@ -633,6 +649,7 @@ if __name__ == "__main__":
     URA = UmaGame(test=0)
     # URA._team_trial()
     # URA.remove_expired_followers(35)
-    # URA._start_game(Vodca, parent=("ElCondorGround1star", "TeioGemini"), mode=0)
-    URA.train_horse_loop(El_Condor1, turn=1, purpose="parent farming", scenerio="CMCancerCup")
+    # URA._start_game(El_Condor1, parent=("ElCondorGround1star", "TeioGemini"), mode=0)
+    URA.train_horse_loop(El_Condor1, turn=57, purpose="parent farming", scenerio="CMCancerCup")
     # print(URA.__friendship_bonus_score__("speed", list(Oguri_Cap3.supportcard)))
+    # URA._roll_prize_derby(50)
