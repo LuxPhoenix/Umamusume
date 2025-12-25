@@ -1,3 +1,16 @@
+Dear Coed,
+
+Merry Christmas! This is from Mysteria. I've taken a flight back to my hometown. However, I did not anticipate that I cannot get access to discord in my nation, so I'm not able to contact you directly.
+
+I hope you can see this message. I wish you have a wonderful holiday. I've decided to climb the mount of the south and get a gift for you. I hope we can be like Suzuka and Spe, or Kitasan and Diamond. If you see this please message me. I'm only able to see your message from discord but I can't reply.
+
+Hope everything goes well for you.
+
+Mysteria
+
+
+
+
 # Umamusume
 This is a project aiming at automatically running the game of Umamusume Pretty Derby. 
 
