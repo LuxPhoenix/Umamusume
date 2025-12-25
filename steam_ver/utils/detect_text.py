@@ -1,7 +1,10 @@
 import pyautogui
 import cv2
+import json
 import pytesseract
+import numpy as np
 from typing import Tuple, Optional
+from concurrent.futures import ThreadPoolExecutor
 
 class ScreenTextReader:
     def __init__(self, tesseract_path: str = r"C://Program Files//Tesseract-OCR//tesseract.exe"):
@@ -14,6 +17,12 @@ class ScreenTextReader:
         pytesseract.pytesseract.tesseract_cmd = tesseract_path
         self.screenshot_path = "test/screenshot.png"
         self.cropped_image_path = "test/cropped_image.png"
+        self.config = self.setup_config()
+
+    def setup_config(self) -> str:
+        with open('data/json/dictionary.json', 'r', encoding='utf-8') as file:
+            cfg = json.load(file)
+        return cfg
     
     def capture_screen(self, region: Tuple[int, int, int, int]) -> str:
         """
@@ -23,7 +32,7 @@ class ScreenTextReader:
         screenshot.save(self.screenshot_path)
         return self.screenshot_path
     
-    def detect_text_in_image(self, image_path: Optional[str] = None, region: Optional[Tuple[int, int, int, int]] = None) -> str:
+    def detect_text_in_image(self, image_path: Optional[str] = None, region: Optional[Tuple[int, int, int, int]] = None, config = None) -> str:
         """
         Detect text in an image using Tesseract OCR
         Get the whole image if no region is specified else crop to the region
@@ -42,5 +51,47 @@ class ScreenTextReader:
         else:
             cropped_img = image
         
-        text = pytesseract.image_to_string(cropped_img, lang='eng')
+        if config:
+            text = pytesseract.image_to_string(cropped_img, config=config)
+        else:
+            text = pytesseract.image_to_string(cropped_img, lang='eng')
         return text.strip()
+    
+    def clean_number(self, text: str) -> str:
+        return ''.join(filter(str.isdigit, text))
+    
+    def detect_one_stat(self, x, y, w, h) -> str:
+        box = (x, y, w, h)
+        # Chụp ảnh trực tiếp thay vì lưu file để tránh xung đột
+        screenshot = pyautogui.screenshot(region=box)
+        # Chuyển đổi PIL image thành numpy array cho OpenCV
+        import numpy as np
+        image_array = np.array(screenshot)
+        # Chuyển đổi RGB thành BGR cho OpenCV
+        image_array = cv2.cvtColor(image_array, cv2.COLOR_RGB2BGR)
+
+        stat = pytesseract.image_to_string(image_array, config='--psm 12')
+        stat = self.clean_number(stat)
+        if stat and stat.isdigit():  # Chỉ trả về nếu là số hợp lệ
+            return stat
+        else:
+            return ""
+
+    def detect_stat(self, x, y) -> dict:
+        position_stat_cfg = self.config["stat_position"]
+        
+        executor = ThreadPoolExecutor(max_workers=5)
+        task = []
+        for stat_name, pos in position_stat_cfg.items():
+            final_x = x + pos[0]
+            final_y = y + pos[1]
+            print(f"Debug - {stat_name}: position ({final_x}, {final_y})")
+            task.append(executor.submit(self.detect_one_stat, final_x, final_y, 40, 20))
+        
+        results = [t.result() for t in task]
+        
+        stats = {stat: text for stat, text in zip(position_stat_cfg.keys(), results)}
+        print(f"Debug - Final stats: {stats}")
+        return stats
+
+

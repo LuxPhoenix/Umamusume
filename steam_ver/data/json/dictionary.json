@@ -106,5 +106,12 @@
     "race_ui": {
         "top_race": [552, 453],
         "bottom_race": [549, 603]
+    },
+    "stat_position": {
+        "speed": [239, 565],
+        "stamina": [308, 565],
+        "power": [378, 565],
+        "guts": [453, 565],
+        "wisdom": [519, 565]
     }
 }

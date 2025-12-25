@@ -69,5 +69,14 @@
         "special_events": ["wonderful mistake"],
         "skill_set": [],
         "strategy": {"23": "Front"}
+    },
+    "Maruzensky 2": {
+        "default_supportcard": ["Nishino Flower (SR)", "Kitasan Black (SSR)", "Air Groove (SR)", "Matikanefukukitaru (SR)", "Fuji Kiseki (SR)", "Yaeno Muteki (SSR)"],
+        "friend_supportcard": "Fine Motion wit",
+        "default_racetable": {"24": "Hopeful S", "34": "NHK Mile", "45": "Shuka Sho", "47": "Mile C", "59": "Victoria Mile", "72": "Mile C"},
+        "training_priority": [1.5, 0.8, 0.5, 0, 0.6],
+        "special_events": [],
+        "skill_set": ["Early Lead", "Triumphant Pulse", "Homestretch Haste"],
+        "strategy": {"22": "Front", "39": "Pace"}
     }
 }
