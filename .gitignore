@@ -1,2 +1,4 @@
 __pycache__
+.vscode/
+logs/
 steam_ver/logs/

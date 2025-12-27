@@ -1,31 +1,55 @@
-"""Implements support cards as a class object. Information about support cards in game are inherited from support_card.json"""
-import json
+"""
+Support card implementation.
+
+REFACTORED: Now uses SupportCard from shared.models and ConfigService.
+This module maintains backward compatibility with the original interface.
+"""
+
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from shared.models import SupportCard as BaseSupportCard
+from services import ConfigService
 
 
-class SupportCard():
-    """Return a support card object with following attributes:
-    
-    1. self.name
-    2. self.train_type: the specialized training type for the support card.
-    3. self.friendship: a bool value that is 1 if friendship bar turns orange or maxed, and 0 otherwise.
-    4. self.e_train: train effectiveness
-    5. self.e_mood: mood bonus
-    6. self.e_friend: friendship bonus"""
+class SupportCard(BaseSupportCard):
+    """
+    Support card with game-specific attributes.
 
-    def __init__(self, name):
-        """train_type is any elements from (spe, sta, pow, gut, wit)"""
-        self.name = name
+    Attributes:
+        name: Card name.
+        train_type: Specialized training type.
+        friendship: 1 if friendship bar is orange/maxed, 0 otherwise.
+        e_train: Training effectiveness.
+        e_mood: Mood bonus.
+        e_friend: Friendship bonus.
+    """
+
+    def __init__(self, name: str):
+        """
+        Initialize support card from support_card.json.
+
+        Args:
+            name: Support card name.
+        """
+        # Load card data
         try:
-            with open('support_card.json', 'r') as file:
-                content = json.load(file)[self.name]
-        except FileNotFoundError:
-            print("Error: The file 'support_card.json' was not found.")
-        except json.JSONDecodeError:
-            print("Error: Could not decode JSON from the file. Check for valid JSON format.")
-        self.train_type = content["train_type"]
-        self.e_train = float(content["training_effectiveness"])
-        self.e_mood = float(content["mood_bunus"])
-        self.e_friend = float(content["friend_bonus"])
+            all_cards = ConfigService.load_support_card_info()
+            content = all_cards.get(name, {})
+        except Exception as e:
+            print(f"Error loading support card data: {e}")
+            content = {}
+
+        # Initialize base class
+        super().__init__(name=name, card_type=content.get("train_type"), data=content)
+
+        # Game-specific attributes
+        self.train_type = content.get("train_type", "")
+        self.e_train = float(content.get("training_effectiveness", 0))
+        self.e_mood = float(content.get("mood_bunus", 0))  # Note: typo in JSON
+        self.e_friend = float(content.get("friend_bonus", 0))
         self.friendship = 0
 
     def _is_specialized(self, training_type: str):
@@ -36,13 +60,13 @@ class SupportCard():
 
     def score(self, training_type: str, present: bool):
         """Return the training bonus score contributed by this support card to a specific training_type.
-        
+
         If the card is not present under the training type, then score is 0.
         The score is 1 if this card is present and the relationship bar is not organge yet, since it is valuable to
         increase the relationship.
         The score is 2.4 if relationship bar is organge & maxed, and the support card is present under its specialized
         training type. This triggers friendship traininng, which is immensely valuable.
-        The score is 0.6 if relationship is organge & maxed but rainbow training is not triggered. This mearly addes up the 
+        The score is 0.6 if relationship is organge & maxed but rainbow training is not triggered. This mearly addes up the
         training effectiveness & mood bonus, so the benefit is smaller."""
 
         if not present:
@@ -65,5 +89,3 @@ class SupportCard():
 if __name__ == "__main__":
     KitasanBlackSpe = SupportCard("Kitasan Black spe")
     print(type(KitasanBlackSpe.e_mood))
-
-        

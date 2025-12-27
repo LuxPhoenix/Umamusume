@@ -78,5 +78,23 @@
         "special_events": [],
         "skill_set": ["Early Lead", "Triumphant Pulse", "Homestretch Haste"],
         "strategy": {"22": "Front", "39": "Pace"}
+    },
+    "Maruzensky 3": {
+        "default_supportcard": ["Sweep Tosho (SR)", "Kitasan Black (SSR)", "Sakura Bakushin O (SSR)", "Mihono Bourbon (SSR)", "Biko Pegasus (SSR)", "Super Creek (SSR)"],
+        "friend_supportcard": "Fine Motion wit",
+        "default_racetable": {"24": "Hopeful S", "34": "NHK Mile", "45": "Shuka Sho", "47": "Mile C", "59": "Victoria Mile", "72": "Mile C"},
+        "training_priority": [1.5, 0.8, 0.5, 0, 0.6],
+        "special_events": [],
+        "skill_set": ["Early Lead", "Triumphant Pulse", "Homestretch Haste"],
+        "strategy": {"22": "Front", "39": "Pace"}
+    },
+    "Maruzensky 4": {
+        "default_supportcard": ["Sweep Tosho (SR)", "Kitasan Black (SSR)", "Sakura Bakushin O (SSR)", "Mihono Bourbon (SSR)", "Biko Pegasus (SSR)", "Yaeno Muteki (SSR)"],
+        "friend_supportcard": "Fine Motion wit",
+        "default_racetable": {"29": "Hopeful S", "30": "NHK Mile", "33": "Shuka Sho", "47": "Mile C", "53": "Victoria Mile", "58": "Mile C", "67": "Tenno Sho Autumn"},
+        "training_priority": [1.5, 0.8, 0.5, 0, 0.6],
+        "special_events": [],
+        "skill_set": ["Early Lead", "Triumphant Pulse", "Homestretch Haste"],
+        "strategy": {"22": "Front"}
     }
 }

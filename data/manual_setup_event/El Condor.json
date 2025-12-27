@@ -1,0 +1,44 @@
+{
+    "Mayano Top Gun (SR)": {
+        "Still Taxiing?": "Auto",
+        "Take Off toward Trendy ♪": "Auto",
+        "Snack Advice for Mayano!": 0,
+        "Fashion Advice for Mayano!": 0
+    },
+    "Manhattan Cafe (SR)": {
+        "Invitation on a Rainy Day": "Auto",
+        "Invitation on a Stormy Day": "Auto",
+        "Solo Nighttime Run": 0,
+        "A Taste of Silence": 0
+    },
+    "Sakura Bakushin O (SSR)": {
+        "Bakushin's Cooking!": "Auto",
+        "Bakushin's Love!": "Auto",
+        "Bakushin's Huge Success!": "Auto",
+        "Genius Efficiency!": 0,
+        "Enough to Break into a Dash!": 0
+    },
+    "Special Week (SSR)": {
+        "Dance in Cleats!": "Auto",
+        "A Roller Coaster of Feelings!": 0,
+        "Our Audience": "Auto",
+        "Watch Where You're Going!": 0,
+        "So Many Options!": 0
+    },
+    "Sweep Tosho (SR)": {
+        "Some Very Green Friends": 0,
+        "Premeditated Mischief": 0,
+        "Miracle ☆ Escape!": 0,
+        "Wonderful ☆ Mistake!": 0
+    },
+    "Kitasan Black (SSR)": {
+        "Chasing Brilliance": "Auto",
+        "Paying It Forward": 0,
+        "We Walk Together": "Auto",
+        "Ah, Friendship": 0,
+        "Ah, Home Sweet Home": 0
+    },
+    "race_table": {"23": "Hanshin Juvenile", "24": "Hopeful S", "32": "Oka Sho", "35": "Japan Derby", "45": "Queen Elizabeth II Cup", "51": "February Stakes", "53": "Osaka Hai", "58": "Victoria Mile", "68": "Queen Elizabeth II Cup", "69": "Japan Cup"},
+    "manual_race_day": [22,23,30,32,33,45,53,58,59,68,69],
+    "race_day": [11,33,44,47,67,71]
+}

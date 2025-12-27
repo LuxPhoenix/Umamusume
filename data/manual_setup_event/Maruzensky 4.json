@@ -1,0 +1,46 @@
+{
+    "Sweep Tosho (SR)": {
+        "Some Very Green Friends": 0,
+        "Premeditated Mischief": 0,
+        "Miracle ☆ Escape!": 0,
+        "Wonderful ☆ Mistake!": 1
+    },
+    "Kitasan Black (SSR)": {
+        "Chasing Brilliance": "Auto",
+        "Paying It Forward": 0,
+        "We Walk Together": "Auto",
+        "Ah, Friendship": 0,
+        "Ah, Home Sweet Home": 0
+    },
+    "Sakura Bakushin O (SSR)": {
+        "Bakushin's Cooking!": "Auto",
+        "Bakushin's Love!": "Auto",
+        "Bakushin's Huge Success!": "Auto",
+        "Genius Efficiency!": 0,
+        "Enough to Break into a Dash!": 0
+    },
+    "Mihono Bourbon (SSR)": {
+        "Do No Harm": 0,
+        "Orders Must Be Followed": 0,
+        "Status-Boring": 0,
+        "Status-As I Am": "Auto",
+        "Status-Fun!": "Auto"
+    },
+    "Biko Pegasus (SSR)": {
+        "Passionate Promises, Heroic Ambitions!": "Auto",
+        "Brace Yourself: Training with Carrot Ranger!": "Auto",
+        "Showdown! Glorious Victory!": "Auto",
+        "A Hero's Woes": 0,
+        "Preparing My Special Move!": 0
+    },
+    "Yaeno Muteki (SSR)": {
+        "Yaeno's Off-Site Training": "Auto",
+        "A Reasonable Diet vs. an Explosive Diet": 0,
+        "Yaeno Muteki's Love Song Nightmare": "Auto",
+        "Firm and Plain, Yet Close to Virtue": 0,
+        "The Will to Protect!": 0
+    },
+    "race_table": {"23": "Hanshin Juvenile", "24": "Hopeful S", "32": "Oka Sho", "35": "Japan Derby", "45": "Queen Elizabeth II Cup", "51": "February Stakes", "53": "Osaka Hai", "58": "Victoria Mile", "68": "Queen Elizabeth II Cup", "69": "Japan Cup"},
+    "manual_race_day": [22,23,29,30,32,33,45,47,53,58,59,67,68,69],
+    "race_day": [11,29,30,33,47,53,58,67]
+}
